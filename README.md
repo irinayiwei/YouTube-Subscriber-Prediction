@@ -20,7 +20,7 @@
 
 **Vision**: To evaluate the potential of new YouTubers
 
-**Mission**: Enable users to 
+**Mission**: Enable users to input information about YouTubers and predict the future subscribers of the input YouTuber based on previous 
 
 **Success criteria**: Users play 80% of recommended songs more than once. 
 
@@ -152,5 +152,5 @@ Run `pytest` from the command line in the main project repository.
 
 Tests exist in `test/test_helpers.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjE4NzA5MzE2XX0=
+eyJoaXN0b3J5IjpbLTg4NjMwMDk5Ml19
 -->
