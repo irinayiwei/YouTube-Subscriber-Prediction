@@ -18,9 +18,9 @@
 
 ## Project Charter 
 
-**Vision**: To enable animals everywhere to enjoy music just for them. 
+**Vision**: To evaluate the potential of new YouTubers
 
-**Mission**: Enable users to add songs that they like and produce new song recommendations based on their entries.
+**Mission**: Enable users to 
 
 **Success criteria**: Users play 80% of recommended songs more than once. 
 
@@ -151,3 +151,6 @@ Run `pytest` from the command line in the main project repository.
 
 
 Tests exist in `test/test_helpers.py`
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMjE4NzA5MzE2XX0=
+-->
