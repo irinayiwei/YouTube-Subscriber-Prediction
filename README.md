@@ -20,9 +20,9 @@
 
 **Vision**: To evaluate the potential of new YouTubers
 
-**Mission**: Enable users to input information about YouTubers and predict the future subscribers of the input YouTuber based on previous 
+**Mission**: Enable users to input information about new YouTubers and predict the future subscribers of the input YouTuber based on data of mature YouTube channels
 
-**Success criteria**: Users play 80% of recommended songs more than once. 
+**Success criteria**: Prediction accuracy 
 
 
 _Note_: Project charters should actually be more detailed than this! But this is where the charter belongs.  
@@ -152,5 +152,5 @@ Run `pytest` from the command line in the main project repository.
 
 Tests exist in `test/test_helpers.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg4NjMwMDk5Ml19
+eyJoaXN0b3J5IjpbLTE0MzI5NjQ2MjVdfQ==
 -->
