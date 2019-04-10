@@ -43,6 +43,7 @@ Optimally, this project will help stakeholders to predict the future growth of e
 - Early data exploration 
 - Model building
 - Web app building 
+- Launching and testing 
 
 **Write stories**: Units of work that make up an epic. These are concrete activities that can be completed in an estimable amount of time.
 
@@ -190,7 +191,7 @@ Run `pytest` from the command line in the main project repository.
 
 Tests exist in `test/test_helpers.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY5NDIwODk2LC0xOTQwMjcwNzg2LDE1Nz
+eyJoaXN0b3J5IjpbNjg3NjcxNDQxLC0xOTQwMjcwNzg2LDE1Nz
 I3Nzc4ODksLTEzMzU4NjQ1NTcsOTM3MTU3ODUzLDE3MjQ1Nzky
 MzUsNTcxMzIxMDQ4LC0xNjE1MjE2NzE0LDEwNjUzMTE4NjIsLT
 Y1MDg0Mjg2MCw1ODg2MjY2NywtMTQ5MDA2MzczMyw1ODczMzA4
