@@ -48,6 +48,8 @@ Optimally, this project will help stakeholders to predict the future growth of e
 **Stories**: 
 
 - Literature Review: 
+  - find articles on past YouTube related projects
+  - extract potentially 
 -  EDA:
 - Model Building:
 - Web App:
@@ -197,9 +199,9 @@ Run `pytest` from the command line in the main project repository.
 
 Tests exist in `test/test_helpers.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDM5MDQxNDYwLDY4NzY3MTQ0MSwtMTk0MD
-I3MDc4NiwxNTcyNzc3ODg5LC0xMzM1ODY0NTU3LDkzNzE1Nzg1
-MywxNzI0NTc5MjM1LDU3MTMyMTA0OCwtMTYxNTIxNjcxNCwxMD
-Y1MzExODYyLC02NTA4NDI4NjAsNTg4NjI2NjcsLTE0OTAwNjM3
-MzMsNTg3MzMwODksLTk2MzM4ODU1NF19
+eyJoaXN0b3J5IjpbMTc5NzY1ODA4MSw2ODc2NzE0NDEsLTE5ND
+AyNzA3ODYsMTU3Mjc3Nzg4OSwtMTMzNTg2NDU1Nyw5MzcxNTc4
+NTMsMTcyNDU3OTIzNSw1NzEzMjEwNDgsLTE2MTUyMTY3MTQsMT
+A2NTMxMTg2MiwtNjUwODQyODYwLDU4ODYyNjY3LC0xNDkwMDYz
+NzMzLDU4NzMzMDg5LC05NjMzODg1NTRdfQ==
 -->
