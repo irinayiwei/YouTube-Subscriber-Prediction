@@ -48,9 +48,9 @@ Optimally, this project will help stakeholders to predict the future growth of e
 **Stories**: 
 
 - Literature Review: 
-  - Find articles on past YouTube related projects
-  - Extract useful datasets for the current project
-  - Identify significant features in subscriber prediction or channel assessment suggested by previous research
+  - Find articles on past YouTube related projects -- 2 point***
+  - Extract useful datasets for the current project -- 1 point ***
+  - Identify significant features in subscriber prediction or channel assessment suggested by previous research -- 
   - Identify effective algorithms in subscriber or video view prediction
 -  EDA:
    - *Merge* multiple datasets to get a combined dataset that includes features for all variables
@@ -67,11 +67,11 @@ Optimally, this project will help stakeholders to predict the future growth of e
    - *Finalize* the prediction model based on comparison across the two variable sets and decide on which set gives the best outcome; arrive at the best parameter set for the final model
    - *Visualize* subscriber growth in terms of year and variable importance based on the final model
 - Web App:
-   - *Build* a pipeline from local data, modeling, to online amazon web service (AWS) -- 8 points
-   - *Design* the display of the web interface for basic functionalities -- 8 points
+   - *Build* a pipeline from local data, modeling, to online amazon web service (AWS) -- 8 points*
+   - *Design* the display of the web interface for basic functionalities -- 8 points*
    - *Optimize* the interface by adding more visualizations and insights; maximize user interactions -- IB
 - Launching and Testing:
-  - *Launch* the web app on AWS and open for user input and feedback -- 2 points**
+  - *Launch* the web app on AWS and open for user input and feedback -- 2 points*
   - *Test* for errors and fix running issues -- 2 points*
   - *Make* adjustment based on user feedback  -- IB
 
@@ -219,7 +219,7 @@ Run `pytest` from the command line in the main project repository.
 
 Tests exist in `test/test_helpers.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ0Mjc0MzUyNCw2Nzk2MTk1MzIsLTE3Nj
+eyJoaXN0b3J5IjpbMTU0MDUwMTk2NSw2Nzk2MTk1MzIsLTE3Nj
 IyNTgwMDgsNjg3NjcxNDQxLC0xOTQwMjcwNzg2LDE1NzI3Nzc4
 ODksLTEzMzU4NjQ1NTcsOTM3MTU3ODUzLDE3MjQ1NzkyMzUsNT
 cxMzIxMDQ4LC0xNjE1MjE2NzE0LDEwNjUzMTE4NjIsLTY1MDg0
