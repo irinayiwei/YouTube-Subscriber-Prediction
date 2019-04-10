@@ -54,9 +54,9 @@ Optimally, this project will help stakeholders to predict the future growth of e
   - Identify effective algorithms in subscriber or video view prediction
 -  EDA:
    - *Merge* multiple datasets to get a combined dataset that includes features for all variables
-   - *Clean* missing values and extreme values, standardize certain variables if needed
-   - *Create* new features suggested by previous research
-   - 
+   - *Clean* missing values and extreme values, *standardize* certain variables if needed
+   - *Create* new features suggested by previous research, including taking the ratios, differences, etc for certain variables
+   - *Visualize* 
 - Model Building:
 - Web App:
 - Launching and Testing:
@@ -205,7 +205,7 @@ Run `pytest` from the command line in the main project repository.
 
 Tests exist in `test/test_helpers.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg2MzU5NjAyOCwtMTc2MjI1ODAwOCw2OD
+eyJoaXN0b3J5IjpbMTk2NTI4Nzk4MiwtMTc2MjI1ODAwOCw2OD
 c2NzE0NDEsLTE5NDAyNzA3ODYsMTU3Mjc3Nzg4OSwtMTMzNTg2
 NDU1Nyw5MzcxNTc4NTMsMTcyNDU3OTIzNSw1NzEzMjEwNDgsLT
 E2MTUyMTY3MTQsMTA2NTMxMTg2MiwtNjUwODQyODYwLDU4ODYy
