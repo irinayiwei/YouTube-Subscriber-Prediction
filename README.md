@@ -64,7 +64,8 @@ Optimally, this project will help stakeholders to predict the future growth of e
    - *Finalize* the prediction model based on comparison, arrive at the best parameter set for the final model
    - *Visualize* subscriber growth in terms of year and variable importance based on the final model
 - Web App:
-   - *Build*
+   - *Build* a pipeline from local data, modeling, to online amazon web service (AWS)
+   - *Design* the display of the web interface for basic functi
 - Launching and Testing:
   - *Launch* the web app on AWS and open for user input and feedback
   - *Test* for errors and make adjustment based on running errors and user feedback
@@ -213,10 +214,10 @@ Run `pytest` from the command line in the main project repository.
 
 Tests exist in `test/test_helpers.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MDc5ODUxNDEsLTE3NjIyNTgwMDgsNj
-g3NjcxNDQxLC0xOTQwMjcwNzg2LDE1NzI3Nzc4ODksLTEzMzU4
-NjQ1NTcsOTM3MTU3ODUzLDE3MjQ1NzkyMzUsNTcxMzIxMDQ4LC
-0xNjE1MjE2NzE0LDEwNjUzMTE4NjIsLTY1MDg0Mjg2MCw1ODg2
-MjY2NywtMTQ5MDA2MzczMyw1ODczMzA4OSwtOTYzMzg4NTU0XX
-0=
+eyJoaXN0b3J5IjpbLTQ4OTg0MDg4MiwtMTc2MjI1ODAwOCw2OD
+c2NzE0NDEsLTE5NDAyNzA3ODYsMTU3Mjc3Nzg4OSwtMTMzNTg2
+NDU1Nyw5MzcxNTc4NTMsMTcyNDU3OTIzNSw1NzEzMjEwNDgsLT
+E2MTUyMTY3MTQsMTA2NTMxMTg2MiwtNjUwODQyODYwLDU4ODYy
+NjY3LC0xNDkwMDYzNzMzLDU4NzMzMDg5LC05NjMzODg1NTRdfQ
+==
 -->
