@@ -62,9 +62,11 @@ Optimally, this project will help stakeholders to predict the future growth of e
    - *Build* different models on the dataset using 10-fold cross-validation, ideally one or two models from each family (linear, trees, svm, boosting, etc); *tune* the parameter sets for each model
    - *Calculate* the performance metrics for each model (prediction RMSE, variable importance, etc) and *compare* the performance metrics among different models
    - *Finalize* the prediction model based on comparison, arrive at the best parameter set for the final model
-   - *Visualize* variable importance based on the final model
+   - *Visualize* subscriber growth in terms of year and variable importance based on the final model
 - Web App:
 - Launching and Testing:
+  - *Launch* the web app on AWS and open to user input
+  - *Test* for errors and 
 
 **Split stories into backlog and icebox**
     -   Backlog is the set of planned stories that can be prioritized.
@@ -210,10 +212,9 @@ Run `pytest` from the command line in the main project repository.
 
 Tests exist in `test/test_helpers.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM4NzMxODcxMywtMTc2MjI1ODAwOCw2OD
-c2NzE0NDEsLTE5NDAyNzA3ODYsMTU3Mjc3Nzg4OSwtMTMzNTg2
-NDU1Nyw5MzcxNTc4NTMsMTcyNDU3OTIzNSw1NzEzMjEwNDgsLT
-E2MTUyMTY3MTQsMTA2NTMxMTg2MiwtNjUwODQyODYwLDU4ODYy
-NjY3LC0xNDkwMDYzNzMzLDU4NzMzMDg5LC05NjMzODg1NTRdfQ
-==
+eyJoaXN0b3J5IjpbLTE5NDcwMzYyLC0xNzYyMjU4MDA4LDY4Nz
+Y3MTQ0MSwtMTk0MDI3MDc4NiwxNTcyNzc3ODg5LC0xMzM1ODY0
+NTU3LDkzNzE1Nzg1MywxNzI0NTc5MjM1LDU3MTMyMTA0OCwtMT
+YxNTIxNjcxNCwxMDY1MzExODYyLC02NTA4NDI4NjAsNTg4NjI2
+NjcsLTE0OTAwNjM3MzMsNTg3MzMwODksLTk2MzM4ODU1NF19
 -->
