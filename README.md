@@ -48,28 +48,28 @@ Optimally, this project will help stakeholders to predict the future growth of e
 **Stories**: 
 
 - Literature Review: 
-  - Find articles on past YouTube related projects -- 2 point****
-  - Extract useful datasets for the current project -- 1 point****
-  - Identify significant features in subscriber prediction or channel assessment suggested by previous research -- 1 point****
-  - Identify effective algorithms in subscriber or video view prediction -- 1 point****
+  - Find articles on past YouTube related projects -- BL 2 point****
+  - Extract useful datasets for the current project -- BL 1 point****
+  - Identify significant features in subscriber prediction or channel assessment suggested by previous research -- BL 1 point****
+  - Identify effective algorithms in subscriber or video view prediction -- BL 1 point****
 -  EDA:
-   - *Merge* multiple datasets to get a combined dataset that includes features for all variables -- 0 point ****
-   - *Clean* missing values and extreme values -- 1 point ***
-   - *Create* new features suggested by previous research, including taking the ratios, differences, etc for certain variables -- 2 points ***
-   - *Standardize* certain variables if needed, check for variable skewness and distributions -- 1 point ***
-   - *Visualize* variable distributions and collinear relationships with response variable (subscriber count) -- 1 point ***
+   - *Merge* multiple datasets to get a combined dataset that includes features for all variables -- BL 0 point****
+   - *Clean* missing values and extreme values -- BL 1 point***
+   - *Create* new features suggested by previous research, including taking the ratios, differences, etc for certain variables -- BL 2 points***
+   - *Standardize* certain variables if needed, check for variable skewness and distributions -- BL 1 point ***
+   - *Visualize* variable distributions and collinear relationships with response variable (subscriber count) -- BL 1 point***
 - Model Building: 
-   - *Split* the data into train, test and validation sets  -- 0 point **
-   - *Identify* a effective distance metrics to calculate the distance between channels, do not use "age" (the time a channel has come into existence) as a variable -- 2 points**
-   - *Find* the nearest n (to be decided based on model performance) training neighbors for each channel in the test set and for the n neighbors:  -- 2 points**
-   - *Build* 2 sets of models (one set using all variables, including "age", another using "age" only) using 10-fold cross-validation, ideally one or two models from each family (linear, trees, svm, boosting, etc); *tune* the parameter sets for each model -- 8 points**
-   - *Calculate* the performance metrics for each model in the two sets (prediction RMSE, variable importance, etc) and *compare* the performance metrics among different models -- 4 points**
-   - *Repeat* on a different number of nearest neighbor set and re-run the models to arrive on the best n -- 8 points**
-   - *Finalize* the prediction model based on comparison across the two variable sets and decide on which set gives the best outcome; arrive at the best parameter set for the final model -- 2 points**
-   - *Visualize* subscriber growth in terms of year and variable importance based on the final model -- 1 points**
+   - *Split* the data into train, test and validation sets  -- BL 0 point **
+   - *Identify* a effective distance metrics to calculate the distance between channels, do not use "age" (the time a channel has come into existence) as a variable -- BL 2 points**
+   - *Find* the nearest n (to be decided based on model performance) training neighbors for each channel in the test set and for the n neighbors:  -- BL 2 points**
+   - *Build* 2 sets of models (one set using all variables, including "age", another using "age" only) using 10-fold cross-validation, ideally one or two models from each family (linear, trees, svm, boosting, etc); *tune* the parameter sets for each model -- BL 8 points**
+   - *Calculate* the performance metrics for each model in the two sets (prediction RMSE, variable importance, etc) and *compare* the performance metrics among different models -- BL 4 points**
+   - *Repeat* on a different number of nearest neighbor set and re-run the models to arrive on the best n -- BL 8 points**
+   - *Finalize* the prediction model based on comparison across the two variable sets and decide on which set gives the best outcome; arrive at the best parameter set for the final model -- BL 2 points**
+   - *Visualize* subscriber growth in terms of year and variable importance based on the final model -- BL 1 points**
 - Web App:
-   - *Build* a pipeline from local data, modeling, to online amazon web service (AWS) -- 8 points*
-   - *Design* the display of the web interface for basic functionalities -- 8 points*
+   - *Build* a pipeline from local data, modeling, to online amazon web service (AWS) -- BL 8 points*
+   - *Design* the display of the web interface for basic functionalities -- BL8 points*
    - *Optimize* the interface by adding more visualizations and insights; maximize user interactions -- IB
 - Launching and Testing:
   - *Launch* the web app on AWS and open for user input and feedback -- 2 points*
@@ -85,6 +85,7 @@ Optimally, this project will help stakeholders to predict the future growth of e
 
 **Notations**: 
 - IB: IceBox 
+- BL: Backlog
 - Priority level for backlog: 
   - ****: very urgent, intended for the next two weeks
   - ***:  urgent, steps to be completed after **** tasks are finished
@@ -218,10 +219,10 @@ Run `pytest` from the command line in the main project repository.
 
 Tests exist in `test/test_helpers.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTc0NzEwMjk0LDY3OTYxOTUzMiwtMTc2Mj
-I1ODAwOCw2ODc2NzE0NDEsLTE5NDAyNzA3ODYsMTU3Mjc3Nzg4
-OSwtMTMzNTg2NDU1Nyw5MzcxNTc4NTMsMTcyNDU3OTIzNSw1Nz
-EzMjEwNDgsLTE2MTUyMTY3MTQsMTA2NTMxMTg2MiwtNjUwODQy
-ODYwLDU4ODYyNjY3LC0xNDkwMDYzNzMzLDU4NzMzMDg5LC05Nj
-MzODg1NTRdfQ==
+eyJoaXN0b3J5IjpbLTExMTc4ODc4MTAsNjc5NjE5NTMyLC0xNz
+YyMjU4MDA4LDY4NzY3MTQ0MSwtMTk0MDI3MDc4NiwxNTcyNzc3
+ODg5LC0xMzM1ODY0NTU3LDkzNzE1Nzg1MywxNzI0NTc5MjM1LD
+U3MTMyMTA0OCwtMTYxNTIxNjcxNCwxMDY1MzExODYyLC02NTA4
+NDI4NjAsNTg4NjI2NjcsLTE0OTAwNjM3MzMsNTg3MzMwODksLT
+k2MzM4ODU1NF19
 -->
