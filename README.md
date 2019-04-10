@@ -72,7 +72,8 @@ Optimally, this project will help stakeholders to predict the future growth of e
    - *Optimize* the interface by adding more visualizations and insights; maximize user interactions -- IB
 - Launching and Testing:
   - *Launch* the web app on AWS and open for user input and feedback
-  - *Test* for errors and make adjustment based on running errors and user feedback
+  - *Test* for errors and fix running issues -- 4 points
+  - *Make* adjustment based on user feedback  -- IB
 
 **Split stories into backlog and icebox**
     -   Backlog is the set of planned stories that can be prioritized.
@@ -218,7 +219,7 @@ Run `pytest` from the command line in the main project repository.
 
 Tests exist in `test/test_helpers.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTYyNzI3MDc3Nyw2Nzk2MTk1MzIsLTE3Nj
+eyJoaXN0b3J5IjpbMTc4NTI0NTA3Nyw2Nzk2MTk1MzIsLTE3Nj
 IyNTgwMDgsNjg3NjcxNDQxLC0xOTQwMjcwNzg2LDE1NzI3Nzc4
 ODksLTEzMzU4NjQ1NTcsOTM3MTU3ODUzLDE3MjQ1NzkyMzUsNT
 cxMzIxMDQ4LC0xNjE1MjE2NzE0LDEwNjUzMTE4NjIsLTY1MDg0
