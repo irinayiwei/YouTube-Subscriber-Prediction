@@ -50,7 +50,7 @@ Optimally, this project will help stakeholders to predict the future growth of e
 - Literature Review: 
   - Find articles on past YouTube related projects
   - Extract useful datasets for the current project
-  - Identify potential significant metrics in subscriber prediction or channel assessment
+  - Identify significant features in subscriber prediction or channel assessment suggested by previous research
   - 
 -  EDA:
 - Model Building:
@@ -201,9 +201,9 @@ Run `pytest` from the command line in the main project repository.
 
 Tests exist in `test/test_helpers.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMjYyNjc5NjksNjg3NjcxNDQxLC0xOT
-QwMjcwNzg2LDE1NzI3Nzc4ODksLTEzMzU4NjQ1NTcsOTM3MTU3
-ODUzLDE3MjQ1NzkyMzUsNTcxMzIxMDQ4LC0xNjE1MjE2NzE0LD
-EwNjUzMTE4NjIsLTY1MDg0Mjg2MCw1ODg2MjY2NywtMTQ5MDA2
-MzczMyw1ODczMzA4OSwtOTYzMzg4NTU0XX0=
+eyJoaXN0b3J5IjpbMTY2ODQyMTg0OSw2ODc2NzE0NDEsLTE5ND
+AyNzA3ODYsMTU3Mjc3Nzg4OSwtMTMzNTg2NDU1Nyw5MzcxNTc4
+NTMsMTcyNDU3OTIzNSw1NzEzMjEwNDgsLTE2MTUyMTY3MTQsMT
+A2NTMxMTg2MiwtNjUwODQyODYwLDU4ODYyNjY3LC0xNDkwMDYz
+NzMzLDU4NzMzMDg5LC05NjMzODg1NTRdfQ==
 -->
