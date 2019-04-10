@@ -87,7 +87,9 @@ Optimally, this project will help stakeholders to predict the future growth of e
 - IB: IceBox 
 - Priority level for backlog: 
   - ****: very urgent, intended for the next two weeks
-  - ***: somewhat urgent, steps to be completed follo
+  - ***:  urgent, steps to be completed after **** tasks are finished
+  - **: somewhat urgent, steps around the midpoints of the project
+  - *: not urgent, steps towards the end of the project
  
 
 
@@ -216,10 +218,10 @@ Run `pytest` from the command line in the main project repository.
 
 Tests exist in `test/test_helpers.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ1MDU1OTY3NCw2Nzk2MTk1MzIsLTE3Nj
-IyNTgwMDgsNjg3NjcxNDQxLC0xOTQwMjcwNzg2LDE1NzI3Nzc4
-ODksLTEzMzU4NjQ1NTcsOTM3MTU3ODUzLDE3MjQ1NzkyMzUsNT
-cxMzIxMDQ4LC0xNjE1MjE2NzE0LDEwNjUzMTE4NjIsLTY1MDg0
-Mjg2MCw1ODg2MjY2NywtMTQ5MDA2MzczMyw1ODczMzA4OSwtOT
-YzMzg4NTU0XX0=
+eyJoaXN0b3J5IjpbNTc0NzEwMjk0LDY3OTYxOTUzMiwtMTc2Mj
+I1ODAwOCw2ODc2NzE0NDEsLTE5NDAyNzA3ODYsMTU3Mjc3Nzg4
+OSwtMTMzNTg2NDU1Nyw5MzcxNTc4NTMsMTcyNDU3OTIzNSw1Nz
+EzMjEwNDgsLTE2MTUyMTY3MTQsMTA2NTMxMTg2MiwtNjUwODQy
+ODYwLDU4ODYyNjY3LC0xNDkwMDYzNzMzLDU4NzMzMDg5LC05Nj
+MzODg1NTRdfQ==
 -->
