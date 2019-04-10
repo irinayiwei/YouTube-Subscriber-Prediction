@@ -64,9 +64,10 @@ Optimally, this project will help stakeholders to predict the future growth of e
    - *Finalize* the prediction model based on comparison, arrive at the best parameter set for the final model
    - *Visualize* subscriber growth in terms of year and variable importance based on the final model
 - Web App:
+   - *Build*
 - Launching and Testing:
-  - *Launch* the web app on AWS and open to user input
-  - *Test* for errors and 
+  - *Launch* the web app on AWS and open for user input and feedback
+  - *Test* for errors and make adjustment based on running errors and user feedback
 
 **Split stories into backlog and icebox**
     -   Backlog is the set of planned stories that can be prioritized.
@@ -212,9 +213,10 @@ Run `pytest` from the command line in the main project repository.
 
 Tests exist in `test/test_helpers.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5NDcwMzYyLC0xNzYyMjU4MDA4LDY4Nz
-Y3MTQ0MSwtMTk0MDI3MDc4NiwxNTcyNzc3ODg5LC0xMzM1ODY0
-NTU3LDkzNzE1Nzg1MywxNzI0NTc5MjM1LDU3MTMyMTA0OCwtMT
-YxNTIxNjcxNCwxMDY1MzExODYyLC02NTA4NDI4NjAsNTg4NjI2
-NjcsLTE0OTAwNjM3MzMsNTg3MzMwODksLTk2MzM4ODU1NF19
+eyJoaXN0b3J5IjpbLTE2MDc5ODUxNDEsLTE3NjIyNTgwMDgsNj
+g3NjcxNDQxLC0xOTQwMjcwNzg2LDE1NzI3Nzc4ODksLTEzMzU4
+NjQ1NTcsOTM3MTU3ODUzLDE3MjQ1NzkyMzUsNTcxMzIxMDQ4LC
+0xNjE1MjE2NzE0LDEwNjUzMTE4NjIsLTY1MDg0Mjg2MCw1ODg2
+MjY2NywtMTQ5MDA2MzczMyw1ODczMzA4OSwtOTYzMzg4NTU0XX
+0=
 -->
