@@ -59,11 +59,10 @@ Optimally, this project will help stakeholders to predict the future growth of e
    - *Standardize* certain variables if needed, check for variable skewness and distributions
    - *Visualize* variable distributions and collinear relationships with response variable (subscriber count)
 - Model Building: 
-   - *Build* different models on the dataset using 10-fold cross-validation, ideally one or two models from each family (linear, trees, svm, boosting, etc); 
-   - *Tune*
-   - *Compare* the performance metrics among different models, and 
-   - *Finalize* 
-   - *Visualize* variable importance based on final model
+   - *Build* different models on the dataset using 10-fold cross-validation, ideally one or two models from each family (linear, trees, svm, boosting, etc); *tune* the parameter sets for each model
+   - *Calculate* the performance metrics for each model (prediction RMSE, variable importance, etc) and *compare* the performance metrics among different models
+   - *Finalize* the prediction model based on comparison, arrive at the best parameter set for the final model
+   - *Visualize* variable importance based on the final model
 - Web App:
 - Launching and Testing:
 
@@ -211,7 +210,7 @@ Run `pytest` from the command line in the main project repository.
 
 Tests exist in `test/test_helpers.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkxMTc2OTI0MiwtMTc2MjI1ODAwOCw2OD
+eyJoaXN0b3J5IjpbLTM4NzMxODcxMywtMTc2MjI1ODAwOCw2OD
 c2NzE0NDEsLTE5NDAyNzA3ODYsMTU3Mjc3Nzg4OSwtMTMzNTg2
 NDU1Nyw5MzcxNTc4NTMsMTcyNDU3OTIzNSw1NzEzMjEwNDgsLT
 E2MTUyMTY3MTQsMTA2NTMxMTg2MiwtNjUwODQyODYwLDU4ODYy
