@@ -35,7 +35,7 @@ The platform will enable users to input basic information about new YouTube chan
 ## Backlog
 **Develop Theme**: 
 
-Optimally, this project will help stakeholders to predict the future growth of entry-level YouTube channels and choose the ideal candidates for product promotion opportunities. By identifying the potential of new channels at an early stage, this project provides quantitative supports to YouTube-related marketing decisions . Since young channels are in general more financially affordable to cooperate with compared to popular channels, this project will help users minimize their marketing cost while maximize business outcome. 
+Optimally, this project will help stakeholders to predict the future growth of entry-level YouTube channels and choose the ideal candidates for product promotion opportunities. By identifying the potential of new channels at an early stage, this project provides quantitative support to YouTube-related marketing decisions and generates insights on the comparison among similar new channels. Since young channels are in general more financially affordable to cooperate with compared to popular channels, this project will help users minimize their marketing cost while maximize business outcome. 
 
 **Epics**: Break themes down into a set of work plans - larger chunks of work with a common objective.
 -   **Write stories**: Units of work that make up an epic. These are concrete activities that can be completed in an estimable amount of time.
@@ -181,7 +181,7 @@ Run `pytest` from the command line in the main project repository.
 
 Tests exist in `test/test_helpers.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg4NzU4MjExNiwxNTcyNzc3ODg5LC0xMz
+eyJoaXN0b3J5IjpbMTI3MjcyMjU0NywxNTcyNzc3ODg5LC0xMz
 M1ODY0NTU3LDkzNzE1Nzg1MywxNzI0NTc5MjM1LDU3MTMyMTA0
 OCwtMTYxNTIxNjcxNCwxMDY1MzExODYyLC02NTA4NDI4NjAsNT
 g4NjI2NjcsLTE0OTAwNjM3MzMsNTg3MzMwODksLTk2MzM4ODU1
