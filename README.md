@@ -20,7 +20,7 @@
 
 **Vision**: This project aims to evaluate the potential growth of new YouTubers 
 
-**Mission**: Enable users to input information about new YouTubers and predict the future subscribers of the input YouTuber based on data of mature YouTube channels
+**Mission**: The platform will enable users to input basic information about new YouTubers, such as video category, , and predict the future subscribers of the input YouTuber based on data of mature YouTube channels. 
 
 **Success criteria**: Prediction accuracy higher than 80%
 
@@ -150,6 +150,6 @@ Run `pytest` from the command line in the main project repository.
 
 Tests exist in `test/test_helpers.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg1Mjc2ODk1NSw1ODczMzA4OSwtOTYzMz
-g4NTU0XX0=
+eyJoaXN0b3J5IjpbLTE0MjQzNTc1NTMsNTg3MzMwODksLTk2Mz
+M4ODU1NF19
 -->
