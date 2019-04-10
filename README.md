@@ -24,6 +24,7 @@
 
 **Success criteria**: 
 Machine learning criteria: prediction root mean square error (RMSE) lower than 10% of the range of the actual values in the test set.
+
 Business criteria: 
  
 
@@ -153,7 +154,7 @@ Run `pytest` from the command line in the main project repository.
 
 Tests exist in `test/test_helpers.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA2NTMxMTg2MiwtNjUwODQyODYwLDU4OD
-YyNjY3LC0xNDkwMDYzNzMzLDU4NzMzMDg5LC05NjMzODg1NTRd
-fQ==
+eyJoaXN0b3J5IjpbLTYxOTk1NjEyNCwxMDY1MzExODYyLC02NT
+A4NDI4NjAsNTg4NjI2NjcsLTE0OTAwNjM3MzMsNTg3MzMwODks
+LTk2MzM4ODU1NF19
 -->
