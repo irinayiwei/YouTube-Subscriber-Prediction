@@ -18,14 +18,12 @@
 
 ## Project Charter 
 
-**Vision**: To evaluate the potential of new YouTubers
+**Vision**: This proj evaluate the potential of new YouTubers
 
 **Mission**: Enable users to input information about new YouTubers and predict the future subscribers of the input YouTuber based on data of mature YouTube channels
 
 **Success criteria**: Prediction accuracy higher than 80%
 
-
-_Note_: Project charters should actually be more detailed than this! But this is where the charter belongs.  
 
 ## Repo structure 
 
@@ -152,5 +150,5 @@ Run `pytest` from the command line in the main project repository.
 
 Tests exist in `test/test_helpers.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk2MzM4ODU1NF19
+eyJoaXN0b3J5IjpbMTU1Njg3OTk5NSwtOTYzMzg4NTU0XX0=
 -->
