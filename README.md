@@ -64,7 +64,7 @@ Optimally, this project will help stakeholders to predict the future growth of e
    - *Find* the nearest n (to be decided based on model performance) training neighbors for each channel in the test set and for the n neighbors:  -- 2 points**
    - *Build* 2 sets of models (one set using all variables, including "age", another using "age" only) using 10-fold cross-validation, ideally one or two models from each family (linear, trees, svm, boosting, etc); *tune* the parameter sets for each model -- 8 points**
    - *Calculate* the performance metrics for each model in the two sets (prediction RMSE, variable importance, etc) and *compare* the performance metrics among different models -- 4 points**
-   - *Repeat* on a different number of nearest neighbor set and re-run the models to arrive on the best n
+   - *Repeat* on a different number of nearest neighbor set and re-run the models to arrive on the best n -- 8 points**
    - *Finalize* the prediction model based on comparison across the two variable sets and decide on which set gives the best outcome; arrive at the best parameter set for the final model -- 2 points**
    - *Visualize* subscriber growth in terms of year and variable importance based on the final model -- 1 points**
 - Web App:
@@ -83,15 +83,9 @@ Optimally, this project will help stakeholders to predict the future growth of e
         -   Ideas that you may or may not follow through on
         -   Nice-to-haves but not requirements according to the current plan/timeline/charter.
 
-**Prioritize the backlog.**
-    -   Prioritize stories in the backlog from top (highest priority) to bottom (lowest priority)
-    -   Label which stories are  _planned_  for the next two weeks. These should be the top stories as this sprint will be prioritized over future sprint stories.
-    -   The rest of the backlog is there and prioritized in the cases that all planned stories are completed with still time to spare.
-    -   It’s okay if not all the stories are completed. Stories can be discarded if they are found unnecessary.
-    -   Icebox stories don’t need to be prioritized.
-
-**Size each story**.
-
+**Notations**: 
+- IB: ice box 
+- 
  
 
 
@@ -220,7 +214,7 @@ Run `pytest` from the command line in the main project repository.
 
 Tests exist in `test/test_helpers.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjQ0Nzc5OTc4LDY3OTYxOTUzMiwtMTc2Mj
+eyJoaXN0b3J5IjpbNzc2MjM3MjQxLDY3OTYxOTUzMiwtMTc2Mj
 I1ODAwOCw2ODc2NzE0NDEsLTE5NDAyNzA3ODYsMTU3Mjc3Nzg4
 OSwtMTMzNTg2NDU1Nyw5MzcxNTc4NTMsMTcyNDU3OTIzNSw1Nz
 EzMjEwNDgsLTE2MTUyMTY3MTQsMTA2NTMxMTg2MiwtNjUwODQy
