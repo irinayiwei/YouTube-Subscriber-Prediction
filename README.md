@@ -49,14 +49,14 @@ Optimally, this project will help stakeholders to predict the future growth of e
 
 - Literature Review: 
   - Find articles on past YouTube related projects -- 2 point***
-  - Extract useful datasets for the current project -- 1 point ***
-  - Identify significant features in subscriber prediction or channel assessment suggested by previous research -- 
-  - Identify effective algorithms in subscriber or video view prediction
+  - Extract useful datasets for the current project -- 1 point***
+  - Identify significant features in subscriber prediction or channel assessment suggested by previous research -- 1 point***
+  - Identify effective algorithms in subscriber or video view prediction -- 1 point***
 -  EDA:
-   - *Merge* multiple datasets to get a combined dataset that includes features for all variables
-   - *Clean* missing values and extreme values
-   - *Create* new features suggested by previous research, including taking the ratios, differences, etc for certain variables
-   - *Standardize* certain variables if needed, check for variable skewness and distributions
+   - *Merge* multiple datasets to get a combined dataset that includes features for all variables -- 0 point ***
+   - *Clean* missing values and extreme values -- 1 point **
+   - *Create* new features suggested by previous research, including taking the ratios, differences, etc for certain variables -- 2 point **
+   - *Standardize* certain variables if needed, check for variable skewness and distributions -- 1 point **
    - *Visualize* variable distributions and collinear relationships with response variable (subscriber count)
 - Model Building: 
    - *Split* the data into train, test and validation sets 
@@ -219,7 +219,7 @@ Run `pytest` from the command line in the main project repository.
 
 Tests exist in `test/test_helpers.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU0MDUwMTk2NSw2Nzk2MTk1MzIsLTE3Nj
+eyJoaXN0b3J5IjpbMjA3MDk4OTY3MSw2Nzk2MTk1MzIsLTE3Nj
 IyNTgwMDgsNjg3NjcxNDQxLC0xOTQwMjcwNzg2LDE1NzI3Nzc4
 ODksLTEzMzU4NjQ1NTcsOTM3MTU3ODUzLDE3MjQ1NzkyMzUsNT
 cxMzIxMDQ4LC0xNjE1MjE2NzE0LDEwNjUzMTE4NjIsLTY1MDg0
