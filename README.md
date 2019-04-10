@@ -35,7 +35,7 @@ The platform will enable users to input basic information about new YouTube chan
 ## Backlog
 **Develop Theme**: 
 
-Optimally, this project will help business stakeholders to compare the potential of entry-level YouTube channels and choose ideal candidates for cooperation opportunities. By identifying the potential of new channels provide quantitative support on . 
+Optimally, this project will help business stakeholders to compare the potential of entry-level YouTube channels and choose ideal candidates for cooperation opportunities. By identifying the potential of new channels at an early stage, while achieve the best business outcome. provide quantitative support on . 
 
 **Epics**: Break themes down into a set of work plans - larger chunks of work with a common objective.
 -   **Write stories**: Units of work that make up an epic. These are concrete activities that can be completed in an estimable amount of time.
@@ -181,8 +181,8 @@ Run `pytest` from the command line in the main project repository.
 
 Tests exist in `test/test_helpers.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjM1NDAwMTgyLDE3MjQ1NzkyMzUsNTcxMz
-IxMDQ4LC0xNjE1MjE2NzE0LDEwNjUzMTE4NjIsLTY1MDg0Mjg2
-MCw1ODg2MjY2NywtMTQ5MDA2MzczMyw1ODczMzA4OSwtOTYzMz
-g4NTU0XX0=
+eyJoaXN0b3J5IjpbNzkzMDgyNzQsMTcyNDU3OTIzNSw1NzEzMj
+EwNDgsLTE2MTUyMTY3MTQsMTA2NTMxMTg2MiwtNjUwODQyODYw
+LDU4ODYyNjY3LC0xNDkwMDYzNzMzLDU4NzMzMDg5LC05NjMzOD
+g1NTRdfQ==
 -->
