@@ -63,7 +63,7 @@ Optimally, this project will help stakeholders to predict the future growth of e
    - *Identify* a effective distance metrics to calculate the distance between channels, do not use "age" (the time a channel has come into existence) as a variable
    - *Find* the nearest n training neighbors for each channel in the test set and for the n neighbors: 
    - *Build* 2 sets of models (one set using all variables, including "age", another using "age" only) using 10-fold cross-validation, ideally one or two models from each family (linear, trees, svm, boosting, etc); *tune* the parameter sets for each model
-   - *Calculate* the performance metrics for each model (prediction RMSE, variable importance, etc) and *compare* the performance metrics among different models
+   - *Calculate* the performance metrics for each model in the two sets (prediction RMSE, variable importance, etc) and *compare* the performance metrics among different models
    - *Finalize* the prediction model based on comparison, arrive at the best parameter set for the final model
    - *Visualize* subscriber growth in terms of year and variable importance based on the final model
 - Web App:
@@ -218,7 +218,7 @@ Run `pytest` from the command line in the main project repository.
 
 Tests exist in `test/test_helpers.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzcxNjQ1ODc2LDY3OTYxOTUzMiwtMTc2Mj
+eyJoaXN0b3J5IjpbNDYyMjgxODI3LDY3OTYxOTUzMiwtMTc2Mj
 I1ODAwOCw2ODc2NzE0NDEsLTE5NDAyNzA3ODYsMTU3Mjc3Nzg4
 OSwtMTMzNTg2NDU1Nyw5MzcxNTc4NTMsMTcyNDU3OTIzNSw1Nz
 EzMjEwNDgsLTE2MTUyMTY3MTQsMTA2NTMxMTg2MiwtNjUwODQy
