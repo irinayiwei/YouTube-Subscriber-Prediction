@@ -57,8 +57,9 @@ Optimally, this project will help stakeholders to predict the future growth of e
    - *Clean* missing values and extreme values
    - *Create* new features suggested by previous research, including taking the ratios, differences, etc for certain variables
    - *Standardize* certain variables if needed, check for variable skewness and distributions
-   - *Visualize* variable distributions and colinear relationships 
+   - *Visualize* variable distributions and collinear relationships with response variable (subscriber count)
 - Model Building: 
+   - 
 - Web App:
 - Launching and Testing:
 
@@ -206,7 +207,7 @@ Run `pytest` from the command line in the main project repository.
 
 Tests exist in `test/test_helpers.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTIzMDUxNTIzLC0xNzYyMjU4MDA4LDY4Nz
+eyJoaXN0b3J5IjpbMTI5MzE5OTY3LC0xNzYyMjU4MDA4LDY4Nz
 Y3MTQ0MSwtMTk0MDI3MDc4NiwxNTcyNzc3ODg5LC0xMzM1ODY0
 NTU3LDkzNzE1Nzg1MywxNzI0NTc5MjM1LDU3MTMyMTA0OCwtMT
 YxNTIxNjcxNCwxMDY1MzExODYyLC02NTA4NDI4NjAsNTg4NjI2
