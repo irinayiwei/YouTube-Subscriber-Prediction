@@ -69,24 +69,17 @@ Optimally, this project will help stakeholders to predict the future growth of e
    - *Visualize* subscriber growth in terms of year and variable importance based on the final model -- BL 1 points**
 - Web App:
    - *Build* a pipeline from local data, modeling, to online amazon web service (AWS) -- BL 8 points*
-   - *Design* the display of the web interface for basic functionalities -- BL8 points*
+   - *Design* the display of the web interface for basic functionalities -- BL 8 points*
    - *Optimize* the interface by adding more visualizations and insights; maximize user interactions -- IB
 - Launching and Testing:
-  - *Launch* the web app on AWS and open for user input and feedback -- 2 points*
-  - *Test* for errors and fix running issues -- 2 points*
+  - *Launch* the web app on AWS and open for user input and feedback -- BL 2 points*
+  - *Test* for errors and fix running issues -- BL 2 points*
   - *Make* adjustment based on user feedback  -- IB
-
-**Split stories into backlog and icebox**
-    -   Backlog is the set of planned stories that can be prioritized.
-    -   Icebox is where to put:
-        -   Stories to be completed at a later stage that are larger and not yet broken down or
-        -   Ideas that you may or may not follow through on
-        -   Nice-to-haves but not requirements according to the current plan/timeline/charter.
 
 **Notations**: 
 - IB: IceBox 
 - BL: Backlog
-- Priority level for backlog: 
+- Priority levels for backlog: 
   - ****: very urgent, intended for the next two weeks
   - ***:  urgent, steps to be completed after **** tasks are finished
   - **: somewhat urgent, steps around the midpoints of the project
@@ -219,10 +212,10 @@ Run `pytest` from the command line in the main project repository.
 
 Tests exist in `test/test_helpers.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMTc4ODc4MTAsNjc5NjE5NTMyLC0xNz
-YyMjU4MDA4LDY4NzY3MTQ0MSwtMTk0MDI3MDc4NiwxNTcyNzc3
-ODg5LC0xMzM1ODY0NTU3LDkzNzE1Nzg1MywxNzI0NTc5MjM1LD
-U3MTMyMTA0OCwtMTYxNTIxNjcxNCwxMDY1MzExODYyLC02NTA4
-NDI4NjAsNTg4NjI2NjcsLTE0OTAwNjM3MzMsNTg3MzMwODksLT
-k2MzM4ODU1NF19
+eyJoaXN0b3J5IjpbMTY2MTA3MzkyNyw2Nzk2MTk1MzIsLTE3Nj
+IyNTgwMDgsNjg3NjcxNDQxLC0xOTQwMjcwNzg2LDE1NzI3Nzc4
+ODksLTEzMzU4NjQ1NTcsOTM3MTU3ODUzLDE3MjQ1NzkyMzUsNT
+cxMzIxMDQ4LC0xNjE1MjE2NzE0LDEwNjUzMTE4NjIsLTY1MDg0
+Mjg2MCw1ODg2MjY2NywtMTQ5MDA2MzczMyw1ODczMzA4OSwtOT
+YzMzg4NTU0XX0=
 -->
