@@ -18,7 +18,7 @@
 
 ## Project Charter 
 
-**Vision**: This proj evaluate the potential of new YouTubers
+**Vision**: This project aims to evaluate the potential growth of new YouTubers
 
 **Mission**: Enable users to input information about new YouTubers and predict the future subscribers of the input YouTuber based on data of mature YouTube channels
 
@@ -150,5 +150,5 @@ Run `pytest` from the command line in the main project repository.
 
 Tests exist in `test/test_helpers.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU1Njg3OTk5NSwtOTYzMzg4NTU0XX0=
+eyJoaXN0b3J5IjpbNTg3MzMwODksLTk2MzM4ODU1NF19
 -->
