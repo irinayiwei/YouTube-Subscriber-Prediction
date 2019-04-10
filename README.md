@@ -48,21 +48,21 @@ Optimally, this project will help stakeholders to predict the future growth of e
 **Stories**: 
 
 - Literature Review: 
-  - Find articles on past YouTube related projects -- 2 point***
-  - Extract useful datasets for the current project -- 1 point***
-  - Identify significant features in subscriber prediction or channel assessment suggested by previous research -- 1 point***
-  - Identify effective algorithms in subscriber or video view prediction -- 1 point***
+  - Find articles on past YouTube related projects -- 2 point****
+  - Extract useful datasets for the current project -- 1 point****
+  - Identify significant features in subscriber prediction or channel assessment suggested by previous research -- 1 point****
+  - Identify effective algorithms in subscriber or video view prediction -- 1 point****
 -  EDA:
-   - *Merge* multiple datasets to get a combined dataset that includes features for all variables -- 0 point ***
-   - *Clean* missing values and extreme values -- 1 point **
-   - *Create* new features suggested by previous research, including taking the ratios, differences, etc for certain variables -- 2 point **
-   - *Standardize* certain variables if needed, check for variable skewness and distributions -- 1 point **
-   - *Visualize* variable distributions and collinear relationships with response variable (subscriber count)
+   - *Merge* multiple datasets to get a combined dataset that includes features for all variables -- 0 point ****
+   - *Clean* missing values and extreme values -- 1 point ***
+   - *Create* new features suggested by previous research, including taking the ratios, differences, etc for certain variables -- 2 points ***
+   - *Standardize* certain variables if needed, check for variable skewness and distributions -- 1 point ***
+   - *Visualize* variable distributions and collinear relationships with response variable (subscriber count) -- 1 point ***
 - Model Building: 
-   - *Split* the data into train, test and validation sets 
-   - *Identify* a effective distance metrics to calculate the distance between channels, do not use "age" (the time a channel has come into existence) as a variable
-   - *Find* the nearest n training neighbors for each channel in the test set and for the n neighbors: 
-   - *Build* 2 sets of models (one set using all variables, including "age", another using "age" only) using 10-fold cross-validation, ideally one or two models from each family (linear, trees, svm, boosting, etc); *tune* the parameter sets for each model
+   - *Split* the data into train, test and validation sets  -- 0 point **
+   - *Identify* a effective distance metrics to calculate the distance between channels, do not use "age" (the time a channel has come into existence) as a variable -- 2 points**
+   - *Find* the nearest n training neighbors for each channel in the test set and for the n neighbors:  -- 2 points**
+   - *Build* 2 sets of models (one set using all variables, including "age", another using "age" only) using 10-fold cross-validation, ideally one or two models from each family (linear, trees, svm, boosting, etc); *tune* the parameter sets for each model -- 4 points**
    - *Calculate* the performance metrics for each model in the two sets (prediction RMSE, variable importance, etc) and *compare* the performance metrics among different models
    - *Finalize* the prediction model based on comparison across the two variable sets and decide on which set gives the best outcome; arrive at the best parameter set for the final model
    - *Visualize* subscriber growth in terms of year and variable importance based on the final model
@@ -219,7 +219,7 @@ Run `pytest` from the command line in the main project repository.
 
 Tests exist in `test/test_helpers.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA3MDk4OTY3MSw2Nzk2MTk1MzIsLTE3Nj
+eyJoaXN0b3J5IjpbLTg1MjQ1NTE5NCw2Nzk2MTk1MzIsLTE3Nj
 IyNTgwMDgsNjg3NjcxNDQxLC0xOTQwMjcwNzg2LDE1NzI3Nzc4
 ODksLTEzMzU4NjQ1NTcsOTM3MTU3ODUzLDE3MjQ1NzkyMzUsNT
 cxMzIxMDQ4LC0xNjE1MjE2NzE0LDEwNjUzMTE4NjIsLTY1MDg0
