@@ -71,8 +71,8 @@ Optimally, this project will help stakeholders to predict the future growth of e
    - *Design* the display of the web interface for basic functionalities -- 8 points
    - *Optimize* the interface by adding more visualizations and insights; maximize user interactions -- IB
 - Launching and Testing:
-  - *Launch* the web app on AWS and open for user input and feedback
-  - *Test* for errors and fix running issues -- 4 points
+  - *Launch* the web app on AWS and open for user input and feedback -- 2 points**
+  - *Test* for errors and fix running issues -- 2 points*
   - *Make* adjustment based on user feedback  -- IB
 
 **Split stories into backlog and icebox**
@@ -219,7 +219,7 @@ Run `pytest` from the command line in the main project repository.
 
 Tests exist in `test/test_helpers.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc4NTI0NTA3Nyw2Nzk2MTk1MzIsLTE3Nj
+eyJoaXN0b3J5IjpbMTQ0Mjc0MzUyNCw2Nzk2MTk1MzIsLTE3Nj
 IyNTgwMDgsNjg3NjcxNDQxLC0xOTQwMjcwNzg2LDE1NzI3Nzc4
 ODksLTEzMzU4NjQ1NTcsOTM3MTU3ODUzLDE3MjQ1NzkyMzUsNT
 cxMzIxMDQ4LC0xNjE1MjE2NzE0LDEwNjUzMTE4NjIsLTY1MDg0
