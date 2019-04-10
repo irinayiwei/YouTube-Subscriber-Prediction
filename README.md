@@ -20,7 +20,9 @@
 
 **Vision**: This project aims to evaluate the future growth of new YouTube channels and generate insights on the factors that mostly affect the development of a new channel. It also hopes to provide stakeholders visions on potential cooperation opportunities with entry level YouTubers who will be influential in the near future. 
 
-**Mission**: The platform will enable users to input basic information about new YouTube channels, such as video category, like-dislike ratio and views per subscriber, and predict the future subscriber number of the input based on data of mature YouTube channels. The model will find the most similar channels given input statistics, and use their information as a guideline to evaluate the potential subscribers of the new channel. 
+**Mission**: 
+
+The platform will enable users to input basic information about new YouTube channels, such as video category, like-dislike ratio and views per subscriber, and predict the future subscriber number of the input based on data of mature YouTube channels. The model will find the most similar channels given input statistics, and use their information as a guideline to evaluate the potential subscribers of the new channel. 
 
 **Success criteria**: 
 
@@ -28,7 +30,23 @@ Machine learning criteria: prediction root mean square error (RMSE) lower than 1
 
 Business criteria: 
 
-**Backlog**:
+## Backlog
+**Develop Theme**: 
+-   **Break themes down into epics**: Break themes down into a set of work plans - larger chunks of work with a common objective.
+-   **Write stories**: Units of work that make up an epic. These are concrete activities that can be completed in an estimable amount of time.
+-   **Split stories into backlog and icebox**
+    -   Backlog is the set of planned stories that can be prioritized.
+    -   Icebox is where to put:
+        -   Stories to be completed at a later stage that are larger and not yet broken down or
+        -   Ideas that you may or may not follow through on
+        -   Nice-to-haves but not requirements according to the current plan/timeline/charter.
+-   **Prioritize the backlog.**
+    -   Prioritize stories in the backlog from top (highest priority) to bottom (lowest priority)
+    -   Label which stories are  _planned_  for the next two weeks. These should be the top stories as this sprint will be prioritized over future sprint stories.
+    -   The rest of the backlog is there and prioritized in the cases that all planned stories are completed with still time to spare.
+    -   It’s okay if not all the stories are completed. Stories can be discarded if they are found unnecessary.
+    -   Icebox stories don’t need to be prioritized.
+-   **Size each story**.
 
  
 
@@ -158,7 +176,7 @@ Run `pytest` from the command line in the main project repository.
 
 Tests exist in `test/test_helpers.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MjQxMDIyMzEsLTE2MTUyMTY3MTQsMT
-A2NTMxMTg2MiwtNjUwODQyODYwLDU4ODYyNjY3LC0xNDkwMDYz
-NzMzLDU4NzMzMDg5LC05NjMzODg1NTRdfQ==
+eyJoaXN0b3J5IjpbNjQ2NTI4NDExLC0xNjE1MjE2NzE0LDEwNj
+UzMTE4NjIsLTY1MDg0Mjg2MCw1ODg2MjY2NywtMTQ5MDA2Mzcz
+Myw1ODczMzA4OSwtOTYzMzg4NTU0XX0=
 -->
