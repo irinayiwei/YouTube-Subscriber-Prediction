@@ -22,7 +22,7 @@
 
 **Mission**: Enable users to input information about new YouTubers and predict the future subscribers of the input YouTuber based on data of mature YouTube channels
 
-**Success criteria**: Prediction accuracy 
+**Success criteria**: Prediction accuracy higher than 80%
 
 
 _Note_: Project charters should actually be more detailed than this! But this is where the charter belongs.  
@@ -152,5 +152,5 @@ Run `pytest` from the command line in the main project repository.
 
 Tests exist in `test/test_helpers.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MzI5NjQ2MjVdfQ==
+eyJoaXN0b3J5IjpbLTk2MzM4ODU1NF19
 -->
