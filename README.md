@@ -39,15 +39,19 @@ Optimally, this project will help stakeholders to predict the future growth of e
 
 **Epics**: 
 
-- Literature review on previous YouTube-related projects
-- Early data exploration 
-- Model building
-- Web app building 
-- Launching and testing 
+- Literature Review
+- Early Data Exploration 
+- Model Building
+- Web App Building 
+- Launching and Testing 
 
 **Stories**: 
 
-- Literature Review:
+- Literature Review: 
+-  EDA:
+- Model Building:
+- Web App:
+- Launching and Testing:
 
 **Split stories into backlog and icebox**
     -   Backlog is the set of planned stories that can be prioritized.
@@ -193,9 +197,9 @@ Run `pytest` from the command line in the main project repository.
 
 Tests exist in `test/test_helpers.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMzIyNTYyMDMsNjg3NjcxNDQxLC0xOT
-QwMjcwNzg2LDE1NzI3Nzc4ODksLTEzMzU4NjQ1NTcsOTM3MTU3
-ODUzLDE3MjQ1NzkyMzUsNTcxMzIxMDQ4LC0xNjE1MjE2NzE0LD
-EwNjUzMTE4NjIsLTY1MDg0Mjg2MCw1ODg2MjY2NywtMTQ5MDA2
-MzczMyw1ODczMzA4OSwtOTYzMzg4NTU0XX0=
+eyJoaXN0b3J5IjpbNDM5MDQxNDYwLDY4NzY3MTQ0MSwtMTk0MD
+I3MDc4NiwxNTcyNzc3ODg5LC0xMzM1ODY0NTU3LDkzNzE1Nzg1
+MywxNzI0NTc5MjM1LDU3MTMyMTA0OCwtMTYxNTIxNjcxNCwxMD
+Y1MzExODYyLC02NTA4NDI4NjAsNTg4NjI2NjcsLTE0OTAwNjM3
+MzMsNTg3MzMwODksLTk2MzM4ODU1NF19
 -->
