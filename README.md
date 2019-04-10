@@ -37,15 +37,17 @@ The platform will enable users to input basic information about new YouTube chan
 
 Optimally, this project will help stakeholders to predict the future growth of entry-level YouTube channels and choose the ideal candidates for product promotion opportunities. By identifying the potential of new channels at an early stage, this project provides quantitative support to YouTube-related marketing decisions and generates insights on the comparison among similar new channels. Since young channels are in general more financially affordable to cooperate with compared to popular channels, this project will help users minimize their marketing cost while maximize business outcome. 
 
-**Epics**: Break themes down into a set of work plans - larger chunks of work with a common objective.
+**Epics**: 
 
-- Literature review on previous YouTube channel predictions
+- Literature review on previous YouTube-related projects
 - Early data exploration 
 - Model building
 - Web app building 
 - Launching and testing 
 
-**Write stories**: Units of work that make up an epic. These are concrete activities that can be completed in an estimable amount of time.
+**Stories**: 
+
+- Literature Review:
 
 **Split stories into backlog and icebox**
     -   Backlog is the set of planned stories that can be prioritized.
@@ -191,9 +193,9 @@ Run `pytest` from the command line in the main project repository.
 
 Tests exist in `test/test_helpers.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjg3NjcxNDQxLC0xOTQwMjcwNzg2LDE1Nz
-I3Nzc4ODksLTEzMzU4NjQ1NTcsOTM3MTU3ODUzLDE3MjQ1Nzky
-MzUsNTcxMzIxMDQ4LC0xNjE1MjE2NzE0LDEwNjUzMTE4NjIsLT
-Y1MDg0Mjg2MCw1ODg2MjY2NywtMTQ5MDA2MzczMyw1ODczMzA4
-OSwtOTYzMzg4NTU0XX0=
+eyJoaXN0b3J5IjpbLTEyMzIyNTYyMDMsNjg3NjcxNDQxLC0xOT
+QwMjcwNzg2LDE1NzI3Nzc4ODksLTEzMzU4NjQ1NTcsOTM3MTU3
+ODUzLDE3MjQ1NzkyMzUsNTcxMzIxMDQ4LC0xNjE1MjE2NzE0LD
+EwNjUzMTE4NjIsLTY1MDg0Mjg2MCw1ODg2MjY2NywtMTQ5MDA2
+MzczMyw1ODczMzA4OSwtOTYzMzg4NTU0XX0=
 -->
