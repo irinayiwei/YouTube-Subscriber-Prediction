@@ -38,20 +38,26 @@ The platform will enable users to input basic information about new YouTube chan
 Optimally, this project will help stakeholders to predict the future growth of entry-level YouTube channels and choose the ideal candidates for product promotion opportunities. By identifying the potential of new channels at an early stage, this project provides quantitative support to YouTube-related marketing decisions and generates insights on the comparison among similar new channels. Since young channels are in general more financially affordable to cooperate with compared to popular channels, this project will help users minimize their marketing cost while maximize business outcome. 
 
 **Epics**: Break themes down into a set of work plans - larger chunks of work with a common objective.
--   **Write stories**: Units of work that make up an epic. These are concrete activities that can be completed in an estimable amount of time.
--   **Split stories into backlog and icebox**
+
+-
+
+**Write stories**: Units of work that make up an epic. These are concrete activities that can be completed in an estimable amount of time.
+
+**Split stories into backlog and icebox**
     -   Backlog is the set of planned stories that can be prioritized.
     -   Icebox is where to put:
         -   Stories to be completed at a later stage that are larger and not yet broken down or
         -   Ideas that you may or may not follow through on
         -   Nice-to-haves but not requirements according to the current plan/timeline/charter.
--   **Prioritize the backlog.**
+
+**Prioritize the backlog.**
     -   Prioritize stories in the backlog from top (highest priority) to bottom (lowest priority)
     -   Label which stories are  _planned_  for the next two weeks. These should be the top stories as this sprint will be prioritized over future sprint stories.
     -   The rest of the backlog is there and prioritized in the cases that all planned stories are completed with still time to spare.
     -   It’s okay if not all the stories are completed. Stories can be discarded if they are found unnecessary.
     -   Icebox stories don’t need to be prioritized.
--   **Size each story**.
+
+**Size each story**.
 
  
 
@@ -181,9 +187,9 @@ Run `pytest` from the command line in the main project repository.
 
 Tests exist in `test/test_helpers.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI3MjcyMjU0NywxNTcyNzc3ODg5LC0xMz
-M1ODY0NTU3LDkzNzE1Nzg1MywxNzI0NTc5MjM1LDU3MTMyMTA0
-OCwtMTYxNTIxNjcxNCwxMDY1MzExODYyLC02NTA4NDI4NjAsNT
-g4NjI2NjcsLTE0OTAwNjM3MzMsNTg3MzMwODksLTk2MzM4ODU1
-NF19
+eyJoaXN0b3J5IjpbLTEzODY4OTgxMDgsMTU3Mjc3Nzg4OSwtMT
+MzNTg2NDU1Nyw5MzcxNTc4NTMsMTcyNDU3OTIzNSw1NzEzMjEw
+NDgsLTE2MTUyMTY3MTQsMTA2NTMxMTg2MiwtNjUwODQyODYwLD
+U4ODYyNjY3LC0xNDkwMDYzNzMzLDU4NzMzMDg5LC05NjMzODg1
+NTRdfQ==
 -->
