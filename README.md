@@ -23,6 +23,7 @@
 **Mission**: The platform will enable users to input basic information about new YouTube channels, such as video category, like-dislike ratio and views per subscriber, and predict the future subscriber number of the input based on data of mature YouTube channels. The model will find the most similar channels given input statistics, and use their information as a guideline to evaluate the potential subscribers of the new channel. 
 
 **Success criteria**: 
+
 Machine learning criteria: prediction root mean square error (RMSE) lower than 10% of the range of the actual values in the test set.
 
 Business criteria: 
@@ -154,7 +155,7 @@ Run `pytest` from the command line in the main project repository.
 
 Tests exist in `test/test_helpers.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYxOTk1NjEyNCwxMDY1MzExODYyLC02NT
-A4NDI4NjAsNTg4NjI2NjcsLTE0OTAwNjM3MzMsNTg3MzMwODks
-LTk2MzM4ODU1NF19
+eyJoaXN0b3J5IjpbLTE2MTUyMTY3MTQsMTA2NTMxMTg2MiwtNj
+UwODQyODYwLDU4ODYyNjY3LC0xNDkwMDYzNzMzLDU4NzMzMDg5
+LC05NjMzODg1NTRdfQ==
 -->
