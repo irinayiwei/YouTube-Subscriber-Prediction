@@ -20,7 +20,7 @@
 
 **Vision**: This project aims to evaluate the potential growth of new YouTubers 
 
-**Mission**: The platform will enable users to input basic information about new YouTubers, such as video category, like-dislike ratio and views per subscriber, and predict the future subscribers of the input YouTuber based on data of mature YouTube channels. The model will find the most similar channels from the existed dataset, and use their information as a guideline to evaluate the potential  of the new YouTube channel. 
+**Mission**: The platform will enable users to input basic information about new YouTubers, such as video category, like-dislike ratio and views per subscriber, and predict the future subscribers of the input YouTuber based on data of mature YouTube channels. The model will find the most similar channels from the existed dataset, and use their information as a guideline to evaluate the potential subscribers of the new YouTube channel. 
 
 **Success criteria**: Prediction accuracy higher than 80%
 
@@ -150,6 +150,6 @@ Run `pytest` from the command line in the main project repository.
 
 Tests exist in `test/test_helpers.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzIwNzkzNiwtMTQ5MDA2MzczMyw1ODczMz
-A4OSwtOTYzMzg4NTU0XX0=
+eyJoaXN0b3J5IjpbLTE5MDA0NTc4MzMsLTE0OTAwNjM3MzMsNT
+g3MzMwODksLTk2MzM4ODU1NF19
 -->
