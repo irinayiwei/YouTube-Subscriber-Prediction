@@ -59,7 +59,10 @@ Optimally, this project will help stakeholders to predict the future growth of e
    - *Standardize* certain variables if needed, check for variable skewness and distributions
    - *Visualize* variable distributions and collinear relationships with response variable (subscriber count)
 - Model Building: 
-   - 
+   - Build
+   - Compare 
+   - *Finalize* 
+   - *Visualize*
 - Web App:
 - Launching and Testing:
 
@@ -207,9 +210,10 @@ Run `pytest` from the command line in the main project repository.
 
 Tests exist in `test/test_helpers.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI5MzE5OTY3LC0xNzYyMjU4MDA4LDY4Nz
-Y3MTQ0MSwtMTk0MDI3MDc4NiwxNTcyNzc3ODg5LC0xMzM1ODY0
-NTU3LDkzNzE1Nzg1MywxNzI0NTc5MjM1LDU3MTMyMTA0OCwtMT
-YxNTIxNjcxNCwxMDY1MzExODYyLC02NTA4NDI4NjAsNTg4NjI2
-NjcsLTE0OTAwNjM3MzMsNTg3MzMwODksLTk2MzM4ODU1NF19
+eyJoaXN0b3J5IjpbMTA5MjE0MDI0NSwtMTc2MjI1ODAwOCw2OD
+c2NzE0NDEsLTE5NDAyNzA3ODYsMTU3Mjc3Nzg4OSwtMTMzNTg2
+NDU1Nyw5MzcxNTc4NTMsMTcyNDU3OTIzNSw1NzEzMjEwNDgsLT
+E2MTUyMTY3MTQsMTA2NTMxMTg2MiwtNjUwODQyODYwLDU4ODYy
+NjY3LC0xNDkwMDYzNzMzLDU4NzMzMDg5LC05NjMzODg1NTRdfQ
+==
 -->
