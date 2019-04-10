@@ -51,7 +51,7 @@ Optimally, this project will help stakeholders to predict the future growth of e
   - Find articles on past YouTube related projects
   - Extract useful datasets for the current project
   - Identify significant features in subscriber prediction or channel assessment suggested by previous research
-  - Identify effective algorithms in view prediction
+  - Identify effective algorithms in subscriber or video view prediction
 -  EDA:
 - Model Building:
 - Web App:
@@ -201,7 +201,7 @@ Run `pytest` from the command line in the main project repository.
 
 Tests exist in `test/test_helpers.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExODU5OTIxNjUsNjg3NjcxNDQxLC0xOT
+eyJoaXN0b3J5IjpbLTE2OTA3MjA0NDMsNjg3NjcxNDQxLC0xOT
 QwMjcwNzg2LDE1NzI3Nzc4ODksLTEzMzU4NjQ1NTcsOTM3MTU3
 ODUzLDE3MjQ1NzkyMzUsNTcxMzIxMDQ4LC0xNjE1MjE2NzE0LD
 EwNjUzMTE4NjIsLTY1MDg0Mjg2MCw1ODg2MjY2NywtMTQ5MDA2
