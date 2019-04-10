@@ -18,7 +18,7 @@
 
 ## Project Charter 
 
-**Vision**: This project aims to evaluate the potential growth of new YouTube channels and generate insight on 
+**Vision**: This project aims to evaluate the future growth of new YouTube channels and generate insight on . It also potential cooperation opportunities with entry level YouTubers. 
 
 **Mission**: The platform will enable users to input basic information about new YouTube channels, such as video category, like-dislike ratio and views per subscriber, and predict the future subscriber number of the input based on data of mature YouTube channels. The model will find the most similar channels given input statistics, and use their information as a guideline to evaluate the potential subscribers of the new channel. 
 
@@ -150,6 +150,6 @@ Run `pytest` from the command line in the main project repository.
 
 Tests exist in `test/test_helpers.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTg4NjI2NjcsLTE0OTAwNjM3MzMsNTg3Mz
-MwODksLTk2MzM4ODU1NF19
+eyJoaXN0b3J5IjpbLTMyODU4OTM0LDU4ODYyNjY3LC0xNDkwMD
+YzNzMzLDU4NzMzMDg5LC05NjMzODg1NTRdfQ==
 -->
