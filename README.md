@@ -53,7 +53,8 @@ Optimally, this project will help stakeholders to predict the future growth of e
   - Identify significant features in subscriber prediction or channel assessment suggested by previous research
   - Identify effective algorithms in subscriber or video view prediction
 -  EDA:
-   - d
+   - Merge multiple datasets to get a combined dataset that includes features for a
+   - 
 - Model Building:
 - Web App:
 - Launching and Testing:
@@ -202,9 +203,10 @@ Run `pytest` from the command line in the main project repository.
 
 Tests exist in `test/test_helpers.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3NjIyNTgwMDgsNjg3NjcxNDQxLC0xOT
-QwMjcwNzg2LDE1NzI3Nzc4ODksLTEzMzU4NjQ1NTcsOTM3MTU3
-ODUzLDE3MjQ1NzkyMzUsNTcxMzIxMDQ4LC0xNjE1MjE2NzE0LD
-EwNjUzMTE4NjIsLTY1MDg0Mjg2MCw1ODg2MjY2NywtMTQ5MDA2
-MzczMyw1ODczMzA4OSwtOTYzMzg4NTU0XX0=
+eyJoaXN0b3J5IjpbLTEwOTY4NjMwNTYsLTE3NjIyNTgwMDgsNj
+g3NjcxNDQxLC0xOTQwMjcwNzg2LDE1NzI3Nzc4ODksLTEzMzU4
+NjQ1NTcsOTM3MTU3ODUzLDE3MjQ1NzkyMzUsNTcxMzIxMDQ4LC
+0xNjE1MjE2NzE0LDEwNjUzMTE4NjIsLTY1MDg0Mjg2MCw1ODg2
+MjY2NywtMTQ5MDA2MzczMyw1ODczMzA4OSwtOTYzMzg4NTU0XX
+0=
 -->
