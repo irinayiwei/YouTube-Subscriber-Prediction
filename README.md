@@ -60,9 +60,9 @@ Optimally, this project will help stakeholders to predict the future growth of e
    - *Visualize* variable distributions and collinear relationships with response variable (subscriber count)
 - Model Building: 
    - *Split* the data into train, test and validation sets 
-   - *Identify* a effective distance metrics to calculate the distance between channels, do not use the time a channel  as a variable
+   - *Identify* a effective distance metrics to calculate the distance between channels, do not use "age" (the time a channel has come into existence) as a variable
    - *Find* the nearest n training neighbors for each channel in the test set and for the n neighbors: 
-   - *Build* different models using 10-fold cross-validation, ideally one or two models from each family (linear, trees, svm, boosting, etc); *tune* the parameter sets for each model
+   - *Build* 2 sets of models (one set using all variables, including "age", another using "age" only) using 10-fold cross-validation, ideally one or two models from each family (linear, trees, svm, boosting, etc); *tune* the parameter sets for each model
    - *Calculate* the performance metrics for each model (prediction RMSE, variable importance, etc) and *compare* the performance metrics among different models
    - *Finalize* the prediction model based on comparison, arrive at the best parameter set for the final model
    - *Visualize* subscriber growth in terms of year and variable importance based on the final model
@@ -218,10 +218,10 @@ Run `pytest` from the command line in the main project repository.
 
 Tests exist in `test/test_helpers.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMzQyOTY2OCw2Nzk2MTk1MzIsLTE3Nj
-IyNTgwMDgsNjg3NjcxNDQxLC0xOTQwMjcwNzg2LDE1NzI3Nzc4
-ODksLTEzMzU4NjQ1NTcsOTM3MTU3ODUzLDE3MjQ1NzkyMzUsNT
-cxMzIxMDQ4LC0xNjE1MjE2NzE0LDEwNjUzMTE4NjIsLTY1MDg0
-Mjg2MCw1ODg2MjY2NywtMTQ5MDA2MzczMyw1ODczMzA4OSwtOT
-YzMzg4NTU0XX0=
+eyJoaXN0b3J5IjpbMzcxNjQ1ODc2LDY3OTYxOTUzMiwtMTc2Mj
+I1ODAwOCw2ODc2NzE0NDEsLTE5NDAyNzA3ODYsMTU3Mjc3Nzg4
+OSwtMTMzNTg2NDU1Nyw5MzcxNTc4NTMsMTcyNDU3OTIzNSw1Nz
+EzMjEwNDgsLTE2MTUyMTY3MTQsMTA2NTMxMTg2MiwtNjUwODQy
+ODYwLDU4ODYyNjY3LC0xNDkwMDYzNzMzLDU4NzMzMDg5LC05Nj
+MzODg1NTRdfQ==
 -->
