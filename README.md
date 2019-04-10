@@ -18,7 +18,9 @@
 
 ## Project Charter 
 
-**Vision**: This project aims to evaluate the future growth of new YouTube channels and generate insights on the factors that mostly affect the development of a new channel. It also hopes to provide stakeholders visions on potential cooperation opportunities with entry level YouTubers who will be influential in the near future. 
+**Vision**: 
+
+This project aims to evaluate the future growth of new YouTube channels and generate insights on the factors that mostly affect the development of a new channel. It also hopes to provide stakeholders visions on potential cooperation opportunities with entry level YouTubers who will be influential in the near future. 
 
 **Mission**: 
 
@@ -26,13 +28,13 @@ The platform will enable users to input basic information about new YouTube chan
 
 **Success criteria**: 
 
-Machine learning criteria: prediction root mean square error (RMSE) lower than 10% of the range of the actual values in the test set.
+- Machine learning criteria: prediction root mean square error (RMSE) lower than 10% of the range of the actual values in the test set.
 
-Business criteria: 
+- Business criteria: 
 
 ## Backlog
 **Develop Theme**: 
--   **Break themes down into epics**: Break themes down into a set of work plans - larger chunks of work with a common objective.
+**Epics**: Break themes down into a set of work plans - larger chunks of work with a common objective.
 -   **Write stories**: Units of work that make up an epic. These are concrete activities that can be completed in an estimable amount of time.
 -   **Split stories into backlog and icebox**
     -   Backlog is the set of planned stories that can be prioritized.
@@ -176,7 +178,7 @@ Run `pytest` from the command line in the main project repository.
 
 Tests exist in `test/test_helpers.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjQ2NTI4NDExLC0xNjE1MjE2NzE0LDEwNj
-UzMTE4NjIsLTY1MDg0Mjg2MCw1ODg2MjY2NywtMTQ5MDA2Mzcz
-Myw1ODczMzA4OSwtOTYzMzg4NTU0XX0=
+eyJoaXN0b3J5IjpbMTYzNTA3ODQxMywtMTYxNTIxNjcxNCwxMD
+Y1MzExODYyLC02NTA4NDI4NjAsNTg4NjI2NjcsLTE0OTAwNjM3
+MzMsNTg3MzMwODksLTk2MzM4ODU1NF19
 -->
