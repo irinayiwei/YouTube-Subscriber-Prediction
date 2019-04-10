@@ -60,7 +60,7 @@ Optimally, this project will help stakeholders to predict the future growth of e
    - *Visualize* variable distributions and collinear relationships with response variable (subscriber count)
 - Model Building: 
    - *Split* the data into train, test and validation sets 
-   - *Find* the nearest n neighbors for each 
+   - *Find* the nearest n training neighbors for each channel in the test set and 
    - *Build* different models on the dataset using 10-fold cross-validation, ideally one or two models from each family (linear, trees, svm, boosting, etc); *tune* the parameter sets for each model
    - *Calculate* the performance metrics for each model (prediction RMSE, variable importance, etc) and *compare* the performance metrics among different models
    - *Finalize* the prediction model based on comparison, arrive at the best parameter set for the final model
@@ -217,7 +217,7 @@ Run `pytest` from the command line in the main project repository.
 
 Tests exist in `test/test_helpers.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQxNzI1NTUyOSw2Nzk2MTk1MzIsLTE3Nj
+eyJoaXN0b3J5IjpbLTgxMzg0NTYyOSw2Nzk2MTk1MzIsLTE3Nj
 IyNTgwMDgsNjg3NjcxNDQxLC0xOTQwMjcwNzg2LDE1NzI3Nzc4
 ODksLTEzMzU4NjQ1NTcsOTM3MTU3ODUzLDE3MjQ1NzkyMzUsNT
 cxMzIxMDQ4LC0xNjE1MjE2NzE0LDEwNjUzMTE4NjIsLTY1MDg0
