@@ -43,18 +43,18 @@ Optimally, this project will help stakeholders to predict the future growth of e
 
 **Epics and Stories**: 
 
-- **Epics1 -- Literature Review**: 
+- **Epics 1 -- Conduct Literature Review**: 
   - Find articles on past YouTube related projects -- BL 2 point****
   - Extract useful datasets for the current project -- BL 1 point****
   - Identify significant features in subscriber prediction or channel assessment suggested by previous research -- BL 1 point****
   - Identify effective algorithms in subscriber or video view prediction -- BL 1 point****
--  **Epics 2EDA:
+-  **Epics 2 -- ExploratiA**:
    - *Merge* multiple datasets to get a combined dataset that includes features for all variables -- BL 0 point****
    - *Clean* missing values and extreme values -- BL 1 point***
    - *Create* new features suggested by previous research, including taking the ratios, differences, etc for certain variables -- BL 2 points***
    - *Standardize* certain variables if needed, check for variable skewness and distributions -- BL 1 point ***
    - *Visualize* variable distributions and collinear relationships with response variable (subscriber count) -- BL 1 point***
-- Model Building: 
+- **Epics 3 -- Model Building**: 
    - *Split* the data into train, test and validation sets  -- BL 0 point **
    - *Identify* a effective distance metrics to calculate the distance between channels, do not use "age" (the time a channel has come into existence) as a variable -- BL 2 points**
    - *Find* the nearest n (to be decided based on model performance) training neighbors for each channel in the test set and for the n neighbors:  -- BL 2 points**
@@ -63,11 +63,11 @@ Optimally, this project will help stakeholders to predict the future growth of e
    - *Repeat* on a different number of nearest neighbor set and re-run the models to arrive on the best n -- BL 8 points**
    - *Finalize* the prediction model based on comparison across the two variable sets and decide on which set gives the best outcome; arrive at the best parameter set for the final model -- BL 2 points**
    - *Visualize* subscriber growth in terms of year and variable importance based on the final model -- BL 1 points**
-- Web App:
+- **Epics 4 --Web App**:
    - *Build* a pipeline from local data, modeling, to online amazon web service (AWS) -- BL 8 points*
    - *Design* the display of the web interface for basic functionalities -- BL 8 points*
    - *Optimize* the interface by adding more visualizations and insights; maximize user interactions -- IB
-- Launching and Testing:
+- **Epics 5 -- Launching and Testing**:
   - *Launch* the web app on AWS and open for user input and feedback -- BL 2 points*
   - *Test* for errors and fix running issues -- BL 2 points*
   - *Make* adjustment based on user feedback  -- IB
@@ -208,11 +208,11 @@ Run `pytest` from the command line in the main project repository.
 
 Tests exist in `test/test_helpers.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzOTczMjk1MzYsLTE2MzAwNjk3ODIsOT
-MzMDEzMDMyLC03MDg5MzI5MTksLTEyODg3MzY2MjEsOTMwMDI5
-MzA2LDE2NjEwNzM5MjcsNjc5NjE5NTMyLC0xNzYyMjU4MDA4LD
-Y4NzY3MTQ0MSwtMTk0MDI3MDc4NiwxNTcyNzc3ODg5LC0xMzM1
-ODY0NTU3LDkzNzE1Nzg1MywxNzI0NTc5MjM1LDU3MTMyMTA0OC
-wtMTYxNTIxNjcxNCwxMDY1MzExODYyLC02NTA4NDI4NjAsNTg4
-NjI2NjddfQ==
+eyJoaXN0b3J5IjpbLTc4MjQwNDkyMSwtMTYzMDA2OTc4Miw5Mz
+MwMTMwMzIsLTcwODkzMjkxOSwtMTI4ODczNjYyMSw5MzAwMjkz
+MDYsMTY2MTA3MzkyNyw2Nzk2MTk1MzIsLTE3NjIyNTgwMDgsNj
+g3NjcxNDQxLC0xOTQwMjcwNzg2LDE1NzI3Nzc4ODksLTEzMzU4
+NjQ1NTcsOTM3MTU3ODUzLDE3MjQ1NzkyMzUsNTcxMzIxMDQ4LC
+0xNjE1MjE2NzE0LDEwNjUzMTE4NjIsLTY1MDg0Mjg2MCw1ODg2
+MjY2N119
 -->
