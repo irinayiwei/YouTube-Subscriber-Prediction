@@ -44,25 +44,25 @@ Optimally, this project will help stakeholders to predict the future growth of e
 **Epics and Stories**: 
 
 - **Epics 1 -- Literature Review**: 
-  - **Story 1**: *Find* articles on past YouTube related projects -- BL 2 point****
+  - **Story1**: *Find* articles on past YouTube related projects -- BL 2 point****
   - **Story2**: *Extract* useful datasets for the current project -- BL 1 point****
   - **Story3**: *Identify* significant features in subscriber prediction or channel assessment suggested by previous research -- BL 1 point****
-  - **Story4**:Identify effective algorithms in subscriber or video view prediction -- BL 1 point****
+  - **Story4**: *Identify* effective algorithms in subscriber or video view prediction -- BL 1 point****
 -  **Epics 2 -- Exploratory Data Analysis**:
-   - *Merge* multiple datasets to get a combined dataset that includes features for all variables -- BL 0 point****
-   - *Clean* missing values and extreme values -- BL 1 point***
-   - *Create* new features suggested by previous research, including taking the ratios, differences, etc for certain variables -- BL 2 points***
-   - *Standardize* certain variables if needed, check for variable skewness and distributions -- BL 1 point ***
-   - *Visualize* variable distributions and collinear relationships with response variable (subscriber count) -- BL 1 point***
+   - **Story1**: *Merge* multiple datasets to get a combined dataset that includes features for all variables -- BL 0 point****
+   - **Story2**: *Clean* missing values and extreme values -- BL 1 point***
+   - **Story3**: *Create* new features suggested by previous research, including taking the ratios, differences, etc for certain variables -- BL 2 points***
+   - **Story4**: *Standardize* certain variables if needed, check for variable skewness and distributions -- BL 1 point ***
+   - **Story5**: *Visualize* variable distributions and collinear relationships with response variable (subscriber count) -- BL 1 point***
 - **Epics 3 -- Model Building**: 
-   - *Split* the data into train, test and validation sets  -- BL 0 point **
-   - *Identify* a effective distance metrics to calculate the distance between channels, do not use "age" (the time a channel has come into existence) as a variable -- BL 2 points**
-   - *Find* the nearest n (to be decided based on model performance) training neighbors for each channel in the test set and for the n neighbors:  -- BL 2 points**
-   - *Build* 2 sets of models (one set using all variables, including "age", another using "age" only) using 10-fold cross-validation, ideally one or two models from each family (linear, trees, svm, boosting, etc); *tune* the parameter sets for each model -- BL 8 points**
-   - *Calculate* the performance metrics for each model in the two sets (prediction RMSE, variable importance, etc) and *compare* the performance metrics among different models -- BL 4 points**
-   - *Repeat* on a different number of nearest neighbor set and re-run the models to arrive on the best n -- BL 8 points**
-   - *Finalize* the prediction model based on comparison across the two variable sets and decide on which set gives the best outcome; arrive at the best parameter set for the final model -- BL 2 points**
-   - *Visualize* subscriber growth in terms of year and variable importance based on the final model -- BL 1 points**
+   - **Story1**: *Split* the data into train, test and validation sets  -- BL 0 point **
+   - **Story2**: *Identify* a effective distance metrics to calculate the distance between channels, do not use "age" (the time a channel has come into existence) as a variable -- BL 2 points**
+   - **Story3**: *Find* the nearest n (to be decided based on model performance) training neighbors for each channel in the test set and for the n neighbors:  -- BL 2 points**
+   - **Story4**: *Build* 2 sets of models (one set using all variables, including "age", another using "age" only) using 10-fold cross-validation, ideally one or two models from each family (linear, trees, svm, boosting, etc); *tune* the parameter sets for each model -- BL 8 points**
+   - **Story5**: *Calculate* the performance metrics for each model in the two sets (prediction RMSE, variable importance, etc) and *compare* the performance metrics among different models -- BL 4 points**
+   - **Story6**: *Repeat* on a different number of nearest neighbor set and re-run the models to arrive on the best n -- BL 8 points**
+   - **Story7**: *Finalize* the prediction model based on comparison across the two variable sets and decide on which set gives the best outcome; arrive at the best parameter set for the final model -- BL 2 points**
+   - **Story8**: *Visualize* subscriber growth in terms of year and variable importance based on the final model -- BL 1 points**
 - **Epics 4 -- Web App Building**:
    - *Build* a pipeline from local data, modeling, to online amazon web service (AWS) -- BL 8 points*
    - *Design* the display of the web interface for basic functionalities -- BL 8 points*
@@ -213,7 +213,7 @@ Run `pytest` from the command line in the main project repository.
 
 Tests exist in `test/test_helpers.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA2MDAwNzUyMCwtMTYzMDA2OTc4Miw5Mz
+eyJoaXN0b3J5IjpbLTY4Mzk3NDg3OCwtMTYzMDA2OTc4Miw5Mz
 MwMTMwMzIsLTcwODkzMjkxOSwtMTI4ODczNjYyMSw5MzAwMjkz
 MDYsMTY2MTA3MzkyNyw2Nzk2MTk1MzIsLTE3NjIyNTgwMDgsNj
 g3NjcxNDQxLC0xOTQwMjcwNzg2LDE1NzI3Nzc4ODksLTEzMzU4
