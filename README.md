@@ -82,11 +82,20 @@ Optimally, this project will help stakeholders to predict the future growth of e
   - *: not urgent, steps towards the end of the project
  
  **Backlog**:
- - 
+ - Epic1.Story1
+ - Epic1.Story2
+ - Epic1.Story3
+ - Epic1.Story4
+ - Epic2.Story1
+ - Epic2.Story2
+ - Epic2.Story3
+ - Epic2.Story4
+ - Epic2.Story5
+ - Epic3.Story1
 
 **IceBox**:
-- Epics4.Story3
-- Epics5.Story3
+- Epic4.Story3
+- Epic5.Story3
 
 ## Repo structure 
 
@@ -213,7 +222,7 @@ Run `pytest` from the command line in the main project repository.
 
 Tests exist in `test/test_helpers.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjYwMzU2NjI4LC0xNjMwMDY5NzgyLDkzMz
+eyJoaXN0b3J5IjpbMjE5Nzg5ODAyLC0xNjMwMDY5NzgyLDkzMz
 AxMzAzMiwtNzA4OTMyOTE5LC0xMjg4NzM2NjIxLDkzMDAyOTMw
 NiwxNjYxMDczOTI3LDY3OTYxOTUzMiwtMTc2MjI1ODAwOCw2OD
 c2NzE0NDEsLTE5NDAyNzA3ODYsMTU3Mjc3Nzg4OSwtMTMzNTg2
