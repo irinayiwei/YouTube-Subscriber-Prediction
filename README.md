@@ -41,22 +41,14 @@ This platform will enable users to input basic information (such as video catego
 
 Optimally, this project will help stakeholders to predict the future growth of entry-level YouTube channels and choose the ideal candidates for product promotion opportunities. By identifying the potential of new channels at an early stage, this project provides quantitative support to YouTube-related marketing decisions and generates insights on the comparison among similar new channels. Since young channels are in general more financially affordable to cooperate with compared to popular channels, this project will help users minimize their marketing cost while maximize the business outcome. 
 
-**Epics**: 
+**Epics and Stories**: 
 
-- Literature Review
-- Early Data Exploration 
-- Model Building
-- Web App Building 
-- Launching and Testing 
-
-**Stories**: 
-
-- Literature Review: 
+- **Epics1 -- Literature Review**: 
   - Find articles on past YouTube related projects -- BL 2 point****
   - Extract useful datasets for the current project -- BL 1 point****
   - Identify significant features in subscriber prediction or channel assessment suggested by previous research -- BL 1 point****
   - Identify effective algorithms in subscriber or video view prediction -- BL 1 point****
--  EDA:
+-  **Epics 2EDA:
    - *Merge* multiple datasets to get a combined dataset that includes features for all variables -- BL 0 point****
    - *Clean* missing values and extreme values -- BL 1 point***
    - *Create* new features suggested by previous research, including taking the ratios, differences, etc for certain variables -- BL 2 points***
@@ -216,11 +208,11 @@ Run `pytest` from the command line in the main project repository.
 
 Tests exist in `test/test_helpers.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MzAwNjk3ODIsOTMzMDEzMDMyLC03MD
-g5MzI5MTksLTEyODg3MzY2MjEsOTMwMDI5MzA2LDE2NjEwNzM5
-MjcsNjc5NjE5NTMyLC0xNzYyMjU4MDA4LDY4NzY3MTQ0MSwtMT
-k0MDI3MDc4NiwxNTcyNzc3ODg5LC0xMzM1ODY0NTU3LDkzNzE1
-Nzg1MywxNzI0NTc5MjM1LDU3MTMyMTA0OCwtMTYxNTIxNjcxNC
-wxMDY1MzExODYyLC02NTA4NDI4NjAsNTg4NjI2NjcsLTE0OTAw
-NjM3MzNdfQ==
+eyJoaXN0b3J5IjpbLTEzOTczMjk1MzYsLTE2MzAwNjk3ODIsOT
+MzMDEzMDMyLC03MDg5MzI5MTksLTEyODg3MzY2MjEsOTMwMDI5
+MzA2LDE2NjEwNzM5MjcsNjc5NjE5NTMyLC0xNzYyMjU4MDA4LD
+Y4NzY3MTQ0MSwtMTk0MDI3MDc4NiwxNTcyNzc3ODg5LC0xMzM1
+ODY0NTU3LDkzNzE1Nzg1MywxNzI0NTc5MjM1LDU3MTMyMTA0OC
+wtMTYxNTIxNjcxNCwxMDY1MzExODYyLC02NTA4NDI4NjAsNTg4
+NjI2NjddfQ==
 -->
