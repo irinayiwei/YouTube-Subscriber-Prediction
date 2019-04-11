@@ -82,15 +82,15 @@ Optimally, this project will help stakeholders to predict the future growth of e
   - *: not urgent, steps towards the end of the project
  
  **Backlog**:
- - Epic1.Story1
- - Epic1.Story2
- - Epic1.Story3
- - Epic1.Story4
- - Epic2.Story1
- - Epic2.Story2
- - Epic2.Story3
- - Epic2.Story4
- - Epic2.Story5
+ - Epic1.Story1: 2 points
+ - Epic1.Story2: 1 points
+ - Epic1.Story3: 1 points
+ - Epic1.Story4: 1 points
+ - Epic2.Story1: 0 points 
+ - Epic2.Story2: 1
+ - Epic2.Story3: 2
+ - Epic2.Story4: 1
+ - Epic2.Story5: 1
  - Epic3.Story1
  - Epic3.Story2
  - Epic3.Story3
@@ -235,11 +235,11 @@ Run `pytest` from the command line in the main project repository.
 
 Tests exist in `test/test_helpers.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMDEyOTcwMzUsLTE2MzAwNjk3ODIsOT
-MzMDEzMDMyLC03MDg5MzI5MTksLTEyODg3MzY2MjEsOTMwMDI5
-MzA2LDE2NjEwNzM5MjcsNjc5NjE5NTMyLC0xNzYyMjU4MDA4LD
-Y4NzY3MTQ0MSwtMTk0MDI3MDc4NiwxNTcyNzc3ODg5LC0xMzM1
-ODY0NTU3LDkzNzE1Nzg1MywxNzI0NTc5MjM1LDU3MTMyMTA0OC
-wtMTYxNTIxNjcxNCwxMDY1MzExODYyLC02NTA4NDI4NjAsNTg4
-NjI2NjddfQ==
+eyJoaXN0b3J5IjpbNTIyMDQzMDA4LC0xMDAxMjk3MDM1LC0xNj
+MwMDY5NzgyLDkzMzAxMzAzMiwtNzA4OTMyOTE5LC0xMjg4NzM2
+NjIxLDkzMDAyOTMwNiwxNjYxMDczOTI3LDY3OTYxOTUzMiwtMT
+c2MjI1ODAwOCw2ODc2NzE0NDEsLTE5NDAyNzA3ODYsMTU3Mjc3
+Nzg4OSwtMTMzNTg2NDU1Nyw5MzcxNTc4NTMsMTcyNDU3OTIzNS
+w1NzEzMjEwNDgsLTE2MTUyMTY3MTQsMTA2NTMxMTg2MiwtNjUw
+ODQyODYwXX0=
 -->
