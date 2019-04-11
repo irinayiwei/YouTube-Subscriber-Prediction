@@ -24,7 +24,7 @@ This project aims to evaluate the future growth of new YouTube channels and gene
 
 **Mission**: 
 
-This platform will enable users to input basic information about new YouTube channels, such as video category and like-dislike ratio, and predict the future subscriber number of the input channel in the desired time period.  based on data of mature YouTube channels. The model will find the most similar channels given input statistics, and use their information as a guideline to evaluate the potential subscribers of the new channel. 
+This platform will enable users to input basic information about new YouTube channels (such as video category and like-dislike ratio), as well as a desired time period, and predict the future subscriber number of the channels in the input time period.  based on data of mature YouTube channels. The model will utilize the data of mature YouTube channels find the most similar channels given input statistics, and use their information as a guideline to evaluate the potential subscribers of the new channel. 
 
 **Success criteria**: 
 
@@ -214,11 +214,11 @@ Run `pytest` from the command line in the main project repository.
 
 Tests exist in `test/test_helpers.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTExMDY5MzMwLC03MDg5MzI5MTksLTEyOD
-g3MzY2MjEsOTMwMDI5MzA2LDE2NjEwNzM5MjcsNjc5NjE5NTMy
-LC0xNzYyMjU4MDA4LDY4NzY3MTQ0MSwtMTk0MDI3MDc4NiwxNT
-cyNzc3ODg5LC0xMzM1ODY0NTU3LDkzNzE1Nzg1MywxNzI0NTc5
-MjM1LDU3MTMyMTA0OCwtMTYxNTIxNjcxNCwxMDY1MzExODYyLC
-02NTA4NDI4NjAsNTg4NjI2NjcsLTE0OTAwNjM3MzMsNTg3MzMw
-ODldfQ==
+eyJoaXN0b3J5IjpbLTQwOTAwODQ1OCwtNzA4OTMyOTE5LC0xMj
+g4NzM2NjIxLDkzMDAyOTMwNiwxNjYxMDczOTI3LDY3OTYxOTUz
+MiwtMTc2MjI1ODAwOCw2ODc2NzE0NDEsLTE5NDAyNzA3ODYsMT
+U3Mjc3Nzg4OSwtMTMzNTg2NDU1Nyw5MzcxNTc4NTMsMTcyNDU3
+OTIzNSw1NzEzMjEwNDgsLTE2MTUyMTY3MTQsMTA2NTMxMTg2Mi
+wtNjUwODQyODYwLDU4ODYyNjY3LC0xNDkwMDYzNzMzLDU4NzMz
+MDg5XX0=
 -->
