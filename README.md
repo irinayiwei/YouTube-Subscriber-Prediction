@@ -43,12 +43,12 @@ Optimally, this project will help stakeholders to predict the future growth of e
 
 **Epics and Stories**: 
 
-- **Epics 1 -- Conduct Literature Review**: 
+- **Epics 1 -- Literature Review**: 
   - Find articles on past YouTube related projects -- BL 2 point****
   - Extract useful datasets for the current project -- BL 1 point****
   - Identify significant features in subscriber prediction or channel assessment suggested by previous research -- BL 1 point****
   - Identify effective algorithms in subscriber or video view prediction -- BL 1 point****
--  **Epics 2 -- ExploratiA**:
+-  **Epics 2 -- Exploratory Data Analysis**:
    - *Merge* multiple datasets to get a combined dataset that includes features for all variables -- BL 0 point****
    - *Clean* missing values and extreme values -- BL 1 point***
    - *Create* new features suggested by previous research, including taking the ratios, differences, etc for certain variables -- BL 2 points***
@@ -63,7 +63,7 @@ Optimally, this project will help stakeholders to predict the future growth of e
    - *Repeat* on a different number of nearest neighbor set and re-run the models to arrive on the best n -- BL 8 points**
    - *Finalize* the prediction model based on comparison across the two variable sets and decide on which set gives the best outcome; arrive at the best parameter set for the final model -- BL 2 points**
    - *Visualize* subscriber growth in terms of year and variable importance based on the final model -- BL 1 points**
-- **Epics 4 --Web App**:
+- **Epics 4 -- Web App Building**:
    - *Build* a pipeline from local data, modeling, to online amazon web service (AWS) -- BL 8 points*
    - *Design* the display of the web interface for basic functionalities -- BL 8 points*
    - *Optimize* the interface by adding more visualizations and insights; maximize user interactions -- IB
@@ -81,6 +81,7 @@ Optimally, this project will help stakeholders to predict the future growth of e
   - **: somewhat urgent, steps around the midpoints of the project
   - *: not urgent, steps towards the end of the project
  
+ **Backlog**:
 
 
 ## Repo structure 
@@ -208,7 +209,7 @@ Run `pytest` from the command line in the main project repository.
 
 Tests exist in `test/test_helpers.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc4MjQwNDkyMSwtMTYzMDA2OTc4Miw5Mz
+eyJoaXN0b3J5IjpbMjEwMDM2NTk3NCwtMTYzMDA2OTc4Miw5Mz
 MwMTMwMzIsLTcwODkzMjkxOSwtMTI4ODczNjYyMSw5MzAwMjkz
 MDYsMTY2MTA3MzkyNyw2Nzk2MTk1MzIsLTE3NjIyNTgwMDgsNj
 g3NjcxNDQxLC0xOTQwMjcwNzg2LDE1NzI3Nzc4ODksLTEzMzU4
