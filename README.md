@@ -32,7 +32,7 @@ The platform will enable users to input basic information about new YouTube chan
 
 - Business criteria: 
   - Predicted top 100 YouTube Channels are among the actual top 200 YouTube channels in the test set
-  - 
+  - Predicted number of subscribers are within a 5% error range 
 
 ## Backlog
 **Develop Theme**: 
@@ -214,11 +214,11 @@ Run `pytest` from the command line in the main project repository.
 
 Tests exist in `test/test_helpers.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNTU1NjY2MzEsLTcwODkzMjkxOSwtMT
-I4ODczNjYyMSw5MzAwMjkzMDYsMTY2MTA3MzkyNyw2Nzk2MTk1
-MzIsLTE3NjIyNTgwMDgsNjg3NjcxNDQxLC0xOTQwMjcwNzg2LD
-E1NzI3Nzc4ODksLTEzMzU4NjQ1NTcsOTM3MTU3ODUzLDE3MjQ1
-NzkyMzUsNTcxMzIxMDQ4LC0xNjE1MjE2NzE0LDEwNjUzMTE4Nj
-IsLTY1MDg0Mjg2MCw1ODg2MjY2NywtMTQ5MDA2MzczMyw1ODcz
-MzA4OV19
+eyJoaXN0b3J5IjpbMjY1OTIzNjMsLTcwODkzMjkxOSwtMTI4OD
+czNjYyMSw5MzAwMjkzMDYsMTY2MTA3MzkyNyw2Nzk2MTk1MzIs
+LTE3NjIyNTgwMDgsNjg3NjcxNDQxLC0xOTQwMjcwNzg2LDE1Nz
+I3Nzc4ODksLTEzMzU4NjQ1NTcsOTM3MTU3ODUzLDE3MjQ1Nzky
+MzUsNTcxMzIxMDQ4LC0xNjE1MjE2NzE0LDEwNjUzMTE4NjIsLT
+Y1MDg0Mjg2MCw1ODg2MjY2NywtMTQ5MDA2MzczMyw1ODczMzA4
+OV19
 -->
