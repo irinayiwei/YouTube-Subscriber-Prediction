@@ -1,4 +1,4 @@
-# Example project repository
+# YouTube Subscriber Prediction
 
 <!-- toc -->
 
@@ -212,10 +212,10 @@ Run `pytest` from the command line in the main project repository.
 
 Tests exist in `test/test_helpers.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY2MTA3MzkyNyw2Nzk2MTk1MzIsLTE3Nj
-IyNTgwMDgsNjg3NjcxNDQxLC0xOTQwMjcwNzg2LDE1NzI3Nzc4
-ODksLTEzMzU4NjQ1NTcsOTM3MTU3ODUzLDE3MjQ1NzkyMzUsNT
-cxMzIxMDQ4LC0xNjE1MjE2NzE0LDEwNjUzMTE4NjIsLTY1MDg0
-Mjg2MCw1ODg2MjY2NywtMTQ5MDA2MzczMyw1ODczMzA4OSwtOT
-YzMzg4NTU0XX0=
+eyJoaXN0b3J5IjpbOTMwMDI5MzA2LDE2NjEwNzM5MjcsNjc5Nj
+E5NTMyLC0xNzYyMjU4MDA4LDY4NzY3MTQ0MSwtMTk0MDI3MDc4
+NiwxNTcyNzc3ODg5LC0xMzM1ODY0NTU3LDkzNzE1Nzg1MywxNz
+I0NTc5MjM1LDU3MTMyMTA0OCwtMTYxNTIxNjcxNCwxMDY1MzEx
+ODYyLC02NTA4NDI4NjAsNTg4NjI2NjcsLTE0OTAwNjM3MzMsNT
+g3MzMwODksLTk2MzM4ODU1NF19
 -->
