@@ -28,7 +28,7 @@ The platform will enable users to input basic information about new YouTube chan
 
 **Success criteria**: 
 
-- Machine learning criteria: prediction root mean square error (RMSE) lower than 10% of the range of the actual values in the test set.
+- Machine learning criteria: prediction root mean square error (RMSE) lower than 10% of the range of the actual response values in the test set.
 
 - Business criteria: 
 
@@ -212,10 +212,10 @@ Run `pytest` from the command line in the main project repository.
 
 Tests exist in `test/test_helpers.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTMwMDI5MzA2LDE2NjEwNzM5MjcsNjc5Nj
-E5NTMyLC0xNzYyMjU4MDA4LDY4NzY3MTQ0MSwtMTk0MDI3MDc4
-NiwxNTcyNzc3ODg5LC0xMzM1ODY0NTU3LDkzNzE1Nzg1MywxNz
-I0NTc5MjM1LDU3MTMyMTA0OCwtMTYxNTIxNjcxNCwxMDY1MzEx
-ODYyLC02NTA4NDI4NjAsNTg4NjI2NjcsLTE0OTAwNjM3MzMsNT
-g3MzMwODksLTk2MzM4ODU1NF19
+eyJoaXN0b3J5IjpbLTEyODg3MzY2MjEsOTMwMDI5MzA2LDE2Nj
+EwNzM5MjcsNjc5NjE5NTMyLC0xNzYyMjU4MDA4LDY4NzY3MTQ0
+MSwtMTk0MDI3MDc4NiwxNTcyNzc3ODg5LC0xMzM1ODY0NTU3LD
+kzNzE1Nzg1MywxNzI0NTc5MjM1LDU3MTMyMTA0OCwtMTYxNTIx
+NjcxNCwxMDY1MzExODYyLC02NTA4NDI4NjAsNTg4NjI2NjcsLT
+E0OTAwNjM3MzMsNTg3MzMwODksLTk2MzM4ODU1NF19
 -->
