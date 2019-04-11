@@ -64,13 +64,13 @@ Optimally, this project will help stakeholders to predict the future growth of e
    - **Story7**: *Finalize* the prediction model based on comparison across the two variable sets and decide on which set gives the best outcome; arrive at the best parameter set for the final model -- BL 2 points**
    - **Story8**: *Visualize* subscriber growth in terms of year and variable importance based on the final model -- BL 1 points**
 - **Epics 4 -- Web App Building**:
-   - *Build* a pipeline from local data, modeling, to online amazon web service (AWS) -- BL 8 points*
-   - *Design* the display of the web interface for basic functionalities -- BL 8 points*
-   - *Optimize* the interface by adding more visualizations and insights; maximize user interactions -- IB
+   - **Story1**: *Build* a pipeline from local data, modeling, to online amazon web service (AWS) -- BL 8 points*
+   - **Story2**: *Design* the display of the web interface for basic functionalities -- BL 8 points*
+   - **Story3**: *Optimize* the interface by adding more visualizations and insights; maximize user interactions -- IB
 - **Epics 5 -- Launching and Testing**:
-  - *Launch* the web app on AWS and open for user input and feedback -- BL 2 points*
-  - *Test* for errors and fix running issues -- BL 2 points*
-  - *Make* adjustment based on user feedback -- IB
+  - **Story1**: *Launch* the web app on AWS and open for user input and feedback -- BL 2 points*
+  - **Story2**: *Test* for errors and fix running issues -- BL 2 points*
+  - **Story3**: *Make* adjustment based on user feedback -- IB
 
 **Notations**: 
 - IB: IceBox 
@@ -213,11 +213,11 @@ Run `pytest` from the command line in the main project repository.
 
 Tests exist in `test/test_helpers.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY4Mzk3NDg3OCwtMTYzMDA2OTc4Miw5Mz
-MwMTMwMzIsLTcwODkzMjkxOSwtMTI4ODczNjYyMSw5MzAwMjkz
-MDYsMTY2MTA3MzkyNyw2Nzk2MTk1MzIsLTE3NjIyNTgwMDgsNj
-g3NjcxNDQxLC0xOTQwMjcwNzg2LDE1NzI3Nzc4ODksLTEzMzU4
-NjQ1NTcsOTM3MTU3ODUzLDE3MjQ1NzkyMzUsNTcxMzIxMDQ4LC
-0xNjE1MjE2NzE0LDEwNjUzMTE4NjIsLTY1MDg0Mjg2MCw1ODg2
-MjY2N119
+eyJoaXN0b3J5IjpbNjYwMzU2NjI4LC0xNjMwMDY5NzgyLDkzMz
+AxMzAzMiwtNzA4OTMyOTE5LC0xMjg4NzM2NjIxLDkzMDAyOTMw
+NiwxNjYxMDczOTI3LDY3OTYxOTUzMiwtMTc2MjI1ODAwOCw2OD
+c2NzE0NDEsLTE5NDAyNzA3ODYsMTU3Mjc3Nzg4OSwtMTMzNTg2
+NDU1Nyw5MzcxNTc4NTMsMTcyNDU3OTIzNSw1NzEzMjEwNDgsLT
+E2MTUyMTY3MTQsMTA2NTMxMTg2MiwtNjUwODQyODYwLDU4ODYy
+NjY3XX0=
 -->
