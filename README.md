@@ -32,7 +32,7 @@ The platform will enable users to input basic information about new YouTube chan
 
 - Business criteria: 
   - Predicted top 100 YouTube Channels are among the actual top 200 YouTube channels in the test set
-  - Predicted number of subscribers for new user input channels are within a 5% error range of the 
+  - Predicted number of subscribers for new user input channels are within a 5% error range of the actual subscriber numbers
 
 ## Backlog
 **Develop Theme**: 
@@ -214,7 +214,7 @@ Run `pytest` from the command line in the main project repository.
 
 Tests exist in `test/test_helpers.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUwMTY0NTcyOSwtNzA4OTMyOTE5LC0xMj
+eyJoaXN0b3J5IjpbMTMwNDU3NjI0MywtNzA4OTMyOTE5LC0xMj
 g4NzM2NjIxLDkzMDAyOTMwNiwxNjYxMDczOTI3LDY3OTYxOTUz
 MiwtMTc2MjI1ODAwOCw2ODc2NzE0NDEsLTE5NDAyNzA3ODYsMT
 U3Mjc3Nzg4OSwtMTMzNTg2NDU1Nyw5MzcxNTc4NTMsMTcyNDU3
