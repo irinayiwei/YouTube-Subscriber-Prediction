@@ -63,11 +63,11 @@ Optimally, this project will help stakeholders to predict the future growth of e
    - **Story6**: *Repeat* on a different number of nearest neighbor set and re-run the models to arrive on the best n -- BL 8 points**
    - **Story7**: *Finalize* the prediction model based on comparison across the two variable sets and decide on which set gives the best outcome; arrive at the best parameter set for the final model -- BL 2 points**
    - **Story8**: *Visualize* subscriber growth in terms of year and variable importance based on the final model -- BL 1 points**
-- **Epics 4 -- Web App Building**:
+- **Epic 4 -- Web App Building**:
    - **Story1**: *Build* a pipeline from local data, modeling, to online amazon web service (AWS) -- BL 8 points*
    - **Story2**: *Design* the display of the web interface for basic functionalities -- BL 8 points*
    - **Story3**: *Optimize* the interface by adding more visualizations and insights; maximize user interactions -- IB
-- **Epics 5 -- Launching and Testing**:
+- **Epic 5 -- Launching and Testing**:
   - **Story1**: *Launch* the web app on AWS and open for user input and feedback -- BL 2 points*
   - **Story2**: *Test* for errors and fix running issues -- BL 2 points*
   - **Story3**: *Make* adjustment based on user feedback -- IB
@@ -92,6 +92,19 @@ Optimally, this project will help stakeholders to predict the future growth of e
  - Epic2.Story4
  - Epic2.Story5
  - Epic3.Story1
+ - Epic3.Story2
+ - Epic3.Story3
+ - Epic3.Story4
+ - Epic3.Story5
+ - Epic3.Story6
+ - Epic3.Story7
+ - Epic3.Story8
+ - Epic4.Story1
+ - Epic4.Story2
+ - Epic4.Story3
+ - Epic5.Story1
+ - Epic5.Story2
+ - Epic5.Story3
 
 **IceBox**:
 - Epic4.Story3
@@ -222,11 +235,11 @@ Run `pytest` from the command line in the main project repository.
 
 Tests exist in `test/test_helpers.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjE5Nzg5ODAyLC0xNjMwMDY5NzgyLDkzMz
-AxMzAzMiwtNzA4OTMyOTE5LC0xMjg4NzM2NjIxLDkzMDAyOTMw
-NiwxNjYxMDczOTI3LDY3OTYxOTUzMiwtMTc2MjI1ODAwOCw2OD
-c2NzE0NDEsLTE5NDAyNzA3ODYsMTU3Mjc3Nzg4OSwtMTMzNTg2
-NDU1Nyw5MzcxNTc4NTMsMTcyNDU3OTIzNSw1NzEzMjEwNDgsLT
-E2MTUyMTY3MTQsMTA2NTMxMTg2MiwtNjUwODQyODYwLDU4ODYy
-NjY3XX0=
+eyJoaXN0b3J5IjpbMTU3MzI4MjcxMiwtMTYzMDA2OTc4Miw5Mz
+MwMTMwMzIsLTcwODkzMjkxOSwtMTI4ODczNjYyMSw5MzAwMjkz
+MDYsMTY2MTA3MzkyNyw2Nzk2MTk1MzIsLTE3NjIyNTgwMDgsNj
+g3NjcxNDQxLC0xOTQwMjcwNzg2LDE1NzI3Nzc4ODksLTEzMzU4
+NjQ1NTcsOTM3MTU3ODUzLDE3MjQ1NzkyMzUsNTcxMzIxMDQ4LC
+0xNjE1MjE2NzE0LDEwNjUzMTE4NjIsLTY1MDg0Mjg2MCw1ODg2
+MjY2N119
 -->
