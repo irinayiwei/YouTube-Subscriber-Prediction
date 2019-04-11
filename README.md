@@ -31,7 +31,8 @@ The platform will enable users to input basic information about new YouTube chan
 - Machine learning criteria: prediction root mean square error (RMSE) lower than 10% of the range of the actual response values in the test set
 
 - Business criteria: 
-- 
+  - Predicted top 100 YouTube Channels are among the actual top 200 YouTube channels in the test set
+  - 
 
 ## Backlog
 **Develop Theme**: 
@@ -213,7 +214,7 @@ Run `pytest` from the command line in the main project repository.
 
 Tests exist in `test/test_helpers.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MjU0MjI2NzQsLTcwODkzMjkxOSwtMT
+eyJoaXN0b3J5IjpbLTEyNTU1NjY2MzEsLTcwODkzMjkxOSwtMT
 I4ODczNjYyMSw5MzAwMjkzMDYsMTY2MTA3MzkyNyw2Nzk2MTk1
 MzIsLTE3NjIyNTgwMDgsNjg3NjcxNDQxLC0xOTQwMjcwNzg2LD
 E1NzI3Nzc4ODksLTEzMzU4NjQ1NTcsOTM3MTU3ODUzLDE3MjQ1
