@@ -44,10 +44,10 @@ Optimally, this project will help stakeholders to predict the future growth of e
 **Epics and Stories**: 
 
 - **Epics 1 -- Literature Review**: 
-  - Find articles on past YouTube related projects -- BL 2 point****
-  - Extract useful datasets for the current project -- BL 1 point****
-  - Identify significant features in subscriber prediction or channel assessment suggested by previous research -- BL 1 point****
-  - Identify effective algorithms in subscriber or video view prediction -- BL 1 point****
+  - **Story 1**: *Find* articles on past YouTube related projects -- BL 2 point****
+  - **Story2**: *Extract* useful datasets for the current project -- BL 1 point****
+  - **Story3**: *Identify* significant features in subscriber prediction or channel assessment suggested by previous research -- BL 1 point****
+  - **Story4**:Identify effective algorithms in subscriber or video view prediction -- BL 1 point****
 -  **Epics 2 -- Exploratory Data Analysis**:
    - *Merge* multiple datasets to get a combined dataset that includes features for all variables -- BL 0 point****
    - *Clean* missing values and extreme values -- BL 1 point***
@@ -70,7 +70,7 @@ Optimally, this project will help stakeholders to predict the future growth of e
 - **Epics 5 -- Launching and Testing**:
   - *Launch* the web app on AWS and open for user input and feedback -- BL 2 points*
   - *Test* for errors and fix running issues -- BL 2 points*
-  - *Make* adjustment based on user feedback  -- IB
+  - *Make* adjustment based on user feedback -- IB
 
 **Notations**: 
 - IB: IceBox 
@@ -213,11 +213,11 @@ Run `pytest` from the command line in the main project repository.
 
 Tests exist in `test/test_helpers.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxNDA5OTIxNDAsLTE2MzAwNjk3ODIsOT
-MzMDEzMDMyLC03MDg5MzI5MTksLTEyODg3MzY2MjEsOTMwMDI5
-MzA2LDE2NjEwNzM5MjcsNjc5NjE5NTMyLC0xNzYyMjU4MDA4LD
-Y4NzY3MTQ0MSwtMTk0MDI3MDc4NiwxNTcyNzc3ODg5LC0xMzM1
-ODY0NTU3LDkzNzE1Nzg1MywxNzI0NTc5MjM1LDU3MTMyMTA0OC
-wtMTYxNTIxNjcxNCwxMDY1MzExODYyLC02NTA4NDI4NjAsNTg4
-NjI2NjddfQ==
+eyJoaXN0b3J5IjpbMjA2MDAwNzUyMCwtMTYzMDA2OTc4Miw5Mz
+MwMTMwMzIsLTcwODkzMjkxOSwtMTI4ODczNjYyMSw5MzAwMjkz
+MDYsMTY2MTA3MzkyNyw2Nzk2MTk1MzIsLTE3NjIyNTgwMDgsNj
+g3NjcxNDQxLC0xOTQwMjcwNzg2LDE1NzI3Nzc4ODksLTEzMzU4
+NjQ1NTcsOTM3MTU3ODUzLDE3MjQ1NzkyMzUsNTcxMzIxMDQ4LC
+0xNjE1MjE2NzE0LDEwNjUzMTE4NjIsLTY1MDg0Mjg2MCw1ODg2
+MjY2N119
 -->
