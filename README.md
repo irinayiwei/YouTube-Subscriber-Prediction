@@ -43,7 +43,7 @@ This platform will enable users to input basic information (such as video catego
 Optimally, this project will help stakeholders to:
 
 - Predict the future subscriber number of entry-level YouTube channels and compare among young channels for potential profitability 
-- Identify the potential of new channels and find similar mature channels with similar growth path
+- Identify mature channels with similar growth path for young channels
 - Provide insights on the influential factors of the growth of YouTube channels
 
 **Epics and Stories**: 
@@ -238,11 +238,11 @@ Run `pytest` from the command line in the main project repository.
 
 Tests exist in `test/test_helpers.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIwNDEzMjI2NCw3NjU1NDE5MCwtMTExOD
-QxNjQ1OCwtMTU3OTE3ODAzOCwtMTM1ODcyOTAyMSwtNTE2NTgx
-NDgsLTExNjY2NDA1NDQsLTEwMDEyOTcwMzUsLTE2MzAwNjk3OD
-IsOTMzMDEzMDMyLC03MDg5MzI5MTksLTEyODg3MzY2MjEsOTMw
-MDI5MzA2LDE2NjEwNzM5MjcsNjc5NjE5NTMyLC0xNzYyMjU4MD
-A4LDY4NzY3MTQ0MSwtMTk0MDI3MDc4NiwxNTcyNzc3ODg5LC0x
-MzM1ODY0NTU3XX0=
+eyJoaXN0b3J5IjpbNzIyNTM5MDQyLDEyMDQxMzIyNjQsNzY1NT
+QxOTAsLTExMTg0MTY0NTgsLTE1NzkxNzgwMzgsLTEzNTg3Mjkw
+MjEsLTUxNjU4MTQ4LC0xMTY2NjQwNTQ0LC0xMDAxMjk3MDM1LC
+0xNjMwMDY5NzgyLDkzMzAxMzAzMiwtNzA4OTMyOTE5LC0xMjg4
+NzM2NjIxLDkzMDAyOTMwNiwxNjYxMDczOTI3LDY3OTYxOTUzMi
+wtMTc2MjI1ODAwOCw2ODc2NzE0NDEsLTE5NDAyNzA3ODYsMTU3
+Mjc3Nzg4OV19
 -->
