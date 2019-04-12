@@ -20,7 +20,7 @@
 
 **Vision**: 
 
-This project aims to evaluate the future growth of young YouTube channels and generate insights on the factors that mostly affect the development of a young channel. It also hopes to provide stakeholders visions on potential cooperation opportunities with entry-level YouTubers and provides quantitative support to YouTube-related marketing decisions. Since young channels are in general more financially affordable to cooperate with compared to popular channels, this project will help users minimize their marketing cost while maximize the business outcome. 
+This project aims to evaluate the future growth of young YouTube channels and generate insights on the factors that mostly affect the development of a young channel. It also hopes to provide stakeholders visions on potential product promotion opportunities with entry-level YouTubers and provides quantitative support to YouTube-related marketing decisions. Since young channels are in general more financially affordable to cooperate with compared to popular channels, this project will help users minimize their marketing cost while maximize the business outcome. 
 
 **Mission**: 
 
@@ -40,7 +40,9 @@ This platform will enable users to input basic information (such as video catego
 ## Backlog
 **Develop Theme**: 
 
-Optimally, this project will help stakeholders to predict the future growth of entry-level YouTube channels and choose the ideal candidates for product promotion opportunities. By identifying the potential of new channels at an early stage, this project provides quantitative support to YouTube-related marketing decisions and generates insights on the comparison among similar new channels. Since young channels are in general more financially affordable to cooperate with compared to popular channels, this project will help users minimize their marketing cost while maximize the business outcome. 
+Optimally, this project will help stakeholders to:
+
+- Predict the future subscriber number of entry-level YouTube channels and choose the ideal candidates for product promotion opportunities. By identifying the potential of new channels at an early stage, this project provides quantitative support to YouTube-related marketing decisions and generates insights on the comparison among similar new channels. Since young channels are in general more financially affordable to cooperate with compared to popular channels, this project will help users minimize their marketing cost while maximize the business outcome. 
 
 **Epics and Stories**: 
 
@@ -234,7 +236,7 @@ Run `pytest` from the command line in the main project repository.
 
 Tests exist in `test/test_helpers.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMTA4NjczMjIsLTE1NzkxNzgwMzgsLT
+eyJoaXN0b3J5IjpbLTExMTg0MTY0NTgsLTE1NzkxNzgwMzgsLT
 EzNTg3MjkwMjEsLTUxNjU4MTQ4LC0xMTY2NjQwNTQ0LC0xMDAx
 Mjk3MDM1LC0xNjMwMDY5NzgyLDkzMzAxMzAzMiwtNzA4OTMyOT
 E5LC0xMjg4NzM2NjIxLDkzMDAyOTMwNiwxNjYxMDczOTI3LDY3
