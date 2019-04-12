@@ -42,7 +42,7 @@ This platform will enable users to input basic information (such as video catego
 
 Optimally, this project will help stakeholders to:
 
-- Predict the future subscriber number of entry-level YouTube channels and compare among young channels for potential profitability 
+- Predict the future subscriber number of entry-level YouTube channels 
 - Identify mature channels with similar growth path for young channels
 - Provide insights on the influential factors of the growth of YouTube channels
 
@@ -67,7 +67,7 @@ Optimally, this project will help stakeholders to:
    - **Story5**: *Calculate* the performance metrics for each model in the two sets (prediction RMSE, variable importance, etc) and *compare* the performance metrics among different models -- BL 4 points**
    - **Story6**: *Repeat* on a different number of nearest neighbor set and re-run the models to arrive on the best n -- BL 8 points**
    - **Story7**: *Finalize* the prediction model based on comparison across the two variable sets and decide on which set gives the best outcome; arrive at the best parameter set for the final model -- BL 2 points**
-   - **Story8**: *Visualize* subscriber growth in terms of year and variable importance based on the final model -- BL 1 points**
+   - **Story8**: *Visualize* subscriber growth in terms of year and variable importance based on the final model; visualize the top 10 mature channels that have similar growth path for a given young channel -- BL 1 points**
 - **Epic 4 -- Web App Building**:
    - **Story1**: *Build* a pipeline from local data, modeling, to online amazon web service (AWS) -- BL 8 points*
    - **Story2**: *Design* the display of the web interface for basic functionalities -- BL 8 points*
@@ -238,11 +238,11 @@ Run `pytest` from the command line in the main project repository.
 
 Tests exist in `test/test_helpers.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzIyNTM5MDQyLDEyMDQxMzIyNjQsNzY1NT
-QxOTAsLTExMTg0MTY0NTgsLTE1NzkxNzgwMzgsLTEzNTg3Mjkw
-MjEsLTUxNjU4MTQ4LC0xMTY2NjQwNTQ0LC0xMDAxMjk3MDM1LC
-0xNjMwMDY5NzgyLDkzMzAxMzAzMiwtNzA4OTMyOTE5LC0xMjg4
-NzM2NjIxLDkzMDAyOTMwNiwxNjYxMDczOTI3LDY3OTYxOTUzMi
-wtMTc2MjI1ODAwOCw2ODc2NzE0NDEsLTE5NDAyNzA3ODYsMTU3
-Mjc3Nzg4OV19
+eyJoaXN0b3J5IjpbMTk4MjcwOTgwNSwxMjA0MTMyMjY0LDc2NT
+U0MTkwLC0xMTE4NDE2NDU4LC0xNTc5MTc4MDM4LC0xMzU4NzI5
+MDIxLC01MTY1ODE0OCwtMTE2NjY0MDU0NCwtMTAwMTI5NzAzNS
+wtMTYzMDA2OTc4Miw5MzMwMTMwMzIsLTcwODkzMjkxOSwtMTI4
+ODczNjYyMSw5MzAwMjkzMDYsMTY2MTA3MzkyNyw2Nzk2MTk1Mz
+IsLTE3NjIyNTgwMDgsNjg3NjcxNDQxLC0xOTQwMjcwNzg2LDE1
+NzI3Nzc4ODldfQ==
 -->
