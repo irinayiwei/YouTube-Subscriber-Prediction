@@ -88,7 +88,7 @@ Optimally, this project will help stakeholders to predict the future growth of e
  - Epic1.Story4: 1 points -- Planned for the next 2 weeks
  - Epic2.Story1: 0 points -- Planned for the next 2 weeks
  - Epic2.Story2: 1 points -- Planned for the next 2 weeks
- - Epic2.Story3: 2 points 
+ - Epic2.Story3: 2 points -- Planned for the next 2 weeks
  - Epic2.Story4: 1 points 
  - Epic2.Story5: 1 points 
  - Epic3.Story1: 0 points 
@@ -233,11 +233,11 @@ Run `pytest` from the command line in the main project repository.
 
 Tests exist in `test/test_helpers.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExNjY2NDA1NDQsLTEwMDEyOTcwMzUsLT
-E2MzAwNjk3ODIsOTMzMDEzMDMyLC03MDg5MzI5MTksLTEyODg3
-MzY2MjEsOTMwMDI5MzA2LDE2NjEwNzM5MjcsNjc5NjE5NTMyLC
-0xNzYyMjU4MDA4LDY4NzY3MTQ0MSwtMTk0MDI3MDc4NiwxNTcy
-Nzc3ODg5LC0xMzM1ODY0NTU3LDkzNzE1Nzg1MywxNzI0NTc5Mj
-M1LDU3MTMyMTA0OCwtMTYxNTIxNjcxNCwxMDY1MzExODYyLC02
-NTA4NDI4NjBdfQ==
+eyJoaXN0b3J5IjpbLTUxNjU4MTQ4LC0xMTY2NjQwNTQ0LC0xMD
+AxMjk3MDM1LC0xNjMwMDY5NzgyLDkzMzAxMzAzMiwtNzA4OTMy
+OTE5LC0xMjg4NzM2NjIxLDkzMDAyOTMwNiwxNjYxMDczOTI3LD
+Y3OTYxOTUzMiwtMTc2MjI1ODAwOCw2ODc2NzE0NDEsLTE5NDAy
+NzA3ODYsMTU3Mjc3Nzg4OSwtMTMzNTg2NDU1Nyw5MzcxNTc4NT
+MsMTcyNDU3OTIzNSw1NzEzMjEwNDgsLTE2MTUyMTY3MTQsMTA2
+NTMxMTg2Ml19
 -->
