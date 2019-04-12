@@ -44,6 +44,7 @@ Optimally, this project will help stakeholders to:
 
 - Predict the future subscriber number of entry-level YouTube channels and compare among similar young channels for potential profitability 
 - Identify the potential of new channels and find similar mature channels with similar growth path
+- Provide insights on the influential factors of the growth of YouTube channels
 
 **Epics and Stories**: 
 
@@ -237,7 +238,7 @@ Run `pytest` from the command line in the main project repository.
 
 Tests exist in `test/test_helpers.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMTczMDk0NzYsNzY1NTQxOTAsLTExMT
+eyJoaXN0b3J5IjpbLTE0NzQ3Njk0MTEsNzY1NTQxOTAsLTExMT
 g0MTY0NTgsLTE1NzkxNzgwMzgsLTEzNTg3MjkwMjEsLTUxNjU4
 MTQ4LC0xMTY2NjQwNTQ0LC0xMDAxMjk3MDM1LC0xNjMwMDY5Nz
 gyLDkzMzAxMzAzMiwtNzA4OTMyOTE5LC0xMjg4NzM2NjIxLDkz
