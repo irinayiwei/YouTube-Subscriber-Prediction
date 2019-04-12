@@ -40,7 +40,7 @@ This platform will enable users to input basic information (such as video catego
 ## Backlog
 **Develop Theme**: 
 
-Optimally, this project will help stakeholders to:
+Optimally, this project aims to:
 
 - Predict the future subscriber number of entry-level YouTube channels 
 - Identify mature channels with similar growth path for young channels
@@ -238,7 +238,7 @@ Run `pytest` from the command line in the main project repository.
 
 Tests exist in `test/test_helpers.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM4NzE2NjcwNiwxMjA0MTMyMjY0LDc2NT
+eyJoaXN0b3J5IjpbMTY2NzA1NjE5NCwxMjA0MTMyMjY0LDc2NT
 U0MTkwLC0xMTE4NDE2NDU4LC0xNTc5MTc4MDM4LC0xMzU4NzI5
 MDIxLC01MTY1ODE0OCwtMTE2NjY0MDU0NCwtMTAwMTI5NzAzNS
 wtMTYzMDA2OTc4Miw5MzMwMTMwMzIsLTcwODkzMjkxOSwtMTI4
