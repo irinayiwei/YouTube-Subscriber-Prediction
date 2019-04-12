@@ -20,7 +20,7 @@
 
 **Vision**: 
 
-This project aims to evaluate the future growth of new YouTube channels and generate insights on the factors that mostly affect the development of a new channel. It also hopes to provide stakeholders visions on potential cooperation opportunities with entry level YouTubers who will be influential in the near future. Since young channels are in general more financially affordable to cooperate with compared to popular channels, this project will help users minimize their marketing cost while maximize the business outcome. 
+This project aims to evaluate the future growth of new YouTube channels and generate insights on the factors that mostly affect the development of a new channel. It also hopes to provide stakeholders visions on potential cooperation opportunities with entry level YouTubers and provides quantitative support to YouTube-related marketing decisions. Since young channels are in general more financially affordable to cooperate with compared to popular channels, this project will help users minimize their marketing cost while maximize the business outcome. 
 
 **Mission**: 
 
@@ -234,11 +234,11 @@ Run `pytest` from the command line in the main project repository.
 
 Tests exist in `test/test_helpers.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1NzkxNzgwMzgsLTEzNTg3MjkwMjEsLT
-UxNjU4MTQ4LC0xMTY2NjQwNTQ0LC0xMDAxMjk3MDM1LC0xNjMw
-MDY5NzgyLDkzMzAxMzAzMiwtNzA4OTMyOTE5LC0xMjg4NzM2Nj
-IxLDkzMDAyOTMwNiwxNjYxMDczOTI3LDY3OTYxOTUzMiwtMTc2
-MjI1ODAwOCw2ODc2NzE0NDEsLTE5NDAyNzA3ODYsMTU3Mjc3Nz
-g4OSwtMTMzNTg2NDU1Nyw5MzcxNTc4NTMsMTcyNDU3OTIzNSw1
-NzEzMjEwNDhdfQ==
+eyJoaXN0b3J5IjpbNzg0NDk2MDczLC0xNTc5MTc4MDM4LC0xMz
+U4NzI5MDIxLC01MTY1ODE0OCwtMTE2NjY0MDU0NCwtMTAwMTI5
+NzAzNSwtMTYzMDA2OTc4Miw5MzMwMTMwMzIsLTcwODkzMjkxOS
+wtMTI4ODczNjYyMSw5MzAwMjkzMDYsMTY2MTA3MzkyNyw2Nzk2
+MTk1MzIsLTE3NjIyNTgwMDgsNjg3NjcxNDQxLC0xOTQwMjcwNz
+g2LDE1NzI3Nzc4ODksLTEzMzU4NjQ1NTcsOTM3MTU3ODUzLDE3
+MjQ1NzkyMzVdfQ==
 -->
