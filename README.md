@@ -24,7 +24,7 @@ This project aims to evaluate the future growth of young YouTube channels and ge
 
 **Mission**: 
 
-This platform will enable users to input basic information (such as video category and like-dislike ratio) about young YouTube channels, together with a desired time period, and make predictions of the subscriber number for the YouTube channels in the input time period. This project will utilize the data of mature YouTubers to find the most similar growth paths of the input channels, and use their information as a guideline to evaluate the potential subscribers of the young channels, which will also be the final output of the model. The final output of the project will be the predicted subscriber number, mature channels with similar grow path, and significant factors that contribute to the development of a young channel. Data that includes attributes of more than 50k mature YouTube channels are found and ready for training purposes.
+This platform will enable users to input basic information (such as video category and like-dislike ratio) about young YouTube channels, together with a desired time period, and make predictions of the subscriber number for the YouTube channels in the input time period. This project will utilize the data of mature YouTubers to find the most similar growth paths of the input channels, and use their information as a guideline to evaluate the potential subscribers of the young channels. The final output of the project will be the predicted subscriber number, statistics of mature channels with similar grow path, and significant factors that contribute to the development of a young channel. Data that includes attributes of more than 50k mature YouTube channels are found and ready for training purposes.
 
 **Success criteria**: 
 
@@ -238,7 +238,7 @@ Run `pytest` from the command line in the main project repository.
 
 Tests exist in `test/test_helpers.py`
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA2MzUyMDE1NCwxMjA0MTMyMjY0LDc2NT
+eyJoaXN0b3J5IjpbMTM4NzE2NjcwNiwxMjA0MTMyMjY0LDc2NT
 U0MTkwLC0xMTE4NDE2NDU4LC0xNTc5MTc4MDM4LC0xMzU4NzI5
 MDIxLC01MTY1ODE0OCwtMTE2NjY0MDU0NCwtMTAwMTI5NzAzNS
 wtMTYzMDA2OTc4Miw5MzMwMTMwMzIsLTcwODkzMjkxOSwtMTI4
