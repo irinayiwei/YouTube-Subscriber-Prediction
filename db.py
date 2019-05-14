@@ -86,89 +86,106 @@ class YouTubeInput(Base):
             self.videoCount, self.videoLikeCount, self.channelCommentCount, self.comments_views, self.dislikes_views,
             self.videoDislikeCount, self.videoCategoryId, self.likes_dislikes, self.pred)
 
+# the engine_string format
+#engine_string = "{conn_type}://{user}:{password}@{host}:{port}/DATABASE_NAME"
+conn_type = "mysql+pymysql"
+user = os.environ.get("MYSQL_USER")
+password = os.environ.get("MYSQL_PASSWORD")
+host = os.environ.get("MYSQL_HOST")
+port = os.environ.get("MYSQL_PORT")
+DATABASE_NAME = 'msia423ywzhang'
+engine_string = "{}://{}:{}@{}:{}/{}".\
+format(conn_type, user, password, host, port, DATABASE_NAME)
+#print(engine_string)
+engine = sql.create_engine(engine_string)
+Base.metadata.create_all(engine)
 
-def _truncate_YouTubeInput(session):
-    """Deletes YouTubeInput table if rerunning and run into unique key error."""
+# set up looging config
+logging.basicConfig(format='%(levelname)s:%(message)s', level=logging.DEBUG)
+logger = logging.getLogger(__file__)
 
-    session.execute('''DELETE FROM YouTubeInput''')
+# def _truncate_YouTubeInput(session):
+#     """Deletes YouTubeInput table if rerunning and run into unique key error."""
 
-def _truncate_YouTube(session):
-    """Deletes YouTube table if rerunning and run into unique key error."""
+#     session.execute('''DELETE FROM YouTubeInput''')
 
-    session.execute('''DELETE FROM YouTube''')
+# def _truncate_YouTube(session):
+#     """Deletes YouTube table if rerunning and run into unique key error."""
 
-
-def create_db(engine=None, engine_string=None):
-    """Creates a database with the data models inherited from `Base` (YouTube and YouTubeInput).
-
-    Args:
-        engine (:py:class:`sqlalchemy.engine.Engine`, default None): SQLAlchemy connection engine.
-            If None, `engine_string` must be provided.
-        engine_string (`str`, default None): String defining SQLAlchemy connection URI in the form of
-            `dialect+driver://username:password@host:port/database`. If None, `engine` must be provided.
-
-    Returns:
-        None
-    """
-    if engine is None and engine_string is None:
-        return ValueError("`engine` or `engine_string` must be provided")
-    elif engine is None:
-        engine = create_connection(engine_string=engine_string)
-
-    Base.metadata.create_all(engine)
-
-def get_engineString():
-    # the engine_string format
-    #engine_string = "{conn_type}://{user}:{password}@{host}:{port}/{database}"
-    conn_type = "mysql+pymysql"
-    user = os.environ.get("MYSQL_USER")
-    password = os.environ.get("MYSQL_PASSWORD")
-    host = os.environ.get("MYSQL_HOST")
-    port = os.environ.get("MYSQL_PORT")
-    engine_string = "{}://{}:{}@{}:{}/DATABASE_NAME".\
-    format(conn_type, user, password, host, port)
-    return(engine_string)
+#     session.execute('''DELETE FROM YouTube''')
 
 
-if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Create defined tables in database")
-    parser.add_argument("--truncate", "-t", default=False, action="store_true",
-                        help="If given, delete current records from YouTube table before create_all "
-                             "so that table can be recreated without unique id issues ")
-    args = parser.parse_args()
+# def create_db(engine=None, engine_string=None):
+#     """Creates a database with the data models inherited from `Base` (YouTube and YouTubeInput).
 
-    # If "truncate" is given as an argument (i.e. python models.py --truncate), then empty the tweet_score table)
-    if args.truncate:
-        #session = get_session(engine_string=config.SQLALCHEMY_DATABASE_URI)
-        try:
-            logger.info("Attempting to truncate YouTubeInput table.")
-            _truncate_YouTubeInput(session)
-            session.commit()
-            logger.info("YouTubeInput truncated.")
-        except Exception as e:
-            logger.error("Error occurred while attempting to truncate YouTubeInput table.")
-            logger.error(e)
-        finally:
-            session.close()
+#     Args:
+#         engine (:py:class:`sqlalchemy.engine.Engine`, default None): SQLAlchemy connection engine.
+#             If None, `engine_string` must be provided.
+#         engine_string (`str`, default None): String defining SQLAlchemy connection URI in the form of
+#             `dialect+driver://username:password@host:port/database`. If None, `engine` must be provided.
 
-    engine_string = get_engineString
+#     Returns:
+#         None
+#     """
+#     if engine is None and engine_string is None:
+#         return ValueError("`engine` or `engine_string` must be provided")
+#     elif engine is None:
+#         engine = create_connection(engine_string=engine_string)
 
-    engine = sql.create_engine(engine_string)
+#     Base.metadata.create_all(engine)
 
-    create_db(engine=engine)
+# def get_engineString():
+#     # the engine_string format
+#     #engine_string = "{conn_type}://{user}:{password}@{host}:{port}/{database}"
+#     conn_type = "mysql+pymysql"
+#     user = os.environ.get("MYSQL_USER")
+#     password = os.environ.get("MYSQL_PASSWORD")
+#     host = os.environ.get("MYSQL_HOST")
+#     port = os.environ.get("MYSQL_PORT")
+#     engine_string = "{}://{}:{}@{}:{}/DATABASE_NAME".\
+#     format(conn_type, user, password, host, port)
+#     return(engine_string)
 
-    # Add Data
-    # set up looging config
-    logging.basicConfig(format='%(levelname)s:%(message)s', level=logging.DEBUG)
-    logger = logging.getLogger(__file__)
-    # create a db session
-    Session = sessionmaker(bind=engine)
-    session = Session()
-    # add a record/track
-    track1 = Track(channelID='123jieife2', channelDays='324', channelViewCount='273', totalviews_channelelapsedtime='283.3', likes_views='473.3554', totvideos_videocount='32', videoCount='2732', videoLikeCount='232', channelCommentCount='327382', comments_views='23296', dislikes_views='-34.2', videoDislikeCount='86', videoCategoryId='788', likes_dislikes='096', pred='983265478')
-    session.add(track1)
-    session.commit()
-    logger.info("Database created with new input added")
+
+# if __name__ == "__main__":
+#     parser = argparse.ArgumentParser(description="Create defined tables in database")
+#     parser.add_argument("--truncate", "-t", default=False, action="store_true",
+#                         help="If given, delete current records from YouTube table before create_all "
+#                              "so that table can be recreated without unique id issues ")
+#     args = parser.parse_args()
+
+#     # If "truncate" is given as an argument (i.e. python models.py --truncate), then empty the tweet_score table)
+#     if args.truncate:
+#         #session = get_session(engine_string=config.SQLALCHEMY_DATABASE_URI)
+#         try:
+#             logger.info("Attempting to truncate YouTubeInput table.")
+#             _truncate_YouTubeInput(session)
+#             session.commit()
+#             logger.info("YouTubeInput truncated.")
+#         except Exception as e:
+#             logger.error("Error occurred while attempting to truncate YouTubeInput table.")
+#             logger.error(e)
+#         finally:
+#             session.close()
+
+#     engine_string = get_engineString()
+
+#     engine = sql.create_engine(engine_string)
+
+#     create_db(engine=engine)
+
+#     # Add Data
+#     # set up looging config
+#     logging.basicConfig(format='%(levelname)s:%(message)s', level=logging.DEBUG)
+#     logger = logging.getLogger(__file__)
+#     # create a db session
+#     Session = sessionmaker(bind=engine)
+#     session = Session()
+#     # add a record/track
+#     track1 = YouTubeInput(channelID='123jieife2', channelDays='324', channelViewCount='273', totalviews_channelelapsedtime='283.3', likes_views='473.3554', totvideos_videocount='32', videoCount='2732', videoLikeCount='232', channelCommentCount='327382', comments_views='23296', dislikes_views='-34.2', videoDislikeCount='86', videoCategoryId='788', likes_dislikes='096', pred='983265478')
+#     session.add(track1)
+#     session.commit()
+#     logger.info("Database created with new input added")
 
 
 
