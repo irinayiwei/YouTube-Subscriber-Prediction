@@ -139,7 +139,23 @@ if __name__ == "__main__":
             session.close()
 
     engine_string = "{conn_type}://{user}:{password}@{host}:{port}/{database}"
+    engine = sql.create_engine(engine_string)
 
-    create_db(engine_string)
+    create_db(engine)
 
-    #create_db(engine_string=config.SQLALCHEMY_DATABASE_URI)
+    # Add Data
+    # set up looging config
+    logging.basicConfig(format='%(levelname)s:%(message)s', level=logging.DEBUG)
+    logger = logging.getLogger(__file__)
+    # create a db session
+    Session = sessionmaker(bind=engine)
+    session = Session()
+    # add a record/track
+    track1 = Track(channelID='123jieife2', channelDays='324', channelViewCount='273', totalviews_channelelapsedtime='283.3', likes_views='473.3554', totvideos_videocount='32', videoCount='2732', videoLikeCount='232', channelCommentCount='327382', comments_views='23296', dislikes_views='-34.2', videoDislikeCount='86', videoCategoryId='788', likes_dislikes='096', pred='983265478')
+    session.add(track1)
+    session.commit()
+    logger.info("Database created with new input added")
+
+
+
+
