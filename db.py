@@ -2,6 +2,7 @@ import os
 import sys
 import logging
 import logging.config
+import sqlalchemy as sql
 
 from sqlalchemy import create_engine, Column, Integer, String, Text, Float
 from sqlalchemy.orm import sessionmaker
@@ -116,6 +117,18 @@ def create_db(engine=None, engine_string=None):
 
     Base.metadata.create_all(engine)
 
+def get_engineString():
+    # the engine_string format
+    #engine_string = "{conn_type}://{user}:{password}@{host}:{port}/{database}"
+    conn_type = "mysql+pymysql"
+    user = os.environ.get("MYSQL_USER")
+    password = os.environ.get("MYSQL_PASSWORD")
+    host = os.environ.get("MYSQL_HOST")
+    port = os.environ.get("MYSQL_PORT")
+    engine_string = "{}://{}:{}@{}:{}/DATABASE_NAME".\
+    format(conn_type, user, password, host, port)
+    return(engine_string)
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Create defined tables in database")
@@ -138,10 +151,11 @@ if __name__ == "__main__":
         finally:
             session.close()
 
-    engine_string = "{conn_type}://{user}:{password}@{host}:{port}/{database}"
+    engine_string = get_engineString
+
     engine = sql.create_engine(engine_string)
 
-    create_db(engine)
+    create_db(engine=engine)
 
     # Add Data
     # set up looging config
