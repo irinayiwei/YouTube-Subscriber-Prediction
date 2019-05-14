@@ -47,12 +47,14 @@ pexpect==4.7.0
 pickleshare==0.7.5
 prometheus-client==0.6.0
 prompt-toolkit==2.0.9
-pytest==4.0.1
+ptyprocess==0.6.0
+Purest = 4.0.1
 ptyprocess==0.6.0
 pyaml==18.11.0
 pyasn1==0.4.5
 pycparser==2.19
 Pygments==2.4.0
+PyMySQL==0.9.3
 pyOpenSSL==19.0.0
 pyparsing==2.4.0
 pyrsistent==0.14.11
