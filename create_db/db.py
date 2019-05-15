@@ -86,8 +86,7 @@ class YouTubeInput(Base):
             self.videoCount, self.videoLikeCount, self.channelCommentCount, self.comments_views, self.dislikes_views,
             self.videoDislikeCount, self.videoCategoryId, self.likes_dislikes, self.pred)
 
-# the engine_string format
-#engine_string = "{conn_type}://{user}:{password}@{host}:{port}/DATABASE_NAME"
+##Creat Databases
 conn_type = "mysql+pymysql"
 user = os.environ.get("MYSQL_USER")
 password = os.environ.get("MYSQL_PASSWORD")
@@ -103,6 +102,23 @@ Base.metadata.create_all(engine)
 # set up looging config
 logging.basicConfig(format='%(levelname)s:%(message)s', level=logging.DEBUG)
 logger = logging.getLogger(__file__)
+
+# Add Data
+
+# create a db session
+Session = sessionmaker(bind=engine)
+session = Session()
+# add a channel and print
+channel1 = YouTubeInput(channelID='123jieife2', channelDays='324', channelViewCount='273', totalviews_channelelapsedtime='283.3', likes_views='473.3554', totvideos_videocount='32', videoCount='2732', videoLikeCount='232', channelCommentCount='327382', comments_views='23296', dislikes_views='-34.2', videoDislikeCount='86', videoCategoryId='788', likes_dislikes='096', pred='983265478')
+session.add(channel1)
+logger.info("Database created with one channel added")
+tbl = session.execute("SELECT * FROM YouTubeInput")
+print(tbl)
+session.commit()
+logger.info("Database printed")
+
+
+
 
 # def _truncate_YouTubeInput(session):
 #     """Deletes YouTubeInput table if rerunning and run into unique key error."""
@@ -174,18 +190,7 @@ logger = logging.getLogger(__file__)
 
 #     create_db(engine=engine)
 
-#     # Add Data
-#     # set up looging config
-#     logging.basicConfig(format='%(levelname)s:%(message)s', level=logging.DEBUG)
-#     logger = logging.getLogger(__file__)
-#     # create a db session
-#     Session = sessionmaker(bind=engine)
-#     session = Session()
-#     # add a record/track
-#     track1 = YouTubeInput(channelID='123jieife2', channelDays='324', channelViewCount='273', totalviews_channelelapsedtime='283.3', likes_views='473.3554', totvideos_videocount='32', videoCount='2732', videoLikeCount='232', channelCommentCount='327382', comments_views='23296', dislikes_views='-34.2', videoDislikeCount='86', videoCategoryId='788', likes_dislikes='096', pred='983265478')
-#     session.add(track1)
-#     session.commit()
-#     logger.info("Database created with new input added")
+
 
 
 

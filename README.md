@@ -16,6 +16,12 @@
 
 <!-- tocstop -->
 
+## MidPoint Review
+
+This branch is created mainly for the midpoint review process. Scripts for acquiring data from S3, putting data to S3 and creating RDS databases are in the create_db folder. Slides for the midpoint checkpoint is in the presentations folder. 
+
+Any feedbacks and suggestions regarding next steps are appreciated!
+
 ## Project Charter 
 
 **Vision**: 
