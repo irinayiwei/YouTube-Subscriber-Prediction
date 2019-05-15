@@ -2,6 +2,7 @@
 
 <!-- toc -->
 
+- [MidPoint Review](#midpoint-review)
 - [Project Charter](#project-charter)
 - [Repo structure](#repo-structure)
 - [Documentation](#documentation)
@@ -55,32 +56,32 @@ Optimally, this project aims to:
 **Epics and Stories**: 
 
 - **Epic 1 -- Literature Review**: 
-  - **Story1**: *Find* articles on past YouTube related projects -- BL 2 point****
-  - **Story2**: *Extract* useful datasets for the current project -- BL 1 point****
-  - **Story3**: *Identify* significant features in subscriber prediction or channel assessment suggested by previous research -- BL 1 point****
-  - **Story4**: *Identify* effective algorithms in subscriber or video view prediction -- BL 1 point****
+  - **Story1**: *Find* articles on past YouTube related projects -- BL 2 point finished
+  - **Story2**: *Extract* useful datasets for the current project -- BL 1 point finished
+  - **Story3**: *Identify* significant features in subscriber prediction or channel assessment suggested by previous research -- BL 1 point finished
+  - **Story4**: *Identify* effective algorithms in subscriber or video view prediction -- BL 1 point finished
 -  **Epic 2 -- Exploratory Data Analysis**:
-   - **Story1**: *Merge* multiple datasets to get a combined dataset that includes features for all variables -- BL 0 point****
-   - **Story2**: *Clean* missing values and extreme values -- BL 1 point***
-   - **Story3**: *Create* new features suggested by previous research, including taking the ratios, differences, etc for certain variables -- BL 2 points***
-   - **Story4**: *Standardize* certain variables if needed, check for variable skewness and distributions -- BL 1 point ***
-   - **Story5**: *Visualize* variable distributions and collinear relationships with response variable (subscriber count) -- BL 1 point***
+   - **Story1**: *Merge* multiple datasets to get a combined dataset that includes features for all variables -- BL 0 point finished
+   - **Story2**: *Clean* missing values and extreme values -- BL 1 point finished
+   - **Story3**: *Create* new features suggested by previous research, including taking the ratios, differences, etc for certain variables -- BL 2 points finished
+   - **Story4**: *Standardize* certain variables if needed, check for variable skewness and distributions -- BL 1 point finished
+   - **Story5**: *Visualize* variable distributions and collinear relationships with response variable (subscriber count) -- BL 1 point finished
 - **Epic 3 -- Model Building**: 
-   - **Story1**: *Split* the data into train, test and validation sets  -- BL 0 point **
-   - **Story2**: *Identify* a effective distance metrics to calculate the distance between channels, do not use "age" (the time a channel has come into existence) as a variable -- BL 2 points**
-   - **Story3**: *Find* the nearest n (to be decided based on model performance) training neighbors for each channel in the test set and for the n neighbors:  -- BL 2 points**
-   - **Story4**: *Build* 2 sets of models (one set using all variables, including "age", another using "age" only) using 10-fold cross-validation, ideally one or two models from each family (linear, trees, svm, boosting, etc); *tune* the parameter sets for each model -- BL 8 points**
-   - **Story5**: *Calculate* the performance metrics for each model in the two sets (prediction RMSE, variable importance, etc) and *compare* the performance metrics among different models -- BL 4 points**
-   - **Story6**: *Repeat* on a different number of nearest neighbor set and re-run the models to arrive on the best n -- BL 8 points**
-   - **Story7**: *Finalize* the prediction model based on comparison across the two variable sets and decide on which set gives the best outcome; arrive at the best parameter set for the final model -- BL 2 points**
-   - **Story8**: *Visualize* subscriber growth in terms of year and variable importance based on the final model; visualize the top 10 mature channels that have similar growth path for a given young channel -- BL 1 points**
+   - **Story1**: *Split* the data into train, test and validation sets  -- BL 0 point finished
+   - **Story2**: *Identify* a effective distance metrics to calculate the distance between channels, do not use "age" (the time a channel has come into existence) as a variable -- BL 2 points finished
+   - **Story3**: *Find* the nearest n (to be decided based on model performance) training neighbors for each channel in the test set and for the n neighbors:  -- BL 2 points finished
+   - **Story4**: *Build* 2 sets of models (one set using all variables, including "age", another using "age" only) using 10-fold cross-validation, ideally one or two models from each family (linear, trees, svm, boosting, etc); *tune* the parameter sets for each model -- BL 8 points finished
+   - **Story5**: *Calculate* the performance metrics for each model in the two sets (prediction RMSE, variable importance, etc) and *compare* the performance metrics among different models -- BL 4 points finished
+   - **Story6**: *Repeat* on a different number of nearest neighbor set and re-run the models to arrive on the best n -- BL 8 points finished
+   - **Story7**: *Finalize* the prediction model based on comparison across the two variable sets and decide on which set gives the best outcome; arrive at the best parameter set for the final model -- BL 2 points finished
+   - **Story8**: *Visualize* subscriber growth in terms of year and variable importance based on the final model; visualize the top 10 mature channels that have similar growth path for a given young channel -- BL 1 points ****
 - **Epic 4 -- Web App Building**:
-   - **Story1**: *Build* a pipeline from local data, modeling, to online amazon web service (AWS) -- BL 8 points*
-   - **Story2**: *Design* the display of the web interface for basic functionalities -- BL 8 points*
+   - **Story1**: *Build* a pipeline from local data, modeling, to online amazon web service (AWS) -- BL 8 points finished
+   - **Story2**: *Design* the display of the web interface for basic functionalities -- BL 8 points ****
    - **Story3**: *Optimize* the interface by adding more visualizations and insights; maximize user interactions -- IB
 - **Epic 5 -- Launching and Testing**:
-  - **Story1**: *Launch* the web app on AWS and open for user input and feedback -- BL 2 points*
-  - **Story2**: *Test* for errors and fix running issues -- BL 2 points*
+  - **Story1**: *Launch* the web app on AWS and open for user input and feedback -- BL 2 points***
+  - **Story2**: *Test* for errors and fix running issues -- BL 2 points**
   - **Story3**: *Make* adjustment based on user feedback -- IB
 
 **Notations**: 
@@ -93,27 +94,27 @@ Optimally, this project aims to:
   - *: not urgent, steps towards the end of the project
  
  **Backlog**:
- - Epic1.Story1: 2 points -- Planned for the next 2 weeks
- - Epic1.Story2: 1 points -- Planned for the next 2 weeks
- - Epic1.Story3: 1 points -- Planned for the next 2 weeks
- - Epic1.Story4: 1 points -- Planned for the next 2 weeks
- - Epic2.Story1: 0 points -- Planned for the next 2 weeks
- - Epic2.Story2: 1 points -- Planned for the next 2 weeks
- - Epic2.Story3: 2 points -- Planned for the next 2 weeks
- - Epic2.Story4: 1 points 
- - Epic2.Story5: 1 points 
- - Epic3.Story1: 0 points 
- - Epic3.Story2: 2 points 
- - Epic3.Story3: 2 points 
- - Epic3.Story4: 8 points 
- - Epic3.Story5: 4 points
- - Epic3.Story6: 8 points 
- - Epic3.Story7: 2 points 
- - Epic3.Story8: 1 points 
- - Epic4.Story1: 8 points 
- - Epic4.Story2: 8 points 
- - Epic5.Story1: 2 points 
- - Epic5.Story2: 2 points
+ - Epic1.Story1: 2 points -- Finished
+ - Epic1.Story2: 1 points -- Finished
+ - Epic1.Story3: 1 points -- Finished
+ - Epic1.Story4: 1 points -- Finished
+ - Epic2.Story1: 0 points -- Finished
+ - Epic2.Story2: 1 points -- Finished
+ - Epic2.Story3: 2 points -- Finished
+ - Epic2.Story4: 1 points -- Finished
+ - Epic2.Story5: 1 points -- Finished
+ - Epic3.Story1: 0 points -- Finished 
+ - Epic3.Story2: 2 points -- Finished
+ - Epic3.Story3: 2 points -- Finished
+ - Epic3.Story4: 8 points -- Finished
+ - Epic3.Story5: 4 points -- Finished
+ - Epic3.Story6: 8 points -- Finished
+ - Epic3.Story7: 2 points -- Finished
+ - Epic3.Story8: 1 points -- Planned for the next 2 weeks
+ - Epic4.Story1: 8 points -- Finished
+ - Epic4.Story2: 8 points -- Planned for the next 2 weeks
+ - Epic5.Story1: 2 points -- Planned for the next 2 weeks
+ - Epic5.Story2: 2 points 
 
 **IceBox**:
 - Epic4.Story3
