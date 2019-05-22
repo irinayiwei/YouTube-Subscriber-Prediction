@@ -16,10 +16,10 @@ Any feedbacks and suggestions regarding next steps are appreciated!
 
 *Related Files:*
 
-- create_db/acquire.py
-- create_db/upload.py
-- create_db/db.py
-- requirements.txt
+- create_db/acquire.py https://github.com/irinayiwei/YouTube-Subscriber-Prediction/blob/midpoint/create_db/acquire.py
+- create_db/upload.py https://github.com/irinayiwei/YouTube-Subscriber-Prediction/blob/midpoint/create_db/upload.py
+- create_db/db.py https://github.com/irinayiwei/YouTube-Subscriber-Prediction/blob/midpoint/create_db/db.py
+- requirements.txt https://github.com/irinayiwei/YouTube-Subscriber-Prediction/blob/midpoint/requirements.txt
 
 *Running the Files:*
 
