@@ -1,0 +1,69 @@
+youtube:
+  author: Yiwei Zhang
+  description: Model to predict the subscriber number of a YouTube channel
+  dependencies: requirements.txt
+  tags: 
+    - prediction
+    - YouTube
+    - Subscriber
+  mpl_setting:
+    font.size: 16
+    axes.prop_cycle: cycler('color', ['#0085ca', '#888b8d', '#00c389', '#f4364c', '#e56db1'])
+    xtick.labelsize: 14
+    ytick.labelsize: 14
+    figure.figsize: [12.0, 8.0]
+    axes.labelsize: 20
+    axes.labelcolor: '#677385'
+    axes.titlesize: 20
+    lines.color: '#0055A7'
+    lines.linewidth: 3
+    text.color: '#677385'
+    font.family: 'sans-serif'
+    font.sans-serif: 'Tahoma'
+  download_data:
+    how: 'user input' #or s3
+    bucketname: nw-yiweizhang-s3
+    dataname: 'YouTubeDataset_withChannelElapsed.json'
+    outputpath: '../data/YouTube.json'
+  upload_data:
+    how: 'user input' # or s3
+    bucketname: nw-yiweizhang-s3
+    dataname: 'YouTubeDataset_withChannelElapsed.json'
+    destination_path: 'YouTube.json'
+  preprocessing:
+    features: ['subscriberCount', 'channelViewCount', 'totalviews/channelelapsedtime', 'likes/views', 'totvideos/videocount', 'videoCount', 'videoLikeCount', 'channelCommentCount', 'comments/views', 'dislikes/views','videoDislikeCount','videoCategoryId', 'likes/dislikes', 'channelDays']
+    random_state: 123
+  train_model:
+    split_data:
+      features: ['channelViewCount', 'totalviews/channelelapsedtime', 'likes/views', 'totvideos/videocount', 'videoCount', 'videoLikeCount', 'channelCommentCount', 'comments/views', 'dislikes/views','videoDislikeCount','videoCategoryId', 'likes/dislikes', 'channelDays']
+      target: 'subscriberCount'
+      split_young: 10000
+      split_mature: 20000
+      test_size: 10000
+    method: 'knn'
+    params:
+      other:
+        n_neighbors: 10
+        weights: 'distance'
+        algorithm: 'auto'
+        leaf_size: 30
+        p: 2
+        metric: 'minkowski'
+      mature: 
+        n_neighbors: 5
+        weights: 'distance'
+        algorithm: 'auto'
+        leaf_size: 30
+        p: 2
+        metric: 'minkowski'
+  score_model:
+    how: 'prediction'
+  evaluate_model:
+    metrics: ['r2', 'rmse', 'rmse/range']
+  important_features:
+    features: ['visible_range', 'visible_norm_range', 'log_entropy', 'IR_mean', 'entropy_x_contrast', 'IR_range', 'IR_norm_range', 'visible_mean']
+    sort_criteria: 'odds_ratio'
+
+
+
+
