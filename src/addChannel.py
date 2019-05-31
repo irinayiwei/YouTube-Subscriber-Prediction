@@ -7,6 +7,7 @@ import sqlalchemy as sql
 from sqlalchemy import create_engine, Column, Integer, String, Text, Float
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy import Column, Integer, String, MetaData
 
 #import config
 import yaml
@@ -176,9 +177,6 @@ def add_channel(args):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Create defined tables in database and add new entries")
-    parser.add_argument("--truncate", "-t", default=False, action="store_true",
-                        help="If given, delete current records from YouTube table before create_all "
-                             "so that table can be recreated without unique id issues ")
     subparsers = parser.add_subparsers()
 
     # Sub-parser for creating a database
@@ -189,6 +187,9 @@ if __name__ == "__main__":
     sb_create.add_argument("--dislikes", default="2637", help="Total dislikes of the channel")
     sb_create.add_argument("--commentCount", default="3728", help="Total comments of the channel")
     sb_create.add_argument("--videoCount", default="347", help="Total videos of the channel")
+    sb_create.add_argument("--truncate", "-t", default=False, action="store_true",
+                        help="If given, delete current records from YouTube table before create_all "
+                             "so that table can be recreated without unique id issues ")
     sb_create.set_defaults(func=create_db)
 
     # Sub-parser for ingesting new data
@@ -199,6 +200,9 @@ if __name__ == "__main__":
     sb_ingest.add_argument("--dislikes", default="19438", help="Total dislikes of the channel")
     sb_ingest.add_argument("--commentCount", default="28475", help="Total comments of the channel")
     sb_ingest.add_argument("--videoCount", default="769", help="Total videos of the channel")
+    sb_ingest.add_argument("--truncate", "-t", default=False, action="store_true",
+                        help="If given, delete current records from YouTube table before create_all "
+                             "so that table can be recreated without unique id issues ")
     sb_ingest.set_defaults(func=add_channel)
 
     args = parser.parse_args()
