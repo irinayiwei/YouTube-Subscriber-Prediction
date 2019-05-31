@@ -195,7 +195,7 @@ if __name__ == "__main__":
 
     # Sub-parser for ingesting new data
     sb_ingest = subparsers.add_parser("ingest", description="Add data to database")
-    sb_create.add_argument("--channelID", default="12313", help="Days the channel has been created")
+    sb_ingest.add_argument("--channelID", default="12313", help="Days the channel has been created")
     sb_ingest.add_argument("--channelDays", default="736", help="Days the channel has been created")
     sb_ingest.add_argument("--viewCount", default="528920", help="Total views of the channel")
     sb_ingest.add_argument("--likes", default="96372", help="Total likes of the channel")
