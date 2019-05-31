@@ -60,40 +60,43 @@ class YouTube(Base):
             self.videoCategoryId, self.videoCount, self.videoDislikeCount, self.videoId, self.videoLikeCount, self.videoPublished, self.videoViewCount, 
             self.views_elapsedtime. self.views_subscribers)
 
-class YouTubeInput(Base):
+class Channel(Base):
 
-    """ Defines the data model for the table `YouTubeInput`. """
+    """ Defines the data model for the table `channel`. """
 
-    __tablename__ = 'YouTubeInput'
+    __tablename__ = 'channel'
 
-    channelId = Column(String(100), primary_key=True, unique=True, nullable=False)
+    #channelId = Column(String(100), primary_key=True, unique=True, nullable=False)
     channelDays = Column(String(100), unique=False, nullable=False)
-    channelViewCount = Column(String(100), unique=False, nullable=False)
-    totalviews_channelelapsedtime = Column(String(100), unique=False, nullable=False)
-    likes_views = Column(String(100), unique=False, nullable=False)
-    totvideos_videocount = Column(String(100), unique=False, nullable=False)
+    viewCount = Column(String(100), unique=False, nullable=False)
+    likes = Column(String(100), unique=False, nullable=False)
+    dislikes = Column(String(100), unique=False, nullable=False)
     videoCount = Column(String(100), unique=False, nullable=False)
-    videoLikeCount = Column(Text, unique=False, nullable=False)
-    channelCommentCount = Column(String(100), unique=False, nullable=False)
-    comments_views = Column(String(100), unique=False, nullable=False)
-    dislikes_views = Column(String(100), unique=False, nullable=False)
-    videoDislikeCount = Column(String(100), unique=False, nullable=False)
-    videoCategoryId = Column(String(100), unique=False, nullable=False)
-    likes_dislikes = Column(String(100), unique=False, nullable=False)
-    pred = Column(String(100), unique=False, nullable=False)
+    commentCount = Column(String(100), unique=False, nullable=False)
+
+    #totalviews_channelelapsedtime = Column(String(100), unique=False, nullable=False)
+    #likes_views = Column(String(100), unique=False, nullable=False)
+    #totvideos_videocount = Column(String(100), unique=False, nullable=False)
+    
+    #videoLikeCount = Column(Text, unique=False, nullable=False)
+    
+    #comments_views = Column(String(100), unique=False, nullable=False)
+    #dislikes_views = Column(String(100), unique=False, nullable=False)
+    #videoDislikeCount = Column(String(100), unique=False, nullable=False)
+    #videoCategoryId = Column(String(100), unique=False, nullable=False)
+    #likes_dislikes = Column(String(100), unique=False, nullable=False)
+    #pred = Column(String(100), unique=False, nullable=False)
 
 
     def __repr__(self):
-        YouTubeInput_repr = "<YouTubeInput(channelID='%s', channelDays='%s', channelViewCount='%s', totalviews/channelelapsedtime='%s', likes/views='%s', totvideos/videocount='%s', videoCount='%s', videoLikeCount='%s', channelCommentCount='%s', comments/views='%s', dislikes/views='%s', videoDislikeCount='%s', videoCategoryId='%s', likes/dislikes='%s', pred='%s')>"
-        return YouTubeInput_repr % (self.channelID, self.channelDays, self.channelViewCount, self.totalviews_channelelapsedtime, self.likes_views, self.totvideos_videocount, 
-            self.videoCount, self.videoLikeCount, self.channelCommentCount, self.comments_views, self.dislikes_views,
-            self.videoDislikeCount, self.videoCategoryId, self.likes_dislikes, self.pred)
+        Channel_repr = "<Channel(channelDays='%s', viewCount='%s', likes='%s', dislikes='%s', videoCount='%s', commentCount='%s')>"
+        return Channel_repr % (self.channelDays, self.viewCount, self.likes, self.dislikes, self.videoCount, self.commentCount)
 
 
-def _truncate_YouTubeInput(session):
-    """Deletes YouTubeInput table if rerunning and run into unique key error."""
+def _truncate_Channel(session):
+    """Deletes Channel table if rerunning and run into unique key error."""
 
-    session.execute('''DELETE FROM YouTubeInput''')
+    session.execute('''DELETE FROM Channel''')
 
 def _truncate_YouTube(session):
     """Deletes YouTube table if rerunning and run into unique key error."""
@@ -101,8 +104,8 @@ def _truncate_YouTube(session):
     session.execute('''DELETE FROM YouTube''')
 
 
-def create_db(engine=None, engine_string=None):
-    """Creates a database with the data models inherited from `Base` (YouTube and YouTubeInput).
+def create_db(args):
+    """Creates a database with the data models inherited from `Base` (YouTube and Channel).
 
     Args:
         engine (:py:class:`sqlalchemy.engine.Engine`, default None): SQLAlchemy connection engine.
@@ -113,11 +116,14 @@ def create_db(engine=None, engine_string=None):
     Returns:
         None
     """
-    if engine is None and engine_string is None:
-        return ValueError("`engine` or `engine_string` must be provided")
-    elif engine is None:
-        engine = sql.create_engine(engine_string)
-
+    # if engine is None and engine_string is None:
+    #     return ValueError("`engine` or `engine_string` must be provided")
+    # elif engine is None:
+    #     engine = sql.create_engine(engine_string)
+    
+    #create engine
+    engine_string = get_engineString()
+    engine = sql.create_engine(engine_string)
     Base.metadata.create_all(engine)
 
     ## End of function
@@ -148,32 +154,74 @@ def get_engineString():
 
     return(engine_string)
 
+def add_channel(args):
+    """Seeds an existing database with additional channels.
+
+    Args:
+        args: Argparse args - should include args.channelDays, args.viewCount, args.likes, args.dislikes, args.videoCount, args.commentCount
+
+    Returns:None
+
+    """
+
+    engine_string = get_engineString()
+    session = get_session(engine_string=engine_string)
+
+    channel = Channel(channelDays = args.channelDays, viewCount = args.viewCount, likes=args.likes, dislikes=args.dislikes, videoCount=args.videoCount, commentCount=args.commentCount)
+    session.add(channel)
+    session.commit()
+    logger.info("Channel with %s days, %s likes, %s dislikes, %s videos, %s comments, %s views, added to database",
+        args.channelDays, args.likes, args.dislikes, args.videoCount, args.commentCount, args.viewCount)
+
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Create defined tables in database")
+    parser = argparse.ArgumentParser(description="Create defined tables in database and add new entries")
     parser.add_argument("--truncate", "-t", default=False, action="store_true",
                         help="If given, delete current records from YouTube table before create_all "
                              "so that table can be recreated without unique id issues ")
-    args = parser.parse_args()
+    subparsers = parser.add_subparsers()
 
-    # If "truncate" is given as an argument (i.e. python models.py --truncate), then empty the YouTubeInput table)
+    # Sub-parser for creating a database
+    sb_create = subparsers.add_parser("create", description="Create database")
+    sb_create.add_argument("--channelDays", default="103", help="Days the channel has been created")
+    sb_create.add_argument("--viewCount", default="48729", help="Total views of the channel")
+    sb_create.add_argument("--likes", default="8728", help="Total likes of the channel")
+    sb_create.add_argument("--dislikes", default="2637", help="Total dislikes of the channel")
+    sb_create.add_argument("--commentCount", default="3728", help="Total comments of the channel")
+    sb_create.add_argument("--videoCount", default="347", help="Total videos of the channel")
+    sb_create.set_defaults(func=create_db)
+
+    # Sub-parser for ingesting new data
+    sb_ingest = subparsers.add_parser("ingest", description="Add data to database")
+    sb_ingest.add_argument("--channelDays", default="736", help="Days the channel has been created")
+    sb_ingest.add_argument("--viewCount", default="528920", help="Total views of the channel")
+    sb_ingest.add_argument("--likes", default="96372", help="Total likes of the channel")
+    sb_ingest.add_argument("--dislikes", default="19438", help="Total dislikes of the channel")
+    sb_ingest.add_argument("--commentCount", default="28475", help="Total comments of the channel")
+    sb_ingest.add_argument("--videoCount", default="769", help="Total videos of the channel")
+    sb_ingest.set_defaults(func=add_channel)
+
+    args = parser.parse_args()
+    args.func(args)
+
+    # If "truncate" is given as an argument (i.e. python models.py --truncate), then empty the Channel table)
     if args.truncate:
-        session = get_session(engine_string=config.SQLALCHEMY_DATABASE_URI)
+        session = get_session(engine_string=get_engineString())
         try:
-            logger.info("Attempting to truncate YouTubeInput table.")
-            _truncate_YouTubeInput(session)
+            logger.info("Attempting to truncate Channel table.")
+            _truncate_Channel(session)
             session.commit()
-            logger.info("YouTubeInput truncated.")
+            logger.info("Channel truncated.")
         except Exception as e:
-            logger.error("Error occurred while attempting to truncate YouTubeInput table.")
+            logger.error("Error occurred while attempting to truncate Channel table.")
             logger.error(e)
         finally:
             session.close()
 
-    engine_string = get_engineString()
+    # engine_string = get_engineString()
 
-    ## Create database
-    create_db(engine_string)
+    # ## Create database
+    # create_db(engine_string)
 
     ## Testing -- Add Data
     # create a db session
@@ -181,10 +229,10 @@ if __name__ == "__main__":
     session = Session()
 
     # add a channel and print
-    channel1 = YouTubeInput(channelID='123jieife2', channelDays='324', channelViewCount='273', totalviews_channelelapsedtime='283.3', likes_views='473.3554', totvideos_videocount='32', videoCount='2732', videoLikeCount='232', channelCommentCount='327382', comments_views='23296', dislikes_views='-34.2', videoDislikeCount='86', videoCategoryId='788', likes_dislikes='096', pred='983265478')
+    channel1 = Channel(channelDays='324', viewCount='273', likes='473', dislikes = '238', videoCount='2732', commentCount='372')
     session.add(channel1)
     logger.info("------------- New Channel Added ------------- ")
-    tbl = session.execute("SELECT * FROM YouTubeInput")
+    tbl = session.execute("SELECT * FROM Channel")
     print(tbl)
 
     session.commit()

@@ -1,7 +1,7 @@
 #.PHONY: venv clouds all
 # Create virtual env
 
-.PHONY: venv load_data preprocessing trainModel1 trainModel2 trainModel3 trainModel4 scoreModel1 scoreModel2 scoreModel3 scoreModel4 evaluateModel1 evaluateModel2 evaluateModel3 ealuateModel4
+.PHONY: venv loadData preprocessing trainModel1 trainModel2 trainModel3 trainModel4 scoreModel1 scoreModel2 scoreModel3 scoreModel4 evaluateModel1 evaluateModel2 evaluateModel3 ealuateModel4
 
 test-env/bin/activate: requirements.txt
 	test -d test-env || virtualenv test-env
@@ -11,8 +11,8 @@ venv: test-env/bin/activate
 
 ## Get Data
 ../data/YouTube.json: config.yml
-	python load_data.py --config=config.yml --bucket=nw-yiweizhang-s3 --data=YouTubeDataset_withChannelElapsed.json --output=../data/YouTube.json
-load_data: ../data/YouTube.json
+	python loadData.py --config=config.yml --bucket=nw-yiweizhang-s3 --data=YouTubeDataset_withChannelElapsed.json --output=../data/YouTube.json
+loadData: ../data/YouTube.json
 
 ## Features 
 ../data/features1.csv ../data/features2.csv ../data/features3.csv ../data/features4.csv: ../data/YouTube.json config.yml
@@ -81,6 +81,6 @@ clean-env:
 clean-pyc:
 	find . -name '*.pyc' -exec rm -f {} +
 
-all: venv load_data preprocessing, trainModel1, trainModel2, trainModel3, trainModel4, scoreModel1, scoreModel2, scoreModel3, scoreModel4, evaluateModel1, evaluateModel2, evaluateModel3, ealuateModel4
+all: venv loadData preprocessing, trainModel1, trainModel2, trainModel3, trainModel4, scoreModel1, scoreModel2, scoreModel3, scoreModel4, evaluateModel1, evaluateModel2, evaluateModel3, ealuateModel4
 
 
