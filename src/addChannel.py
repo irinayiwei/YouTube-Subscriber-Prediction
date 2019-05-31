@@ -67,7 +67,7 @@ class Channel(Base):
 
     __tablename__ = 'channel'
 
-    channelId = Column(String(100), primary_key=True, unique=True, nullable=False)
+    channelID = Column(String(100), primary_key=True, unique=True, nullable=False)
     channelDays = Column(String(100), unique=False, nullable=False)
     viewCount = Column(String(100), unique=False, nullable=False)
     likes = Column(String(100), unique=False, nullable=False)
@@ -181,7 +181,7 @@ if __name__ == "__main__":
 
     # Sub-parser for creating a database
     sb_create = subparsers.add_parser("create", description="Create database")
-    sb_create.add_argument("--channelID", default="18329", help="Days the channel has been created")
+    sb_create.add_argument("--channelID", default="18329", help="random channel id")
     sb_create.add_argument("--channelDays", default="103", help="Days the channel has been created")
     sb_create.add_argument("--viewCount", default="48729", help="Total views of the channel")
     sb_create.add_argument("--likes", default="8728", help="Total likes of the channel")
@@ -195,7 +195,7 @@ if __name__ == "__main__":
 
     # Sub-parser for ingesting new data
     sb_ingest = subparsers.add_parser("ingest", description="Add data to database")
-    sb_ingest.add_argument("--channelID", default="12313", help="Days the channel has been created")
+    sb_ingest.add_argument("--channelID", default="12313", help="random channel id")
     sb_ingest.add_argument("--channelDays", default="736", help="Days the channel has been created")
     sb_ingest.add_argument("--viewCount", default="528920", help="Total views of the channel")
     sb_ingest.add_argument("--likes", default="96372", help="Total likes of the channel")
