@@ -66,7 +66,7 @@ class Channel(Base):
 
     __tablename__ = 'channel'
 
-    #channelId = Column(String(100), primary_key=True, unique=True, nullable=False)
+    channelId = Column(String(100), primary_key=True, unique=True, nullable=False)
     channelDays = Column(String(100), unique=False, nullable=False)
     viewCount = Column(String(100), unique=False, nullable=False)
     likes = Column(String(100), unique=False, nullable=False)
