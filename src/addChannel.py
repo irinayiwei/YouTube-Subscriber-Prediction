@@ -168,7 +168,7 @@ def add_channel(args):
     engine_string = get_engineString()
     session = get_session(engine_string=engine_string)
 
-    channel = Channel(channelDays = args.channelDays, viewCount = args.viewCount, likes=args.likes, dislikes=args.dislikes, videoCount=args.videoCount, commentCount=args.commentCount)
+    channel = Channel(channelID = args.channelID, channelDays = args.channelDays, viewCount = args.viewCount, likes=args.likes, dislikes=args.dislikes, videoCount=args.videoCount, commentCount=args.commentCount)
     session.add(channel)
     session.commit()
     logger.info("Channel with %s days, %s likes, %s dislikes, %s videos, %s comments, %s views, added to database",

@@ -6,6 +6,8 @@ from flask import Flask
 from src.add_Channel import Channel
 from flask_sqlalchemy import SQLAlchemy
 
+import random
+
 # Initialize the Flask application
 app = Flask(__name__)
 
@@ -51,7 +53,8 @@ def add_entry():
     """
 
     try:
-        channel1 = Channel(channelDays = request.form['channelDays'], viewCount = request.form['viewCount'], likes=request.form['likes'], dislikes=request.form['dislikes'], videoCount=request.form['videoCount'], commentCount=request.form['commentCount'])
+        channelID = str(random.randint(1, 999999999))
+        channel1 = Channel(channelID = , channelDays = request.form['channelDays'], viewCount = request.form['viewCount'], likes=request.form['likes'], dislikes=request.form['dislikes'], videoCount=request.form['videoCount'], commentCount=request.form['commentCount'])
         db.session.add(channel1)
         db.session.commit()
         logger.info("Channel with %s days, %s likes, %s dislikes, %s videos, %s comments, %s views, added to database",
