@@ -36,19 +36,19 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="Run components of the model source code")
     subparsers = parser.add_subparsers()
 
-    # # Sub-parser for creating a database
-    # sb_create = subparsers.add_parser("create", description="Create database")
-    # sb_create.add_argument("--channelID", default="18329", help="random channel id")
-    # sb_create.add_argument("--channelDays", default="103", help="Days the channel has been created")
-    # sb_create.add_argument("--viewCount", default="48729", help="Total views of the channel")
-    # sb_create.add_argument("--likes", default="8728", help="Total likes of the channel")
-    # sb_create.add_argument("--dislikes", default="2637", help="Total dislikes of the channel")
-    # sb_create.add_argument("--commentCount", default="3728", help="Total comments of the channel")
-    # sb_create.add_argument("--videoCount", default="347", help="Total videos of the channel")
-    # sb_create.add_argument("--truncate", "-t", default=False, action="store_true",
-    #                     help="If given, delete current records from YouTube table before create_all "
-    #                          "so that table can be recreated without unique id issues ")
-    # sb_create.set_defaults(func=create_db)
+    # Sub-parser for creating a database
+    sb_create = subparsers.add_parser("create", description="Create database")
+    sb_create.add_argument("--channelID", default="18329", help="random channel id")
+    sb_create.add_argument("--channelDays", default="103", help="Days the channel has been created")
+    sb_create.add_argument("--viewCount", default="48729", help="Total views of the channel")
+    sb_create.add_argument("--likes", default="8728", help="Total likes of the channel")
+    sb_create.add_argument("--dislikes", default="2637", help="Total dislikes of the channel")
+    sb_create.add_argument("--commentCount", default="3728", help="Total comments of the channel")
+    sb_create.add_argument("--videoCount", default="347", help="Total videos of the channel")
+    sb_create.add_argument("--truncate", "-t", default=False, action="store_true",
+                        help="If given, delete current records from YouTube table before create_all "
+                             "so that table can be recreated without unique id issues ")
+    sb_create.set_defaults(func=create_db)
 
     # Sub-parser for ingesting new data
     sb_ingest = subparsers.add_parser("ingest", description="Add data to database")
