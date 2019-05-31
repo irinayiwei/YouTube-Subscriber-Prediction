@@ -16,4 +16,4 @@ class Channel(db.Model):
         logger.warning("'channels' table not found")
 
     def __repr__(self):
-        return Channel_repr % (self.channelDays, self.viewCount, self.likes, self.dislikes, self.videoCount, self.commentCount)
+        return Channel_repr % (self.channelID, self.channelDays, self.viewCount, self.likes, self.dislikes, self.videoCount, self.commentCount)

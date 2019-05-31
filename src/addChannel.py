@@ -11,7 +11,7 @@ from sqlalchemy import Column, Integer, String, MetaData
 
 #import config
 import yaml
-from helpers import create_connection, get_session
+from src.helpers.helpers import create_connection, get_session
 import argparse
 
 logging.basicConfig(level=logging.INFO, format="%(name)-12s %(levelname)-8s %(message)s")

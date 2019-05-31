@@ -9,7 +9,7 @@ import logging
 import argparse
 import yaml
 import pickle
-from helpers import Timer
+from src.helpers.helpers import Timer
 
 # Basic plotting and data manipulation
 import numpy as np

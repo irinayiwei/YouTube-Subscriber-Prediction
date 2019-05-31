@@ -3,7 +3,7 @@ from flask import render_template, request, redirect, url_for
 import logging.config
 # from app.models import Channel
 from flask import Flask
-from src.add_Channel import Channel
+from src.addChannel import Channel
 from flask_sqlalchemy import SQLAlchemy
 
 import random
@@ -54,7 +54,7 @@ def add_entry():
 
     try:
         channelID = str(random.randint(1, 999999999))
-        channel1 = Channel(channelID = , channelDays = request.form['channelDays'], viewCount = request.form['viewCount'], likes=request.form['likes'], dislikes=request.form['dislikes'], videoCount=request.form['videoCount'], commentCount=request.form['commentCount'])
+        channel1 = Channel(channelID = channelID, channelDays = request.form['channelDays'], viewCount = request.form['viewCount'], likes=request.form['likes'], dislikes=request.form['dislikes'], videoCount=request.form['videoCount'], commentCount=request.form['commentCount'])
         db.session.add(channel1)
         db.session.commit()
         logger.info("Channel with %s days, %s likes, %s dislikes, %s videos, %s comments, %s views, added to database",
