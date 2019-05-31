@@ -1,8 +1,8 @@
 DEBUG = True
 LOGGING_CONFIG = "config/logging/local.conf"
-PORT = 3000
+PORT = 9044
 APP_NAME = "youtube-yiwei"
-#SQLALCHEMY_DATABASE_URI = 'sqlite:///../data/tracks.db'
+# SQLALCHEMY_DATABASE_URI = 'sqlite:///../data/channels.db'
 SQLALCHEMY_TRACK_MODIFICATIONS = True
 HOST = "0.0.0.0"
 SQLALCHEMY_ECHO = False  # If true, SQL for queries made will be printed
@@ -15,5 +15,7 @@ password = os.environ.get("MYSQL_PASSWORD")
 host = os.environ.get("MYSQL_HOST")
 port = os.environ.get("MYSQL_PORT")
 DATABASE_NAME = 'msia423ywzhang'
-SQLALCHEMY_DATABASE_URI = "{}://{}:{}@{}:{}/{}".\
-format(conn_type, user, password, host, port, DATABASE_NAME)
+SQLALCHEMY_DATABASE_URI = os.environ.get("{}://{}:{}@{}:{}/{}").\
+format(conn_type=conn_type, user, password, host, port, DATABASE_NAME)
+# SQLALCHEMY_DATABASE_URI = os.environ.get("SQLALCHEMY_DATABASE_URI").\
+# format(conn_type=conn_type, user, password, host, port, DATABASE_NAME)

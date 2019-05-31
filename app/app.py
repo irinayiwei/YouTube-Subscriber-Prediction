@@ -17,11 +17,15 @@ app.config.from_pyfile('../config/flask_config.py')
 # Define LOGGING_CONFIG in flask_config.py - path to config file for setting
 # up the logger (e.g. config/logging/local.conf)
 logging.config.fileConfig(app.config["LOGGING_CONFIG"])
-logger = logging.getLogger("penny-lane")
+logger = logging.getLogger("youtube-yiwei")
 logger.debug('Test log')
 
 # Initialize the database
 db = SQLAlchemy(app)
+
+# # Import prediction file here
+# from penny.py import Pennylane
+# pennylane = Pennylane()
 
 
 # @app.route('/')
@@ -63,5 +67,14 @@ def add_entry():
     except:
         logger.warning("Not able to display tracks, error page returned")
         return render_template('error.html')
+
+# @app.route('/add', methods=['POST'])
+# def predict():
+#     """View that process a POST with new channel input
+
+#     :return: redirect to index page
+#     """
+
+#     prediction = pennylane.run(request.form['kkkk'])
 
 

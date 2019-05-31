@@ -19,7 +19,7 @@ import logging.config
 from app.app import app
 
 logging.config.fileConfig("config/logging/local.conf")
-logger = logging.getLogger("run-penny-lane")
+logger = logging.getLogger("youtube-yiwei")
 logger.debug('Test log')
 
 from src.addChannel import create_db, add_channel
