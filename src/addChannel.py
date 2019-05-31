@@ -90,8 +90,8 @@ class Channel(Base):
 
 
     def __repr__(self):
-        Channel_repr = "<Channel(channelDays='%s', viewCount='%s', likes='%s', dislikes='%s', videoCount='%s', commentCount='%s')>"
-        return Channel_repr % (self.channelDays, self.viewCount, self.likes, self.dislikes, self.videoCount, self.commentCount)
+        Channel_repr = "<Channel(channelID='%s', channelDays='%s', viewCount='%s', likes='%s', dislikes='%s', videoCount='%s', commentCount='%s')>"
+        return Channel_repr % (self.channelID, self.channelDays, self.viewCount, self.likes, self.dislikes, self.videoCount, self.commentCount)
 
 
 def _truncate_Channel(session):
@@ -181,6 +181,7 @@ if __name__ == "__main__":
 
     # Sub-parser for creating a database
     sb_create = subparsers.add_parser("create", description="Create database")
+    sb_create.add_argument("--channelID", default="18329", help="Days the channel has been created")
     sb_create.add_argument("--channelDays", default="103", help="Days the channel has been created")
     sb_create.add_argument("--viewCount", default="48729", help="Total views of the channel")
     sb_create.add_argument("--likes", default="8728", help="Total likes of the channel")
@@ -194,6 +195,7 @@ if __name__ == "__main__":
 
     # Sub-parser for ingesting new data
     sb_ingest = subparsers.add_parser("ingest", description="Add data to database")
+    sb_create.add_argument("--channelID", default="12313", help="Days the channel has been created")
     sb_ingest.add_argument("--channelDays", default="736", help="Days the channel has been created")
     sb_ingest.add_argument("--viewCount", default="528920", help="Total views of the channel")
     sb_ingest.add_argument("--likes", default="96372", help="Total likes of the channel")
@@ -229,18 +231,18 @@ if __name__ == "__main__":
 
     ## Testing -- Add Data
     # create a db session
-    Session = sessionmaker(bind=engine)
-    session = Session()
+    # Session = sessionmaker(bind=engine)
+    # session = Session()
 
-    # add a channel and print
-    channel1 = Channel(channelDays='324', viewCount='273', likes='473', dislikes = '238', videoCount='2732', commentCount='372')
-    session.add(channel1)
-    logger.info("------------- New Channel Added ------------- ")
-    tbl = session.execute("SELECT * FROM Channel")
-    print(tbl)
+    # # add a channel and print
+    # channel1 = Channel(channelDays='324', viewCount='273', likes='473', dislikes = '238', videoCount='2732', commentCount='372')
+    # session.add(channel1)
+    # logger.info("------------- New Channel Added ------------- ")
+    # tbl = session.execute("SELECT * FROM Channel")
+    # print(tbl)
 
-    session.commit()
-    logger.info("------------- Data Table Printed ------------- ")
+    # session.commit()
+    # logger.info("------------- Data Table Printed ------------- ")
 
 
 
