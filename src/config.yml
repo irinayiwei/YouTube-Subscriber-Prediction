@@ -44,6 +44,11 @@ youtube:
         metric: 'minkowski'
   score_model:
     how: 'prediction'
+    path_to_stats: 'data/stats.csv'
+    path_to_tmo1: 'models/model1.pkl'
+    path_to_tmo2: 'models/model2.pkl'
+    path_to_tmo3: 'models/model3.pkl'
+    path_to_tmo4: 'models/model4.pkl'
   evaluate_model:
     metrics: ['r2', 'rmse', 'rmse/range']
   important_features:

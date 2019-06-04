@@ -13,7 +13,7 @@ class Channel(db.Model):
     try:
         __table__ = db.Model.metadata.tables['channels'] 
     except:
-        logger.warning("'channels' table not found")
+        logger.warning(" --- 'channels' table not found ---")
 
     def __repr__(self):
-        return Channel_repr % (self.channelID, self.channelDays, self.viewCount, self.likes, self.dislikes, self.videoCount, self.commentCount)
+        return Channel_repr % (self.channelID, self.channelDays, self.viewCount, self.likes, self.dislikes, self.videoCount, self.commentCount, self.catID)

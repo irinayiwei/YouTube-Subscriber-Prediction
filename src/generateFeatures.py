@@ -59,6 +59,18 @@ def generate_features(data, **kwargs):
     
     return(newbie, fiveYear, sixYear, eightYear)
 
+def get_stats(data1, data2, data3, data4):
+    mean1 = np.mean(data1)
+    sd1 = np.std(data1)
+    mean2 = np.mean(data2)
+    sd2 = np.std(data2)
+    mean3 = np.mean(data3)
+    sd3 = np.std(data3)
+    mean4 = np.mean(data4)
+    sd4 = np.std(data4)
+    stats = pd.DataFrame(data=np.array([mean1, sd1, mean2, sd2, mean3, sd3, mean4, sd4]), columns=['subscriberCount', 'viewCount', 'views_days', 'likes_views', 'videos_videocount', 'videoCount', 'videoLikeCount', 'CommentCount', 'comments_views', 'dislikes_views', 'dislikeCount', 'videoCategoryId', 'likes_dislikes', 'channelDays'])
+    return stats
+
 def run_features(args):
     """Orchestrates the generating of features from commandline arguments."""
     with open(args.config, "r") as f:
@@ -76,12 +88,14 @@ def run_features(args):
 
     ## Preprossing
     data1, data2, data3, data4 = generate_features(data, **config_yt['preprocessing'])
+    stats = get_stats(data1, data2, data3, data4)
 
     if args.output1 is not None:
         data1.to_csv(args.output1, header=True, index=False)
         data2.to_csv(args.output2, header=True, index=False)
         data3.to_csv(args.output3, header=True, index=False)
         data4.to_csv(args.output4, header=True, index=False)
+        stats.to_csv(args.output5, header=True, index=False)
         logger.info("Cohort data saved to %s, %s, %s and %s", args.output1, args.output2, args.output3, args.output4)
 
     return(data1, data2, data3, data4)
@@ -94,6 +108,7 @@ if __name__ == '__main__':
     parser.add_argument('--output2', default="features2.csv", help="Path to where the second dataset should be saved")
     parser.add_argument('--output3', default="features3.csv", help='Path to where the third dataset should be saved')
     parser.add_argument('--output4', default="features4.csv", help="Path to where the forth dataset should be saved")
+    parser.add_argument('--output5', default="stats.csv", help="Path to where the output statistics should be saved")
 
     args = parser.parse_args()
 

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="static/basic.css" rel="stylesheet">
+</head>
+
+<body>
+    <h3>
+         <a href = "{{ url_for('index') }}">Penny Lane Music Recommender</a>
+    </h3>
+
+    <hr/>
+<!--     <table>
+         <thead>
+            <tr>
+               <th>likes</th>
+               <th>dislikes</th>
+               <th>comment count</th>
+               <th>view count</th>
+               <th>days</th>
+               <th>video count</th>
+            </tr>
+         </thead>
+
+         <tbody>
+            {% for track in tracks %}
+               <tr>
+                   <td>{{ track.title }}</td>
+                   <td>{{ track.artist }}</td>
+                   <td>{{ track.album }}</td>
+               </tr>
+            {% endfor %}
+         </tbody>
+      </table> -->
+      <form action="{{ url_for('add_entry') }}" method=post class=add-entry>
+      <dl>
+        <input type=text size=15 name=channelDays placeholder="Title">
+        <input type=text size=15 name=likes placeholder="Artist">
+        <input type=text size=15 name=dislikes placeholder="Album">
+        <input type=text size=15 name=videoCount placeholder="Artist">
+        <input type=text size=15 name=viewCount placeholder="Album">
+        <input type=text size=15 name=commentCount placeholder="Artist">
+        <input type=submit value=Add>
+      </dl>
+    </form>
+
+</body>
+</html>

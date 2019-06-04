@@ -28,7 +28,7 @@ class YouTube(Base):
 
     VideoCommentCount = Column(String(100), unique=False, nullable=False)
     channelCommentCount = Column(String(100), unique=False, nullable=False)
-    channelId = Column(String(100), primary_key=True, unique=True, nullable=False)
+    channelId = Column(Integer, primary_key=True, unique=True, autoincrement=True)
     channelViewCount = Column(String(100), unique=False, nullable=False)
     channelelapsedtime = Column(String(100), unique=False, nullable=False)
     comments_subscriber = Column(String(100), unique=False, nullable=False)
@@ -67,31 +67,22 @@ class Channel(Base):
 
     __tablename__ = 'channel'
 
-    channelID = Column(String(100), primary_key=True, unique=True, nullable=False)
+    channelID = Column(Integer, primary_key=True, unique=True, nullable=False, autoincrement=True)
     channelDays = Column(String(100), unique=False, nullable=False)
     viewCount = Column(String(100), unique=False, nullable=False)
     likes = Column(String(100), unique=False, nullable=False)
     dislikes = Column(String(100), unique=False, nullable=False)
     videoCount = Column(String(100), unique=False, nullable=False)
     commentCount = Column(String(100), unique=False, nullable=False)
-
-    #totalviews_channelelapsedtime = Column(String(100), unique=False, nullable=False)
-    #likes_views = Column(String(100), unique=False, nullable=False)
-    #totvideos_videocount = Column(String(100), unique=False, nullable=False)
-    
-    #videoLikeCount = Column(Text, unique=False, nullable=False)
-    
-    #comments_views = Column(String(100), unique=False, nullable=False)
-    #dislikes_views = Column(String(100), unique=False, nullable=False)
-    #videoDislikeCount = Column(String(100), unique=False, nullable=False)
-    #videoCategoryId = Column(String(100), unique=False, nullable=False)
-    #likes_dislikes = Column(String(100), unique=False, nullable=False)
-    #pred = Column(String(100), unique=False, nullable=False)
-
+    catID = Column(String(100), unique=False, nullable=False)
+    pred1 = Column(String(100), unique=False, nullable=False)
+    pred2 = Column(String(100), unique=False, nullable=False)
+    pred3 = Column(String(100), unique=False, nullable=False)
+    pred4 = Column(String(100), unique=False, nullable=False)
 
     def __repr__(self):
-        Channel_repr = "<Channel(channelID='%s', channelDays='%s', viewCount='%s', likes='%s', dislikes='%s', videoCount='%s', commentCount='%s')>"
-        return Channel_repr % (self.channelID, self.channelDays, self.viewCount, self.likes, self.dislikes, self.videoCount, self.commentCount)
+        Channel_repr = "<Channel(channelID='%s', channelDays='%s', viewCount='%s', likes='%s', dislikes='%s', videoCount='%s', commentCount='%s', catID='%s')>"
+        return Channel_repr % (self.channelID, self.channelDays, self.viewCount, self.likes, self.dislikes, self.videoCount, self.commentCount, self.catID)
 
 
 def _truncate_Channel(session):
@@ -117,20 +108,16 @@ def create_db(args):
     Returns:
         None
     """
-    # if engine is None and engine_string is None:
-    #     return ValueError("`engine` or `engine_string` must be provided")
-    # elif engine is None:
-    #     engine = sql.create_engine(engine_string)
     
     #create engine
-    engine_string = get_engineString()
+    engine_string = get_engineString(args.use_sqlite)
     engine = sql.create_engine(engine_string)
     Base.metadata.create_all(engine)
 
     ## End of function
     logging.info('------------- Database Created ------------')
 
-def get_engineString():
+def get_engineString(use_sqlite=False):
     """Get engine string from setting and environment
 
     Args: 
@@ -139,8 +126,13 @@ def get_engineString():
     Returns:
         Engine String
     """
-    ## Function to get engine string
 
+    ## If using local database
+    if use_sqlite:
+        engine_string = "sqlite:///../data/channels.db"
+
+    ## If using RDS
+    else:
     conn_type = "mysql+pymysql"
     user = os.environ.get("MYSQL_USER")
     password = os.environ.get("MYSQL_PASSWORD")
@@ -165,14 +157,14 @@ def add_channel(args):
 
     """
 
-    engine_string = get_engineString()
+    engine_string = get_engineString(args.use_sqlite)
     session = get_session(engine_string=engine_string)
 
-    channel = Channel(channelID = args.channelID, channelDays = args.channelDays, viewCount = args.viewCount, likes=args.likes, dislikes=args.dislikes, videoCount=args.videoCount, commentCount=args.commentCount)
+    channel = Channel(channelDays = args.channelDays, viewCount = args.viewCount, likes=args.likes, dislikes=args.dislikes, videoCount=args.videoCount, commentCount=args.commentCount, catID=args.catID, pred1=args.pred1, pred2=args.pred2, pred3=args.pred3, pred4=args.pred4)
     session.add(channel)
     session.commit()
-    logger.info("Channel with %s days, %s likes, %s dislikes, %s videos, %s comments, %s views, added to database",
-        args.channelDays, args.likes, args.dislikes, args.videoCount, args.commentCount, args.viewCount)
+    logger.info("Channel with %s days, %s likes, %s dislikes, %s videos, %s comments, %s views, %s catID added to database",
+        args.channelDays, args.likes, args.dislikes, args.videoCount, args.commentCount, args.viewCount, args.catID)
 
 
 if __name__ == "__main__":
@@ -181,13 +173,18 @@ if __name__ == "__main__":
 
     # Sub-parser for creating a database
     sb_create = subparsers.add_parser("create", description="Create database")
-    sb_create.add_argument("--channelID", default="18329", help="random channel id")
+    sb_create.add_argument("--use_sqlite", default=False, help="Whether using sqlite or RDS")
     sb_create.add_argument("--channelDays", default="103", help="Days the channel has been created")
     sb_create.add_argument("--viewCount", default="48729", help="Total views of the channel")
     sb_create.add_argument("--likes", default="8728", help="Total likes of the channel")
     sb_create.add_argument("--dislikes", default="2637", help="Total dislikes of the channel")
     sb_create.add_argument("--commentCount", default="3728", help="Total comments of the channel")
     sb_create.add_argument("--videoCount", default="347", help="Total videos of the channel")
+    sb_create.add_argument("--catID", default="34", help="Category ID")
+    sb_create.add_argument("--pred1", default="10000", help="Prediction 1")
+    sb_create.add_argument("--pred2", default="20000", help="Prediction 2")
+    sb_create.add_argument("--pred3", default="30000", help="Prediction 3")
+    sb_create.add_argument("--pred4", default="40000", help="prediction 4")
     sb_create.add_argument("--truncate", "-t", default=False, action="store_true",
                         help="If given, delete current records from YouTube table before create_all "
                              "so that table can be recreated without unique id issues ")
@@ -195,13 +192,18 @@ if __name__ == "__main__":
 
     # Sub-parser for ingesting new data
     sb_ingest = subparsers.add_parser("ingest", description="Add data to database")
-    sb_ingest.add_argument("--channelID", default="12313", help="random channel id")
+    sb_ingest.add_argument("--use_sqlite", default=False, help="Whether using sqlite or RDS")
     sb_ingest.add_argument("--channelDays", default="736", help="Days the channel has been created")
     sb_ingest.add_argument("--viewCount", default="528920", help="Total views of the channel")
     sb_ingest.add_argument("--likes", default="96372", help="Total likes of the channel")
     sb_ingest.add_argument("--dislikes", default="19438", help="Total dislikes of the channel")
     sb_ingest.add_argument("--commentCount", default="28475", help="Total comments of the channel")
     sb_ingest.add_argument("--videoCount", default="769", help="Total videos of the channel")
+    sb_ingest.add_argument("--catID", default="34", help="Category ID")
+    sb_ingest.add_argument("--pred1", default="10000", help="Prediction 1")
+    sb_ingest.add_argument("--pred2", default="20000", help="Prediction 2")
+    sb_ingest.add_argument("--pred3", default="30000", help="Prediction 3")
+    sb_ingest.add_argument("--pred4", default="40000", help="prediction 4")
     sb_ingest.add_argument("--truncate", "-t", default=False, action="store_true",
                         help="If given, delete current records from YouTube table before create_all "
                              "so that table can be recreated without unique id issues ")
@@ -212,7 +214,7 @@ if __name__ == "__main__":
 
     # If "truncate" is given as an argument (i.e. python models.py --truncate), then empty the Channel table)
     if args.truncate:
-        session = get_session(engine_string=get_engineString())
+        session = get_session(engine_string=get_engineString(args.use_sqlite))
         try:
             logger.info("Attempting to truncate Channel table.")
             _truncate_Channel(session)

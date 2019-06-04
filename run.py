@@ -27,6 +27,7 @@ from src.loadData import run_loading
 from src.generateFeatures import run_features
 from src.trainModel import run_training
 from src.scoreModel import run_score
+from predictNew import run_predict
 
 def run_app(args):
     app.run(debug=app.config["DEBUG"], port=app.config["PORT"], host=app.config["HOST"])

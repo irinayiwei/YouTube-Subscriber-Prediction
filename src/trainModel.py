@@ -58,8 +58,8 @@ def split_data(data, cohort, **kwargs):
         ytrain = data.loc[0:split_mature, target]
         ytest = data.loc[split_mature: endpoint, target]
 
-    xtrain = preprocessing.scale(xtrain)
-    xtest = preprocessing.scale(xtest)
+    # xtrain = preprocessing.scale(xtrain)
+    # xtest = preprocessing.scale(xtest)
 
     return(xtrain, xtest, ytrain, ytest)
 
