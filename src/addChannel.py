@@ -28,7 +28,7 @@ class YouTube(Base):
 
     VideoCommentCount = Column(String(100), unique=False, nullable=False)
     channelCommentCount = Column(String(100), unique=False, nullable=False)
-    channelId = Column(Integer, primary_key=True, unique=True, autoincrement=True)
+    channelId = Column(String(100), primary_key=True, unique=True)
     channelViewCount = Column(String(100), unique=False, nullable=False)
     channelelapsedtime = Column(String(100), unique=False, nullable=False)
     comments_subscriber = Column(String(100), unique=False, nullable=False)
@@ -67,7 +67,7 @@ class Channel(Base):
 
     __tablename__ = 'channel'
 
-    channelID = Column(Integer, primary_key=True, unique=True, nullable=False, autoincrement=True)
+    channelID = Column(String(100), primary_key=True, unique=False, nullable=False)
     channelDays = Column(String(100), unique=False, nullable=False)
     viewCount = Column(String(100), unique=False, nullable=False)
     likes = Column(String(100), unique=False, nullable=False)
@@ -133,6 +133,7 @@ def get_engineString(use_sqlite=False):
 
     ## If using RDS
     else:
+        SQLALCHEMY_DATABASE_URI = os.environ.get("SQLALCHEMY_DATABASE_URI")
         conn_type = "mysql+pymysql"
         user = os.environ.get("MYSQL_USER")
         password = os.environ.get("MYSQL_PASSWORD")
@@ -160,7 +161,7 @@ def add_channel(args):
     engine_string = get_engineString(args.use_sqlite)
     session = get_session(engine_string=engine_string)
 
-    channel = Channel(channelDays = args.channelDays, viewCount = args.viewCount, likes=args.likes, dislikes=args.dislikes, videoCount=args.videoCount, commentCount=args.commentCount, catID=args.catID, pred1=args.pred1, pred2=args.pred2, pred3=args.pred3, pred4=args.pred4)
+    channel = Channel(channelID=args.channelID, channelDays = args.channelDays, viewCount = args.viewCount, likes=args.likes, dislikes=args.dislikes, videoCount=args.videoCount, commentCount=args.commentCount, catID=args.catID, pred1=args.pred1, pred2=args.pred2, pred3=args.pred3, pred4=args.pred4)
     session.add(channel)
     session.commit()
     logger.info("Channel with %s days, %s likes, %s dislikes, %s videos, %s comments, %s views, %s catID added to database",
@@ -174,6 +175,7 @@ if __name__ == "__main__":
     # Sub-parser for creating a database
     sb_create = subparsers.add_parser("create", description="Create database")
     sb_create.add_argument("--use_sqlite", default=False, help="Whether using sqlite or RDS")
+    sb_create.add_argument("--channelID", default="103382913", help="Channel ID")
     sb_create.add_argument("--channelDays", default="103", help="Days the channel has been created")
     sb_create.add_argument("--viewCount", default="48729", help="Total views of the channel")
     sb_create.add_argument("--likes", default="8728", help="Total likes of the channel")
@@ -193,6 +195,7 @@ if __name__ == "__main__":
     # Sub-parser for ingesting new data
     sb_ingest = subparsers.add_parser("ingest", description="Add data to database")
     sb_ingest.add_argument("--use_sqlite", default=False, help="Whether using sqlite or RDS")
+    sb_ingest.add_argument("--channelID", default="74829103", help="Channel ID")
     sb_ingest.add_argument("--channelDays", default="736", help="Days the channel has been created")
     sb_ingest.add_argument("--viewCount", default="528920", help="Total views of the channel")
     sb_ingest.add_argument("--likes", default="96372", help="Total likes of the channel")

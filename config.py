@@ -5,7 +5,7 @@ import os
 
 DEBUG = True
 LOGGING_CONFIG = "config/logging/local.conf"
-PORT = 3002
+PORT = 9044
 APP_NAME = "youtube-yiwei"
 SQLALCHEMY_TRACK_MODIFICATIONS = True
 HOST = "127.0.0.1"

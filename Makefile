@@ -76,12 +76,12 @@ train: loadData, preprocessing, trainModel1, trainModel2, trainModel3, trainMode
 
 # Create the database
 data/channels.db:
-	python run.py ingest
+	python run.py ingest --use_sqlite=True
 database: data/channels.db
 
 # Run the Flask app
 app: database 
-	python run.py app
+	python run.py app 
 
 ## Clean up
 clean-env:

@@ -37,8 +37,8 @@ newpredict = NewPredict()
 def index():
     """Main view that lists songs in the database.
 
-    Create view into index page that uses data queried from Track database and
-    inserts it into the msiapp/templates/index.html template.
+    Create view into index page that uses data queried from Channel database and
+    inserts it into the templates/index.html template.
 
     Returns: rendered html template
 
@@ -89,6 +89,7 @@ def predict():
         commentCount = float(request.form['commentCount'])
         viewCount = float(request.form['viewCount'])
         catID = float(request.form['catID'])
+        channelID = str(random.randint(1,999999999))
 
         #new features goes here, all variables ready for predict 
         view_days = viewCount / days
@@ -112,7 +113,7 @@ def predict():
 
         # Add result to database
         logger.info("---- Adding data to db started ----")
-        channel = Channel(channelDays = request.form['channelDays'], viewCount = request.form['viewCount'], 
+        channel = Channel(channelID = channelID, channelDays = request.form['channelDays'], viewCount = request.form['viewCount'], 
             likes=request.form['likes'], dislikes=request.form['dislikes'], videoCount=request.form['videoCount'], commentCount=request.form['commentCount'], 
             catID=request.form['catID'], pred1=result1, pred2=result2, pred3=result3, pred4=result4)
         logger.info("---- Entry entered ---- ")
@@ -131,7 +132,7 @@ def predict():
 
     except:
         traceback.print_exc()
-        logger.warning("Not able to predict new data")
+        logger.warning("Not able to predict and insert new data")
         return render_template('error.html')
 
 
