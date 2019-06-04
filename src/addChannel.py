@@ -133,14 +133,14 @@ def get_engineString(use_sqlite=False):
 
     ## If using RDS
     else:
-    conn_type = "mysql+pymysql"
-    user = os.environ.get("MYSQL_USER")
-    password = os.environ.get("MYSQL_PASSWORD")
-    host = os.environ.get("MYSQL_HOST")
-    port = os.environ.get("MYSQL_PORT")
-    DATABASE_NAME = 'msia423ywzhang'
-    engine_string = "{}://{}:{}@{}:{}/{}".\
-    format(conn_type, user, password, host, port, DATABASE_NAME)
+        conn_type = "mysql+pymysql"
+        user = os.environ.get("MYSQL_USER")
+        password = os.environ.get("MYSQL_PASSWORD")
+        host = os.environ.get("MYSQL_HOST")
+        port = os.environ.get("MYSQL_PORT")
+        DATABASE_NAME = 'msia423ywzhang'
+        engine_string = "{}://{}:{}@{}:{}/{}".\
+        format(conn_type, user, password, host, port, DATABASE_NAME)
 
     ## End of function
     logging.info('------------- Engine String Retrieved ------------')
