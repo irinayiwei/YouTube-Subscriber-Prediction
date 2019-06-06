@@ -30,9 +30,9 @@ class NewPredict:
         self.logger.info("--- Configuration file loaded from %s --- ", model_config)
         self.config = config
 
-        # Load data ranges
-        path_to_stats = config["score_model"]["path_to_stats"]
-        self.stats = pd.read_csv(path_to_stats)
+        # # Load data ranges
+        # path_to_stats = config["score_model"]["path_to_stats"]
+        # self.stats = pd.read_csv(path_to_stats)
 
         # Load trained model object for each model
         path_to_tmo1 = config["score_model"]["path_to_tmo1"]
@@ -56,7 +56,7 @@ class NewPredict:
 
 
     def run(self, data):
-        """Predicts song popularity for the input data
+        """Predicts subscriber amount for the input data
 
         Args:
             data (:py:class:`pandas.DataFrame`): DataFrame containing the data inputs for scoring
@@ -90,6 +90,18 @@ class NewPredict:
 
 
 def run_predict(args):
+    """ Run prediction function in the calss
+
+        Args:
+            config: config file 
+            input: input data for scoring
+            output: output path
+            debug: whether put logger into debug mode
+
+        Returns:
+            results (:py:class:`numpy.Array`): Array of predictions of subscriber amount
+
+    """
     data_df = pd.read_csv(args.input)
 
     predict_instance = NewPredict(args.config, args.debug)

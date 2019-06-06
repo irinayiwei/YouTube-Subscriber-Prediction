@@ -7,11 +7,11 @@ Current commands enabled:
 
 To create a database for Channel:
 
-    `python run.py create --channelID=93821, --channelDays=2974, --viewCount=372242, --likes=48282, --dislikes=38271, --videoCount=382, --commentCount=7625"`
+    `python run.py create --channelID=93821, --channelDays=2974, --viewCount=372242, --likes=48282, --dislikes=38271, --videoCount=382, --commentCount=7625, catID=1"`
 
-To add a song to an already created database:
+To add a channel to an already created database:
 
-    `python run.py ingest --channelID=72514, --channelDays=72614, --viewCount=74625, --likes=25662, --dislikes=57532 --videoCount=211, --commentCount=8865"`
+    `python run.py ingest --channelID=72514, --channelDays=72614, --viewCount=74625, --likes=25662, --dislikes=57532 --videoCount=211, --commentCount=8865, --catID=1"`
 
 """
 import argparse
@@ -47,6 +47,7 @@ if __name__ == '__main__':
     sb_create.add_argument("--dislikes", default="2637", help="Total dislikes of the channel")
     sb_create.add_argument("--commentCount", default="3728", help="Total comments of the channel")
     sb_create.add_argument("--videoCount", default="347", help="Total videos of the channel")
+    sb_create.add_argument("--catID", default="34", help="Category ID")
     sb_create.add_argument("--truncate", "-t", default=False, action="store_true",
                         help="If given, delete current records from YouTube table before create_all "
                              "so that table can be recreated without unique id issues ")
@@ -62,6 +63,7 @@ if __name__ == '__main__':
     sb_ingest.add_argument("--dislikes", default="19438", help="Total dislikes of the channel")
     sb_ingest.add_argument("--commentCount", default="28475", help="Total comments of the channel")
     sb_ingest.add_argument("--videoCount", default="769", help="Total videos of the channel")
+    sb_ingest.add_argument("--catID", default="37", help="Category ID")
     sb_ingest.add_argument("--truncate", "-t", default=False, action="store_true",
                         help="If given, delete current records from YouTube table before create_all "
                              "so that table can be recreated without unique id issues ")

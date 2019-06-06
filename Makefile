@@ -1,7 +1,7 @@
 #.PHONY: venv clouds all
 # Create virtual env
 
-.PHONY: app venv loadData preprocessing trainModel1 trainModel2 trainModel3 trainModel4 scoreModel1 scoreModel2 scoreModel3 scoreModel4 evaluateModel1 evaluateModel2 evaluateModel3 ealuateModel4
+.PHONY: venv test app train clean loadData preprocessing trainModel1 trainModel2 trainModel3 trainModel4 scoreModel1 scoreModel2 scoreModel3 scoreModel4 evaluateModel1 evaluateModel2 evaluateModel3 ealuateModel4 database clean-tests clean-env clean-pyc
 
 test-env/bin/activate: requirements.txt
 	test -d test-env || virtualenv test-env
@@ -16,9 +16,9 @@ data/YouTube.json: src/config.yml
 loadData: data/YouTube.json
 
 ## Features 
-data/features1.csv data/features2.csv data/features3.csv data/features4.csv data/stats.csv: data/YouTube.json src/config.yml
-	python src/generateFeatures.py --config=src/config.yml --input=data/YouTube.json --output1=data/features1.csv --output2=data/features2.csv --output3=data/features3.csv --output4=data/features4.csv --output5=data/stats.csv
-preprocessing: data/features1.csv data/features2.csv data/features3.csv data/features4.csv data/stats.csv
+data/features1.csv data/features2.csv data/features3.csv data/features4.csv: data/YouTube.json src/config.yml
+	python src/generateFeatures.py --config=src/config.yml --input=data/YouTube.json --output1=data/features1.csv --output2=data/features2.csv --output3=data/features3.csv --output4=data/features4.csv
+preprocessing: data/features1.csv data/features2.csv data/features3.csv data/features4.csv 
 
 ## Train Model
 models/model1.pkl data/ytest1.csv data/xtest1.csv: data/features1.csv src/config.yml
@@ -71,21 +71,44 @@ results/evaluation4.txt: data/ytest4.csv data/ypred4.csv src/config.yml
 	python src/evaluateModel.py --config=src/config.yml --cohort=4 --ytest=data/ytest4.csv --ypred=data/ypred4.csv --output=results/evaluation4.txt
 evaluateModel4: results/evaluation4.txt
 
-## Intermediate result
-train: loadData, preprocessing, trainModel1, trainModel2, trainModel3, trainModel4, scoreModel1, scoreModel2, scoreModel3, scoreModel4, evaluateModel1, evaluateModel2, evaluateModel3, ealuateModel4
-
 # Create the database
-data/channels.db:
-	python run.py ingest --use_sqlite=True
-database: data/channels.db
+data/channel.db:
+	python src/addChannel.py create --use_sqlite=True
+database: data/channel.db
 
-# Run the Flask app
+## Intermediate result
+train: venv loadData preprocessing trainModel1 trainModel2 trainModel3 trainModel4 scoreModel1 scoreModel2 scoreModel3 scoreModel4 evaluateModel1 evaluateModel2 evaluateModel3 ealuateModel4
+
+## Unit Test
+test: venv
+	source test-env/bin/activate; pytest
+
+## Run the Flask app
 app: database 
 	python run.py app 
 
 ## Clean up
+clean-tests:
+	rm -rf .pytest_cache
+	rm -r test/model/test/
+	mkdir test/model/test
+	touch test/model/test/.gitkeep
+
 clean-env:
 	rm -r test-env
 
 clean-pyc:
 	find . -name '*.pyc' -exec rm -f {} +
+
+clean: clean-tests clean-env clean-pyc
+
+## All
+all_test: venv test clean
+
+## All app
+all_app: venv app clean
+
+## All train
+all_train: venv train clean
+
+
