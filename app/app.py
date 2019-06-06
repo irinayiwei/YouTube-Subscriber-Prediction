@@ -35,7 +35,7 @@ newpredict = NewPredict()
 
 @app.route('/')
 def index():
-    """Main view that lists songs in the database.
+    """Main view that asks for user input
 
     Create view into index page that uses data queried from Channel database and
     inserts it into the templates/index.html template.
@@ -44,7 +44,7 @@ def index():
 
     """
 
-    return render_template('index.html', result1='', result2='', result3='', result4='')
+    return render_template('index.html', result1='', result2='', result3='', result4='', img_path='static/prediction1.png')
 
 # @app.route('/add', methods=['POST'])
 # def add_entry():
@@ -132,7 +132,7 @@ def predict():
 
     except:
         traceback.print_exc()
-        logger.warning("Not able to predict and insert new data")
+        logger.warning("Not able to predict and insert new data to the database, try entering valid input")
         return render_template('error.html')
 
 
