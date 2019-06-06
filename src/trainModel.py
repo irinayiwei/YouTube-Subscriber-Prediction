@@ -68,28 +68,29 @@ def train_model(data, cohort, **kwargs):
 
     ''' Train and score model on given data and model'''
     logging.info('------------Training Model Started ------------')
-    #logging.info(kwargs)
 
     #train-test split
     xtrain, xtest, ytrain, ytest = split_data(data, cohort, **kwargs['split_data'])
-   
-    #build model   
-    method = kwargs['method']
-    assert method in methods.keys()
 
-    if(cohort == 4):
-        model = methods[method](**kwargs["params"]["mature"])
+    #value check
+    if xtrain.isnull().values.any():
+        model = None
+        raise ValueError('Training dataframe cannot contain nan values!')
+
     else:
-        model = methods[method](**kwargs["params"]["other"])
+        #build model   
+        method = kwargs['method']
+        assert method in methods.keys()
 
-    #fit model
-    model.fit(xtrain, ytrain)
-    #score model
-    #ypred = model.predict(xtest)
-    #convert to dataframe
+        if(cohort == 4):
+            model = methods[method](**kwargs["params"]["mature"])
+        else:
+            model = methods[method](**kwargs["params"]["other"])
 
-    xtest = pd.DataFrame(xtest, columns = kwargs['split_data']['features'])
-    #print(xtest)
+        #fit model
+        model.fit(xtrain, ytrain)
+
+        xtest = pd.DataFrame(xtest, columns = kwargs['split_data']['features'])
 
     logging.info('------------Training Model Finished------------')
 

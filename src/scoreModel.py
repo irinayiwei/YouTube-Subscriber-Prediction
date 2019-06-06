@@ -9,7 +9,7 @@ import logging
 import argparse
 import yaml
 import pickle
-from src.helpers.helpers import Timer
+# from helpers.helpers import Timer
 
 # Basic plotting and data manipulation
 import numpy as np
@@ -41,12 +41,17 @@ def score_model(xtest, model_path, output, **kwargs):
     with open(model_path, "rb") as f:
         model = pickle.load(f)
 
-    ## Make Prediction
-    with Timer("scoring", logger):
+    #value check
+    if xtest.isnull().values.any():
+        ypred = None
+        raise ValueError('Testing dataframe cannot contain nan values!')
+
+    else:
+        ## Make Prediction
         ypred = model.predict(xtest)
 
-    if output is not None:
-        pd.DataFrame(ypred, columns=['ypred']).to_csv(output,  index=False)
+        if output is not None:
+            pd.DataFrame(ypred, columns=['ypred']).to_csv(output,  index=False)
 
     return ypred
 

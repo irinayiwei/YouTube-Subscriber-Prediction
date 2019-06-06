@@ -11,7 +11,7 @@ from sqlalchemy import Column, Integer, String, MetaData
 
 #import config
 import yaml
-from src.helpers.helpers import create_connection, get_session
+from helpers.helpers import create_connection, get_session
 import argparse
 
 logging.basicConfig(level=logging.INFO, format="%(name)-12s %(levelname)-8s %(message)s")
@@ -129,7 +129,7 @@ def get_engineString(use_sqlite=False):
 
     ## If using local database
     if use_sqlite:
-        engine_string = "sqlite:///../data/channels.db"
+        engine_string = "sqlite:///data/channel.db"
 
     ## If using RDS
     else:
@@ -152,7 +152,7 @@ def add_channel(args):
     """Seeds an existing database with additional channels.
 
     Args:
-        args: Argparse args - should include args.channelDays, args.viewCount, args.likes, args.dislikes, args.videoCount, args.commentCount
+        args: Argparse args - should include args.channelID,    args.channelDays, args.viewCount, args.likes, args.dislikes, args.videoCount, args.commentCount, args.catID
 
     Returns:None
 

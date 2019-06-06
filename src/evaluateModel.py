@@ -52,16 +52,22 @@ def evaluate_model(ytest, ypred, cohort, output, **kwargs):
     # rmse/range
     if "rmse/range" in metrics:
         test_range = ytest.max() - ytest.min()
-        rmse_range = np.round(100*rmse/test_range, 2)
-        print('%s%f%s' % ('RMSE is ',  rmse_range, '% of the range of the test set'))
+        
+        ## Check if range is 0
+        if int(test_range) == 0:
+            raise ValueError('Input needs to have different values for min and max amount!')
+        else:
+            rmse_range = np.round(100*rmse/test_range, 2)
+            print('%s%f%s' % ('RMSE is ',  rmse_range, '% of the range of the test set'))
     else: rmse_range = ''
 
-    # write to output
-    with open(output, 'a+') as file:
-        file.write('Evaluation for cohort %g: \n' % cohort)
-        file.write('R square is %g \n' % r2)
-        file.write('RMSE is %g \n' % rmse)
-        file.write('RMSE takes part of %g percent of the range of test data \n' % rmse_range)
+    if output is not None:
+        # write to output
+        with open(output, 'a+') as file:
+            file.write('Evaluation for cohort %g: \n' % cohort)
+            file.write('R square is %g \n' % r2)
+            file.write('RMSE is %g \n' % rmse)
+            file.write('RMSE takes part of %g percent of the range of test data \n' % rmse_range)
 
     ## End of Function    
     logging.info('------------Evaluating Model Finished------------')
