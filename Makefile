@@ -77,9 +77,8 @@ data/channel.db:
 	python src/addChannel.py create --use_sqlite=True
 database_local: data/channel.db
 
-data/channel.db:
-	python src/addChannel.py create --use_sqlite=False
-database_rds: data/channel.db
+database_rds:
+	python run.py create --use_sqlite=False
 # database_rds:
 # 	python src/addChannel.py create --use_sqlite=False
 
