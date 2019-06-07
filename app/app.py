@@ -16,11 +16,7 @@ app = Flask(__name__)
 # Configure flask app from flask_config.py
 app.config.from_object('config')
 
-# Define LOGGING_CONFIG in flask_config.py - path to config file for setting
-# up the logger (e.g. config/logging/local.conf)
-# logging.config.fileConfig(app.config["LOGGING_CONFIG"])
-# logger = logging.getLogger("youtube-yiwei")
-
+# Logging setup
 logging.basicConfig(level=logging.INFO, format="%(name)-12s %(levelname)-8s %(message)s")
 logger = logging.getLogger()
 logger.debug('Test log')
@@ -46,37 +42,13 @@ def index():
 
     return render_template('index.html', result1='', result2='', result3='', result4='', img_path='static/prediction1.png')
 
-# @app.route('/add', methods=['POST'])
-# def add_entry():
-#     """View that process a POST with new channel input
-
-#     :return: redirect to index page
-#     """
-
-#     try:
-#         logger.info("---- Adding started ----")
-#         channel2 = Channel(channelDays = request.form['channelDays'], viewCount = viewCount, likes=request.form['likes'], dislikes=request.form['dislikes'], videoCount=request.form['videoCount'], commentCount=request.form['commentCount'])
-#         logger.info("second entry entered")
-
-#         db.session.add(channel2)
-#         logger.info("second entry added")
-
-#         db.session.commit()
-#         logger.info("committed")
-
-#         logger.info("Channel with %s days, %s likes, %s dislikes, %s videos, %s comments, %s views, added to database",
-#         request.form['channelDays'], request.form['likes'], request.form['dislikes'], request.form['videoCount'], request.form['commentCount'], viewCount)
-#         return redirect(url_for('index'))
-#     except:
-#         traceback.print_exc()
-#         logger.warning("Not able to display tracks, error page returned")
-#         return render_template('error.html')
 
 @app.route('/predict', methods=['POST'])
 def predict():
+
     """Predict new input data
 
-    :return: redirect to index page
+    Return: redirect to index page
     """
 
     try:
@@ -120,6 +92,8 @@ def predict():
 
         db.session.add(channel)
         logger.info("---- Entry added ----")
+
+
 
         db.session.commit()
         logger.info("---- Committed ----")

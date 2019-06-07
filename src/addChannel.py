@@ -117,7 +117,7 @@ def create_db(args):
     ## End of function
     logging.info('------------- Database Created ------------')
 
-def get_engineString(use_sqlite=False):
+def get_engineString(use_sqlite):
     """Get engine string from setting and environment
 
     Args: 
@@ -142,6 +142,8 @@ def get_engineString(use_sqlite=False):
         DATABASE_NAME = 'msia423ywzhang'
         engine_string = "{}://{}:{}@{}:{}/{}".\
         format(conn_type, user, password, host, port, DATABASE_NAME)
+
+    # print(engine_string)
 
     ## End of function
     logging.info('------------- Engine String Retrieved ------------')
@@ -174,7 +176,7 @@ if __name__ == "__main__":
 
     # Sub-parser for creating a database
     sb_create = subparsers.add_parser("create", description="Create database")
-    sb_create.add_argument("--use_sqlite", default=False, help="Whether using sqlite or RDS")
+    sb_create.add_argument("--use_sqlite", default=True, help="Use local or RDS database")
     sb_create.add_argument("--channelID", default="103382913", help="Channel ID")
     sb_create.add_argument("--channelDays", default="103", help="Days the channel has been created")
     sb_create.add_argument("--viewCount", default="48729", help="Total views of the channel")
@@ -194,7 +196,7 @@ if __name__ == "__main__":
 
     # Sub-parser for ingesting new data
     sb_ingest = subparsers.add_parser("ingest", description="Add data to database")
-    sb_ingest.add_argument("--use_sqlite", default=False, help="Whether using sqlite or RDS")
+    sb_ingest.add_argument("--use_sqlite", default=True, help="Use local or RDS database")
     sb_ingest.add_argument("--channelID", default="74829103", help="Channel ID")
     sb_ingest.add_argument("--channelDays", default="736", help="Days the channel has been created")
     sb_ingest.add_argument("--viewCount", default="528920", help="Total views of the channel")

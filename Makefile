@@ -6,6 +6,7 @@
 test-env/bin/activate: requirements.txt
 	test -d test-env || virtualenv test-env
 	. test-env/bin/activate; pip install -r requirements.txt
+	# test-env/bin/pip install -r requirements.txt
 	touch test-env/bin/activate
 venv: test-env/bin/activate
 
@@ -74,18 +75,25 @@ evaluateModel4: results/evaluation4.txt
 # Create the database
 data/channel.db:
 	python src/addChannel.py create --use_sqlite=True
-database: data/channel.db
+database_local: data/channel.db
 
-## Intermediate result
-train: venv loadData preprocessing trainModel1 trainModel2 trainModel3 trainModel4 scoreModel1 scoreModel2 scoreModel3 scoreModel4 evaluateModel1 evaluateModel2 evaluateModel3 ealuateModel4
+data/channel.db:
+	python src/addChannel.py create --use_sqlite=False
+database_rds: data/channel.db
+
+## Intermediate result -- Train model
+train: loadData preprocessing trainModel1 trainModel2 trainModel3 trainModel4 scoreModel1 scoreModel2 scoreModel3 scoreModel4 evaluateModel1 evaluateModel2 evaluateModel3 evaluateModel4 clean
 
 ## Unit Test
 test: venv
 	source test-env/bin/activate; pytest
 
 ## Run the Flask app
-app: database 
-	python run.py app 
+app_rds: database_rds
+	python run.py app
+
+app_local: database_local
+	python run.py app
 
 ## Clean up
 clean-tests:
@@ -103,12 +111,9 @@ clean-pyc:
 clean: clean-tests clean-env clean-pyc
 
 ## All
-all_test: venv test clean
+all_test: test clean
+all_app_rds: database_rds app_rds clean
+all_app_local: database_local app_local clean
 
-## All app
-all_app: venv app clean
-
-## All train
-all_train: venv train clean
 
 
