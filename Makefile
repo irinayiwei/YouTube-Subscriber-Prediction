@@ -75,9 +75,8 @@ evaluateModel4: results/evaluation4.txt
 train: loadData, preprocessing, trainModel1, trainModel2, trainModel3, trainModel4, scoreModel1, scoreModel2, scoreModel3, scoreModel4, evaluateModel1, evaluateModel2, evaluateModel3, ealuateModel4
 
 # Create the database
-data/channels.db:
-	python run.py ingest
-database: data/channels.db
+database:
+	python run.py create --use_sqlite=False
 
 # Run the Flask app
 app: database 

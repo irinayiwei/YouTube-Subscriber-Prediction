@@ -11,7 +11,7 @@ from sqlalchemy import Column, Integer, String, MetaData
 
 #import config
 import yaml
-from src.helpers.helpers import create_connection, get_session
+from helpers.helpers import create_connection, get_session
 import argparse
 
 logging.basicConfig(level=logging.INFO, format="%(name)-12s %(levelname)-8s %(message)s")
@@ -111,6 +111,7 @@ def create_db(args):
     
     #create engine
     engine_string = get_engineString(args.use_sqlite)
+    print(engine_string)
     engine = sql.create_engine(engine_string)
     Base.metadata.create_all(engine)
 
@@ -128,7 +129,7 @@ def get_engineString(use_sqlite=False):
     """
 
     ## If using local database
-    if use_sqlite:
+    if use_sqlite is True:
         engine_string = "sqlite:///../data/channels.db"
 
     ## If using RDS
