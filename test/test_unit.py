@@ -4,10 +4,10 @@ import logging
 import pytest
 from sklearn.utils import shuffle
 from sklearn import preprocessing
-#import generateFeatures
-import trainModel
-import scoreModel
-import evaluateModel
+import src.generateFeatures as generateFeatures
+import src.trainModel as trainModel
+import src.scoreModel as scoreModel
+import src.evaluateModel as evaluateModel
 
 
 logging.basicConfig(level=logging.INFO, format="%(name)-12s %(levelname)-8s %(message)s")
