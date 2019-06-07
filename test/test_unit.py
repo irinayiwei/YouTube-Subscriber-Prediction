@@ -4,7 +4,7 @@ import logging
 import pytest
 from sklearn.utils import shuffle
 from sklearn import preprocessing
-import generateFeatures
+#import generateFeatures
 import trainModel
 import scoreModel
 import evaluateModel
