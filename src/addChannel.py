@@ -88,7 +88,7 @@ class Channel(Base):
 def _truncate_Channel(session):
     """Deletes Channel table if rerunning and run into unique key error."""
 
-    session.execute('''DELETE FROM Channel''')
+    session.execute('''DELETE FROM channel''')
 
 def _truncate_YouTube(session):
     """Deletes YouTube table if rerunning and run into unique key error."""
@@ -143,7 +143,6 @@ def get_engineString(use_sqlite):
         engine_string = "{}://{}:{}@{}:{}/{}".\
         format(conn_type, user, password, host, port, DATABASE_NAME)
 
-    # print(engine_string)
 
     ## End of function
     logging.info('------------- Engine String Retrieved ------------')

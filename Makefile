@@ -1,7 +1,7 @@
 #.PHONY: venv clouds all
 # Create virtual env
 
-.PHONY: venv test app train clean loadData preprocessing trainModel1 trainModel2 trainModel3 trainModel4 scoreModel1 scoreModel2 scoreModel3 scoreModel4 evaluateModel1 evaluateModel2 evaluateModel3 ealuateModel4 database clean-tests clean-env clean-pyc
+.PHONY: venv test app train clean loadData preprocessing trainModel1 trainModel2 trainModel3 trainModel4 scoreModel1 scoreModel2 scoreModel3 scoreModel4 evaluateModel1 evaluateModel2 evaluateModel3 ealuateModel4 database_local database_rds clean-tests clean-env clean-pyc
 
 test-env/bin/activate: requirements.txt
 	test -d test-env || virtualenv test-env
@@ -78,7 +78,12 @@ data/channel.db:
 database_local: data/channel.db
 
 database_rds:
+<<<<<<< HEAD
 	python run.py create --use_sqlite=False
+=======
+	python src/addChannel.py create --use_sqlite=False
+	
+>>>>>>> c87f7015a97c1819e37ebcd3048c957377ae1c56
 # database_rds:
 # 	python src/addChannel.py create --use_sqlite=False
 
