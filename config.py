@@ -8,7 +8,7 @@ LOGGING_CONFIG = "config/logging/local.conf"
 PORT = 9044
 APP_NAME = "youtube-yiwei"
 SQLALCHEMY_TRACK_MODIFICATIONS = True
-HOST = "127.0.0.1"
+HOST = "0.0.0.0"
 MAX_ROWS_SHOW = 100
 
 SQLALCHEMY_DATABASE_URI = os.environ.get("SQLALCHEMY_DATABASE_URI")

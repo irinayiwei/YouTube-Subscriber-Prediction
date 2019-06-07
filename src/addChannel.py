@@ -111,6 +111,7 @@ def create_db(args):
     
     #create engine
     engine_string = get_engineString(args.use_sqlite)
+    print(engine_string)
     engine = sql.create_engine(engine_string)
     Base.metadata.create_all(engine)
 
@@ -128,7 +129,7 @@ def get_engineString(use_sqlite):
     """
 
     ## If using local database
-    if use_sqlite:
+    if use_sqlite is True:
         engine_string = "sqlite:///data/channel.db"
 
     ## If using RDS
