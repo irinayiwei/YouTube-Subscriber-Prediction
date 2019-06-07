@@ -47,7 +47,11 @@ if __name__ == '__main__':
     sb_create.add_argument("--dislikes", default="2637", help="Total dislikes of the channel")
     sb_create.add_argument("--commentCount", default="3728", help="Total comments of the channel")
     sb_create.add_argument("--videoCount", default="347", help="Total videos of the channel")
-    sb_create.add_argument("--catID", default="34", help="Category ID")
+    sb_create.add_argument("--catID", default="3443", help="Category ID")
+    sb_create.add_argument("--pred1", default="4334", help="Prediction for cohort1")
+    sb_create.add_argument("--pred2", default="5467", help="Prediction for cohort2")
+    sb_create.add_argument("--pred3", default="6783", help="Prediction for cohort3")
+    sb_create.add_argument("--pred4", default="9846", help="Prediction for cohort4")
     sb_create.add_argument("--truncate", "-t", default=False, action="store_true",
                         help="If given, delete current records from YouTube table before create_all "
                              "so that table can be recreated without unique id issues ")
@@ -64,6 +68,10 @@ if __name__ == '__main__':
     sb_ingest.add_argument("--commentCount", default="28475", help="Total comments of the channel")
     sb_ingest.add_argument("--videoCount", default="769", help="Total videos of the channel")
     sb_ingest.add_argument("--catID", default="37", help="Category ID")
+    sb_ingest.add_argument("--pred1", default="4334", help="Prediction for cohort1")
+    sb_ingest.add_argument("--pred2", default="5467", help="Prediction for cohort2")
+    sb_ingest.add_argument("--pred3", default="6783", help="Prediction for cohort3")
+    sb_ingest.add_argument("--pred4", default="9846", help="Prediction for cohort4")
     sb_ingest.add_argument("--truncate", "-t", default=False, action="store_true",
                         help="If given, delete current records from YouTube table before create_all "
                              "so that table can be recreated without unique id issues ")

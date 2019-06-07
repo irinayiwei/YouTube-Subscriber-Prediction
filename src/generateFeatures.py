@@ -58,21 +58,6 @@ def generate_features(data, **kwargs):
     
     return(newbie, fiveYear, sixYear, eightYear)
 
-# def get_stats(data1, data2, data3, data4):
-
-#     ''' Calculate the mean and sd of each cohort input '''
-
-#     mean1 = np.mean(data1)
-#     sd1 = np.std(data1)
-#     mean2 = np.mean(data2)
-#     sd2 = np.std(data2)
-#     mean3 = np.mean(data3)
-#     sd3 = np.std(data3)
-#     mean4 = np.mean(data4)
-#     sd4 = np.std(data4)
-#     stats = pd.DataFrame(data=np.array([mean1, sd1, mean2, sd2, mean3, sd3, mean4, sd4]), columns=['subscriberCount', 'viewCount', 'views_days', 'likes_views', 'videos_videocount', 'videoCount', 'videoLikeCount', 'CommentCount', 'comments_views', 'dislikes_views', 'dislikeCount', 'videoCategoryId', 'likes_dislikes', 'channelDays'])
-#     return stats
-
 def run_features(args):
 
     """Orchestrates the generating of features from commandline arguments."""

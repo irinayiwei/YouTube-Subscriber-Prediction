@@ -38,6 +38,8 @@ methods = dict(knn=KNeighborsRegressor,
 
 def split_data(data, cohort, **kwargs):
 
+    ''' Split data into 4 cohorts based on channel time'''
+
     features = kwargs['features']
     target = kwargs['target']
     split_young = kwargs['split_young']
