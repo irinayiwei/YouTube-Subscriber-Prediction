@@ -77,11 +77,11 @@ data/channel.db:
 	python src/addChannel.py create --use_sqlite=True
 database_local: data/channel.db
 
-# data/channel.db:
-# 	python src/addChannel.py create --use_sqlite=False
-# database_rds: data/channel.db
-database_rds:
+data/channel.db:
 	python src/addChannel.py create --use_sqlite=False
+database_rds: data/channel.db
+# database_rds:
+# 	python src/addChannel.py create --use_sqlite=False
 
 ## Intermediate result -- Train model
 train: loadData preprocessing trainModel1 trainModel2 trainModel3 trainModel4 scoreModel1 scoreModel2 scoreModel3 scoreModel4 evaluateModel1 evaluateModel2 evaluateModel3 evaluateModel4 clean
