@@ -275,7 +275,9 @@ make all_app_rds
 ### 5. Interact with the application 
 
 If running on local, go to [http://127.0.0.1:9044/]( http://127.0.0.1:3000/) to interact with the current version of the app. 
-If running on RDS, go to [http://3.17.190.74:9044/](http://3.17.190.74:9044/) to interact with the current version of the app.
+If running on RDS, go to [http://3.14.126.216:9044/](http://3.17.190.74:9044/) to interact with the current version of the app.
+
+To terminate the interface from terminal, type control + C.
 
 ## Reproducing Model Training
 ### Running with default folder output
@@ -306,7 +308,7 @@ python src/generateFeatures.py --config=src/config.yml --input=data/YouTube.json
 
 #### 3. Train model
 To train the models, run the command below in the main project repository.
-```python
+```bash
 python src/trainModel.py --config=src/config.yml --input1=data/features1.csv --input2=1 --output1=models/model1.pkl --output2=data/ytest1.csv --output3=data/xtest1.csv
 python src/trainModel.py --config=src/config.yml --input1=data/features2.csv --input2=2 --output1=models/model2.pkl --output2=data/ytest2.csv --output3=data/xtest2.csv
 python src/trainModel.py --config=src/config.yml --input1=data/features3.csv --input2=3 --output1=models/model3.pkl --output2=data/ytest3.csv --output3=data/xtest3.csv
@@ -318,7 +320,7 @@ Note that the 4 data files generated in the previous step will be trained separa
 
 #### 4. Score model
 To score the models, run the command below in the main project repository.
-```python
+```bash
 python src/scoreModel.py --config=src/config.yml --xtest=data/xtest1.csv --model_path=models/model1.pkl --output=data/ypred1.csv
 python src/scoreModel.py --config=src/config.yml --xtest=data/xtest2.csv --model_path=models/model2.pkl --output=data/ypred2.csv
 python src/scoreModel.py --config=src/config.yml --xtest=data/xtest3.csv --model_path=models/model3.pkl --output=data/ypred3.csv
@@ -328,7 +330,7 @@ xtest should be the path of the testing x data (output2) in the previous step; m
 
 #### 5. Evaluate model
 To evaluate the models, run the command below in the main project repository.
-```python
+```bash
 python src/evaluateModel.py --config=src/config.yml --cohort=1 --ytest=data/ytest1.csv --ypred=data/ypred1.csv --output=results/evaluation1.txt
 python src/evaluateModel.py --config=src/config.yml --cohort=2 --ytest=data/ytest2.csv --ypred=data/ypred2.csv --output=results/evaluation2.txt
 python src/evaluateModel.py --config=src/config.yml --cohort=3 --ytest=data/ytest3.csv --ypred=data/ypred3.csv --output=results/evaluation3.txt

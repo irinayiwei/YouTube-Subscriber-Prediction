@@ -129,7 +129,7 @@ def get_engineString(use_sqlite):
     """
 
     ## If using local database
-    if use_sqlite is True:
+    if use_sqlite == "True":
         engine_string = "sqlite:///data/channel.db"
 
     ## If using RDS

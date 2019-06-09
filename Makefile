@@ -82,7 +82,7 @@ database_rds:
 
 
 ## Intermediate result -- Train model
-train: loadData preprocessing trainModel1 trainModel2 trainModel3 trainModel4 scoreModel1 scoreModel2 scoreModel3 scoreModel4 evaluateModel1 evaluateModel2 evaluateModel3 evaluateModel4 clean
+train: loadData preprocessing trainModel1 trainModel2 trainModel3 trainModel4 scoreModel1 scoreModel2 scoreModel3 scoreModel4 evaluateModel1 evaluateModel2 evaluateModel3 evaluateModel4
 
 ## Unit Test
 test: venv
@@ -92,7 +92,7 @@ test: venv
 app_rds: database_rds
 	python run.py app
 
-app_local: database_local
+app_local: venv database_local
 	python run.py app
 
 ## Clean up
@@ -112,8 +112,8 @@ clean: clean-tests clean-env clean-pyc
 
 ## All
 all_test: test clean
-all_app_rds: database_rds app_rds clean
-all_app_local: database_local app_local clean
+all_app_rds: database_rds app_rds
+all_app_local: database_local app_local
 
 
 
