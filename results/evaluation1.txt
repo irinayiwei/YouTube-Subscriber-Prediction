@@ -10,3 +10,7 @@ Evaluation for cohort 1:
 R square is 0.552567 
 RMSE is 94931.3 
 RMSE takes part of 2.33 percent of the range of test data 
+Evaluation for cohort 1: 
+R square is 0.552567 
+RMSE is 94931.3 
+RMSE takes part of 2.33 percent of the range of test data 

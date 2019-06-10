@@ -10,7 +10,7 @@ youtube:
     how: 'user input' #or s3
     bucketname: nw-yiweizhang-s3
     dataname: 'YouTubeDataset_withChannelElapsed.json'
-    outputpath: '../data/YouTube.json'
+    outputpath: 'data/YouTube.json'
   upload_data:
     how: 'user input' # or s3
     bucketname: nw-yiweizhang-s3

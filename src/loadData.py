@@ -6,6 +6,7 @@ import multiprocessing
 import glob
 import boto3
 import yaml
+import requests
 
 # for appending dates to filenames
 import datetime
@@ -20,18 +21,30 @@ def download_s3(bucket, data, output, keyid=None, secret_key=None, **kwargs):
     logging.info('------------Downloading Data Started ------------')
 
 
-    if(kwargs['how'] == 'user input'): #how should be user input, or s3, which is set in config
-        if keyid is not None:
-            ## Get the Data
-            s3 = boto3.client('s3', aws_access_key_id = keyid , aws_secret_access_key= secret_key)
-        else:
-            s3 = boto3.client('s3')
-    else:
-        bucket = kwargs['bucketname']
-        data = kwargs['dataname']
-        output = kwargs['outputpath']
+    # if(kwargs['how'] == 'user input'): #how should be user input, or s3, which is set in config
+    #     if keyid is not None:
+    #         ## Get the Data
+    #         s3 = boto3.client('s3', aws_access_key_id = keyid , aws_secret_access_key= secret_key)
+    #     else:
+    #         s3 = boto3.client('s3')
+    # else:
+    #     bucket = kwargs['bucketname']
+    #     data = kwargs['dataname']
+    #     output = kwargs['outputpath']
     
-    s3.download_file(bucket, data, output)
+    bucket = kwargs['bucketname']
+    data = kwargs['dataname']
+    output = kwargs['outputpath']
+
+    #for file in filename:
+    sourceurl = 'https://'+ bucket + '.s3-us-west-2.amazonaws.com/' + data
+    r = requests.get(sourceurl)
+    if not os.path.exists(output):
+        os.mkdir(output)
+    with open(output, 'wb') as f:
+        f.write(r.content)
+
+    #s3.download_file(bucket, data, output)
 
      ## End of Function 
     logging.info('------------Downloading Data Done------------')

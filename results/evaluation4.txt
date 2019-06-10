@@ -2,3 +2,7 @@ Evaluation for cohort 4:
 R square is 0.378257 
 RMSE is 176904 
 RMSE takes part of 1.03 percent of the range of test data 
+Evaluation for cohort 4: 
+R square is 0.475868 
+RMSE is 162425 
+RMSE takes part of 0.94 percent of the range of test data 
