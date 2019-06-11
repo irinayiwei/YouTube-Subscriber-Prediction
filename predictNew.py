@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 import pickle
 import time
 
-logging.config.fileConfig("config/logging/local.conf")
+#logging.config.fileConfig("config/logging/local.conf")
 
 
 class NewPredict:
@@ -31,10 +31,6 @@ class NewPredict:
 
         self.logger.info("--- Configuration file loaded from %s --- ", model_config)
         self.config = config
-
-        # # Load data ranges
-        # path_to_stats = config["score_model"]["path_to_stats"]
-        # self.stats = pd.read_csv(path_to_stats)
 
         # Load trained model object for each model
         path_to_tmo1 = config["score_model"]["path_to_tmo1"]
@@ -70,22 +66,32 @@ class NewPredict:
 
         self.logger.info("--- Scaling New Data Done --- ")
 
-        # Make predictions
-        result1 = int(round(self.model1.predict(data)[0]))
-        result2 = int(round(self.model2.predict(data)[0]))
-        result3 = int(round(self.model3.predict(data)[0]))
-        result4 = int(round(self.model4.predict(data)[0]))
+        # Check if contains infinity values
+        lis = data.values.tolist()
+        if float("inf") in lis[0]:
+            result1 = None
+            result2 = None
+            result3 = None
+            result4 = None
+            raise ValueError('Input data cannot contain infinity values!')
 
-        self.logger.info('--- Prediction for range1 is %s; prediction for range2 is %s; prediction for range3 is %s; prediction for range4 is %s---', result1, result2, result3, result4)
+        else:
+            # Make predictions
+            result1 = int(round(self.model1.predict(data)[0]))
+            result2 = int(round(self.model2.predict(data)[0]))
+            result3 = int(round(self.model3.predict(data)[0]))
+            result4 = int(round(self.model4.predict(data)[0]))
 
-        # Plot Subscriber Plot
-        img_path = "static/prediction{}.png".format(time.time())
-        full_img_path = "app/" + img_path
-        plt.plot([2, 4, 5, 7], [result1, result2, result3, result4])
-        plt.xlabel("Year")
-        plt.ylabel("Subscriber Amount")
-        plt.savefig(full_img_path, transparent=True)
-        plt.close()
+            self.logger.info('--- Prediction for range1 is %s; prediction for range2 is %s; prediction for range3 is %s; prediction for range4 is %s---', result1, result2, result3, result4)
+
+            # Plot Subscriber Plot
+            img_path = "static/prediction{}.png".format(time.time())
+            full_img_path = "app/" + img_path
+            plt.plot([2, 4, 5, 7], [result1, result2, result3, result4])
+            plt.xlabel("Year")
+            plt.ylabel("Subscriber Amount")
+            plt.savefig(full_img_path, transparent=True)
+            plt.close()
 
 
         return(result1, result2, result3, result4, img_path)
