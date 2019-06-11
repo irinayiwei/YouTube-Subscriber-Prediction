@@ -8,6 +8,8 @@ import src.generateFeatures as generateFeatures
 import src.trainModel as trainModel
 import src.scoreModel as scoreModel
 import src.evaluateModel as evaluateModel
+import predictNew 
+from predictNew import NewPredict
 
 
 logging.basicConfig(level=logging.INFO, format="%(name)-12s %(levelname)-8s %(message)s")
@@ -76,7 +78,7 @@ def test_features():
 
 def test_split():
 
-	"""Test split data function"""
+	"""Test whether split data splits the data right"""
 
 	logging.info('------------Testing Split Started ------------')
 	## Input test data
@@ -146,7 +148,7 @@ def test_split():
 
 def test_train():
 
-    """Test whether train_model script can handle nan in dataframe."""
+    """Test whether trainModel script can handle nan in dataframe."""
 
     with pytest.raises(ValueError) as errormsg:
         ## Testing data
@@ -197,7 +199,7 @@ def test_train():
 
 def test_score():
 
-	"""Test whether score_model script can catch nan in dataframe."""
+	"""Test whether scoreModel script can catch nan in dataframe."""
 
 	with pytest.raises(ValueError) as errormsg:
 		## Testing data
@@ -224,7 +226,7 @@ def test_score():
 
 def test_evaluate():
 
-	"""Test whether evaluate_model can capture 0 in denominator (0 in ytest range)."""
+	"""Test whether evaluateModel can capture 0 in denominator (0 in ytest range)."""
 
 	with pytest.raises(ValueError) as errormsg:
 
@@ -240,6 +242,17 @@ def test_evaluate():
 	## Check value with true error message
 	assert str(errormsg.value) == 'Input needs to have different values for min and max amount!'
 
+def test_predict():
+	"""Test whether predictNew can capture infinity values (interferes with prediction)."""
 
+	with pytest.raises(ValueError) as errormsg:
 
+		## Input data
+		test_input = [348292, float("inf"), 2.34, 3848, 34, 43827, 283462, 3342.2343, 34832, 3482, 34, 43.3, 384]
+		test_input = pd.DataFrame(np.array(test_input).reshape(1,13))
+		new_predict = NewPredict()
+		new_predict.run(test_input)
+
+	## Check value with true error message
+	assert str(errormsg.value) == 'Input data cannot contain infinity values!'
 
